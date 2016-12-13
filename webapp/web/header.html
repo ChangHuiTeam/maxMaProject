@@ -12,57 +12,73 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <style>
-.header1{
-text-align:center;
-   background-color:gray;
-    color:white;
-    text-align:center;
-    font-weight:bold;
-    padding:0.5% 1.5%;
-    float:right;
+.first{
+background:#4D4D4D;
+height:36px;
 }
-.header2{
- float:left;
-  padding-left:15%;
-  padding-top:0.5%;
-  text-align:center;
-  height:30%;
-  background:white;
+.bigView{
+padding:5px 25%;
 }
-.header3{
-float:left;
- padding-top:6%;
+.topView{
 
- height:40px;
- width:60px;
+float:right;
+}
+.topA{
+padding:0px 5px;
+}
+.view{
+padding:0 15%;
+height:78px;
+}
+.header2
+{
+float:left;
+padding:10px 15px 10px 0px;
+}
+.login{
+background-color:transparent;
+height:60px;
+border:0;
+color:#10A1F1;
+}
+#navigate{
+padding-top:10px;
+}
+#label56{
+font-family:SimSun;
+color:white;
+font-weight:regular;
 }
 </style>
 </head>
-<body style="background: #F6F4F4;">
-<div style="background:gray">
-	<div >	
-	<div class="header1"><a href="#" style="color: white">400-879-7956</a></div>
-	<div class="header1"><a href="#" style="color: white">APP下载</a></div>	
-	<div class="header1"><a href="#" style="color: white">关于我们</a></div>
-	<div class="header1"><a href="#" style="color: white">运营合作</a> </div>
+<body>
+	<div class="first" >
+	<div class="bigView">
+	<label id="label56">56物流，我们更懂物流</label>
+	<div class="topView" >
+	<a class="topA" href="#" style="color: white">运营合作</a> 
+	<a class="topA" href="#" style="color: white">关于我们</a>
+	<a class="topA" href="#" style="color: white">APP下载</a>	
+	<a class="topA" href="#" style="color: white">400-879-7956</a>
 	</div>
-	<br><br>
-	<div style="background: #F6F4F4;height:50px" >
-	<div class="header2"><img src="../images/1.jpg" style="height: 40px"></div>			
+	</div>
+	</div>
+	<div class="view" >	
+	<div class="header2">
+	<img src="../images/img-56logo.png" style="height:40px" >
+	</div>			
 		<div class="header2">
-			<ul class="nav nav-pills">
+			<ul id="navigate" style="width:340px" class="nav nav-pills">
 				<li class="active"><a href="#">首 页</a></li>
 				<li><a href="#">下单询价</a></li>
 				<li><a href="#">我的订单</a></li>
 				<li><a href="#">个人中心</a></li>
-			</ul>
+			</ul>	
 		</div>
-		<div class="header2">	
-		<div class="header3"><a href="#" id="lkRegister">注册</a></div>
-	    <div class="header3"><a href="#" id="lkLogin">登录</a></div>
-	    </div>
-		
-</div>
+		<div class="header2">
+		<button class="login"><img src="../images/ic-register.png" > 注册 </button>	
+		<button class="login"><img src="../images/ic-login.png" > 登录</button>	
+	    </div>	 
 </div>
 </body>
 </html>

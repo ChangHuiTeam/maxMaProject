@@ -8,7 +8,7 @@
 <title>56物流，我们更懂物流</title>
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="../bootstrap/js/jquery.min.js"></script>
+<script src="../bootstrap/js/jquery-2.1.1.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <style>
@@ -50,6 +50,19 @@ color:white;
 font-weight:regular;
 }
 </style>
+<script type="text/javascript">
+function didLogin() {
+	
+	    parent.loginModel();
+	
+}
+function didRegister() {
+	
+    parent.registerModel();
+
+}
+
+</script>
 </head>
 <body>
 	<div class="first" >
@@ -76,9 +89,10 @@ font-weight:regular;
 			</ul>	
 		</div>
 		<div class="header2">
-		<button class="login"><img src="../images/ic-register.png" > 注册 </button>	
-		<button class="login"><img src="../images/ic-login.png" > 登录</button>	
+		<button id="register" onclick="didRegister();" class="login"  data-toggle="modal" data-target="#myModal"><img src="../images/ic-register.png" > 注册 </button>	
+		<button id="login" onclick="didLogin();" class="login"><img src="../images/ic-login.png" > 登录</button>	
 	    </div>	 
 </div>
+
 </body>
 </html>

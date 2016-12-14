@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-store, must-revalidate">
+<meta http-equiv="expires" content="0">
+<link rel="stylesheet" href="http://static.loji.com/avenger/css/g.css?ver=v41700">
+<script charset="utf-8" src="http://trust.baidu.com/vcard/v.js?siteid=6802257&amp;url=http%3A%2F%2Fwww.loji.com%2Forders%2Fsendorders&amp;source=https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DWZgyxh3rj-FJev0QQIh91aj68dJ4sNgVvaB1Rx7Ae9W%26wd%3D%26eqid%3Ddbed495e000008e000000006584a1bd8&amp;rnd=1570425132&amp;hm=1"></script><script src="//hm.baidu.com/hm.js?ca3f11bbdb68fbf43862d8b4cc7608c8"></script><script type="text/javascript" async="" src="http://dn-growing.qbox.me/vds.js"></script><script type="text/javascript">
+var _vds = _vds || [];(function(){ _vds.push(['setAccountId', 'deefdf1512f94a58bb5ecebdf4216b46']);(function() {var vds = document.createElement('script'); vds.type='text/javascript'; vds.async = true;vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(vds, s);})();})();
+</script>
+<link rel="stylesheet" href="http://static.loji.com/avenger/css/boxPlugin.css?ver=v36905">
+<link rel="stylesheet" href="http://static.loji.com/avenger/css/lessload.css?ver=v38611">
+<link rel="stylesheet" href="http://static.loji.com/avenger/css/dialog.css?ver=v36905">
+<link rel="stylesheet" href="http://static.loji.com/avenger/css/fulltruckorderlist.css?ver=v42063">
+<title>整车订单-罗计专业物流解决方案提供商</title>
+<link href="http://static.loji.com/avenger/js/plugin/DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css"></head>
+</head>
+<body>
+<!-- http://www.loji.com/orders/sendorders 货主 整车订单 order/sendOrdersList.ft -->
+<input id="J_roleStatus" value="0" type="hidden">
+<div class="headerWar">
+<div class="headerTitle w1200">
+<div class="headerLink">
+<a href="/broker/login" class="on" target="_blank">我是承运商</a>|
+<a href="http://www.loji.com/yupu/index.html" target="_blank">专线服务</a>|
+<a href="http://www.loji.com/about/about">关于我们</a>|
+<a href="https://news.loji.com" target="_blank">罗计新闻</a>
+<span class="fh_tel">
+<i class="ico_017"></i><span class="tel_number">400-890-0856</span>
+</span>
+</div>
+</div>
+</div>
+<div class="header">
+<div class="w1200">
+<div class="logo">
+<a href="/" class="cwhite"></a>
+</div>
+<div class="" data="0">
+<ul class="linkNav">
+<li><a href="/">首页</a></li>
+<li><a href="/proxyorders/fillFullOrder">在线询价</a></li>
+<li><a class="J_popLogin on" href="/orders/sendorders">我的运单</a></li>
+<li><a class="J_popLogin" href="/home/index">个人中心</a></li>
+<li class="loginNav noHover">
+<a href="/home/index"><i class="ico_020"></i>罗计会员号：
+12037900</a></li>
+<li class="loginNav"><a href="/logout?ret=http://www.loji.com/"><i class="ico_021"></i>退出</a></li>
+</ul></div>
+</div>
+</div><!-- 订单查询 start -->
+<div class="w1200">
+<!-- tabs start -->
+<div class="tabs moduleTabs">
+<ul>
+<li><a href="javascript:void(0);" title="整车订单" class="cur">整车订单</a></li>
+<li><a href="/proxyorders/less_full/find?loadType=0" title="零担订单">零担订单</a></li>
+</ul>
+</div>
+<!-- tabs end -->
+<!-- 条件筛选 start -->
+<div class="k_filter statusList">
+<div class="fl">
+<a href="?" class="active">全部订单</a>
+<a href="?status=7">待审核<sup class="rs_count" style="display:none;"></sup></a>
+<a href="?status=1">报价中<sup class="rs_count" style="display:none;"></sup></a>
+<a href="?status=6">待指派<sup class="rs_count" style="display:none;"></sup></a>
+<a href="?status=2">取货中<sup class="rs_count" style="display:none;"></sup></a>
+<a href="?status=3">运输中<sup class="rs_count" style="display:none;"></sup></a>
+<a href="?status=4">已送达<sup class="rs_count" style="display:none;"></sup></a>
+<a href="?status=5">已签收<sup class="rs_count" style="display:none;"></sup></a>
+<a href="?status=11">已取消<sup class="rs_count" style="display:none;"></sup></a>
+</div>
+<div class="fr mt5">
+<label for="orderId">订单号：</label>
+<div class="orderIdInp">
+<input name="orderId" placeholder="请输入订单号" value="" type="text">
+</div>
+<button id="J_fullTruckOrder_btn" class="btn btn-small btn-orange">搜索</button>
+</div>
+</div>
+<div class="k_filter timeAddQuery" style="overflow: inherit">
+<div class="fl">
+<label>装车时间：</label>
+<div class="dateInputCon">
+<input name="startTime" value="" class="text inSmall-L dateInput" placeholder="选择日期" style="height: 32px;padding: 0 5px;" onfocus="document.body.click()" readonly="readonly" type="text">
+</div>
+<span class="split">-</span>
+<div class="dateInputCon">
+<input name="endTime" value="" class="text inSmall-L dateInput" placeholder="选择日期" style="height: 32px;padding: 0 5px;" onfocus="document.body.click()" readonly="readonly" type="text">
+</div>
+</div>
+<ul class="fl">
+<li class="sch">
+<span class="tit">起始地</span>
+<div class="lj_select" id="areaSelectFrom" data-pid="" data-cid="" data-tid="">
+<div class="area_name">
+<input class="area_title" placeholder="城市名（中文/拼音）" value="" type="text">
+<span class="auto_tips"></span>
+<span class="arrow"></span>
+<input data-target="province" name="startProvince" value="" type="hidden"><input data-target="city" name="startCity" value="" type="hidden"><input data-target="county" name="startCounty" value="" type="hidden">
+<input data-target="province" name="startProvince" value="" type="hidden"><input data-target="city" name="startCity" value="" type="hidden"><input data-target="county" name="startCounty" value="" type="hidden"></div>
+<div class="city_content">
+<div class="select_tab"><a href="javascript:;" class="current" data-to="province_list">省份</a><a href="javascript:;" data-to="city_list">城市</a><a href="javascript:;" data-to="county_list">县区</a><a href="javascript:;" class="city_close">关闭</a></div>
+<div class="areaListWar"><div class="area_list province_list"></div><div class="area_list city_list"></div><div class="area_list county_list"></div></div>
+</div>
+<div class="city_add_list"></div></div>
+</li>
+<li class="sch">
+<span class="tit">目的地</span>
+<div class="lj_select" id="areaSelectTo" data-pid="" data-cid="" data-tid="">
+<div class="area_name">
+<input class="area_title" placeholder="城市名（中文/拼音）" style="width: 70%;" value="" type="text">
+<span class="auto_tips"></span>
+<span class="arrow"></span>
+<input data-target="province" name="endProvince" value="" type="hidden"><input data-target="city" name="endCity" value="" type="hidden"><input data-target="county" name="endCounty" value="" type="hidden">
+<input data-target="province" name="endProvince" value="" type="hidden"><input data-target="city" name="endCity" value="" type="hidden"><input data-target="county" name="endCounty" value="" type="hidden"></div>
+<div class="city_content">
+<div class="select_tab"><a href="javascript:;" class="current" data-to="province_list">省份</a><a href="javascript:;" data-to="city_list">城市</a><a href="javascript:;" data-to="county_list">县区</a><a href="javascript:;" class="city_close">关闭</a></div>
+<div class="areaListWar"><div class="area_list province_list"></div><div class="area_list city_list"></div><div class="area_list county_list"></div></div>
+</div>
+<div class="city_add_list"></div></div>
+</li>
+</ul>
+<input name="status" value="" type="hidden">
+<button id="J_reset_btn" class="btn btn-small">重置</button><button id="J_fullTruck_btn" class="btn btn-small btn-orange">查询</button>
+<a href="javascript:;" id="excel" target="_blank">导出当前报表</a>
+</div>
+<!-- 条件筛选 end -->
+<!-- 筛选结果 start -->
+<div class="table_content" id="fullTruckItems">
+<table class="table_gray J_transPopBtn">
+<thead>
+<tr>
+<td width="180">订单号</td>
+<td width="180">起止地</td>
+<td>货物信息</td>
+<td width="130">装车日期</td>
+<td width="160">运输车辆</td>
+<td width="90">订单状态</td>
+<td width="120">运费</td>
+<td width="150">操作</td>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="8">对不起，没有你想要查询的订单</td></tr>
+</tbody>
+</table>
+</div>
+<!-- 筛选结果 end -->
+</div>
+<!-- 订单查询 end -->
+<div class="commonPop commonPopNoFoot" id="refoundLayer">
+<div class="titlesBox">
+<h3>退款申诉</h3>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<div class="contentBox">
+<ul>
+<li>
+<p>一、货物为承运正常退款</p>
+<p>若支付运费之后，实际未承运货源，需要正常退款</p>
+</li>
+<li>
+<p>二、货物已承运有问题</p>
+<p>1、成功支付运费</p>
+<p>2、货物送达，收货人给司机提供验证码之前，为有效申诉期</p>
+</li>
+<li>以上申诉请联系 <span> 400-890-0856</span></li>
+</ul>
+</div>
+</div>
+<div class="commonPop" id="showReceiptBillsLayer">
+<div class="titlesBox">
+<h3>签收单</h3>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<ul></ul>
+</div>
+<div id="comment" style="display:none">
+<div class="comment">
+<p class="companyName">承运物流公司：<span id="cname">沈阳晨路达物流有限公司</span></p>
+<input name="J_cmt_serialNum" type="hidden">
+<div class="cmtStars">
+<label>请根据实际运输情况进行评价：</label>
+<span class="starCell J_speedStar">
+<label>运输速度：</label>
+<span class="star star5">
+<i></i><i></i><i></i><i></i><i></i>
+<input class="J_starRealVal" name="J_cmt_speed" value="5" type="hidden">
+</span>
+</span>
+<span class="starCell J_attitudeStar">
+<label>服务态度：</label>
+<span class="star star5">
+<i></i><i></i><i></i><i></i><i></i>
+<input class="J_starRealVal" name="J_cmt_attitude" id="" value="5" type="hidden">
+</span>
+</span>
+<span class="starCell J_safetyStar">
+<label>货物安全：</label>
+<span class="star star5">
+<i></i><i></i><i></i><i></i><i></i>
+<input class="J_starRealVal" name="J_cmt_safety" id="" value="5" type="hidden">
+</span>
+</span>
+</div>
+<div class="cmtContent tarea">
+<textarea placeholder="请输入评价" id="cmtContent" name="J_cmt_detail"></textarea>
+</div>
+<div class="cmtBtns btns J_cmtBtns">
+<input class="btn btn-middle btn-white J_cmtCancel" value="取消" type="button">
+<input class="btn btn-middle J_cmtSubmit" value="确定" type="button">
+</div>
+</div>
+</div>
+<div class="footerSimple">
+Copyright ©<span title="localhost">2016</span> 北京运科网络科技有限公司 <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP证 161112 号</a>
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030460"><img src="http://static.loji.com/avenger/imgs/042.png" style="display:inline-block;vertical-align:text-bottom;">京公网安备 11010502030460 号</a>
+<a href="http://cx.l-wl.com:80/xyzx2/credit/CertificateTemplate.html?certificateNo=cx-cflp076" target="_blank"><img src="http://static.loji.com/avenger/imgs/074.png" style="display:inline-block;vertical-align:text-bottom;height:19px"></a>
+<a id="_pingansec_bottomimagesmall_brand" href="http://si.trustutn.org/info?sn=513161122025733996223&amp;certType=1" target="_blank"><img src="http://v.trustutn.org/images/cert/brand_bottom_small.jpg" style="position: relative;top:3px" height="20"></a>
+</div><div class="mask" id="pageMask"></div>
+<div class="commonPop" id="createOrDeleteWarn">
+<div class="titlesBox">
+<h3>提  示</h3>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<div class="contentBox">
+<div class="warn_con cRed">
+确定货物已经送达吗？
+</div>
+</div>
+<div class="footBox">
+<a href="javascript:void(0);" class="popBtn popLeftBtn J_dismiss">取消</a><a href="javascript:void(0);" class="popBtn popRightBtn popBtnLinght popBtnOrange confirmArrivedBtn">确认</a>
+</div>
+</div>
+<!-- 查看电话提示 -->
+<div class="commonPop" id="open2">
+<div class="titlesBox">
+<h3>查看电话提示</h3>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<div class="contentBox">
+<div class="hintBox">
+<p></p>
+</div>
+</div>
+<div class="footBox">
+<a href="javascript:void(0);" class="popBtn popLeftBtn">取消</a><a href="javascript:void(0);" class="popBtn popRightBtn popBtnLinght popBtnOrange">确认查看</a>
+</div>
+</div>
+<!-- 查看报价 -->
+<div class="commonPop commonPopNoFoot" id="lookQuote">
+<div class="titlesBox">
+<div class="fnt">
+<p class="titMain">查看报价</p>
+<p class="titSub">此报价含保险，含服务费，罗计可开具发票</p>
+</div>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<div class="contentBox">
+<div class="lookQuote_boxs">
+</div>
+</div>
+<div class="footBox">
+<a href="javascript:void(0);" class="popBtn popLeftBtn">取消</a><a href="javascript:void(0);" class="popBtn popRightBtn popBtnLinght popBtnOrange">确认查看</a>
+</div>
+</div>
+<!--转账弹窗-->
+<div class="commonPop transPop" id="transPopOpt">
+<form action="https://pay.loji.com/loji/pay/web/trans/gateway" target="_blank" method="post">
+<div class="titlesBox">
+<h3>转账</h3>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<div class="contentBox">
+<div class="acc_info">
+<div class="dev_info clear">
+</div>
+<div class="form_items">
+<div class="form_group">
+<label>转账金额：</label>
+<input class="text" name="cash" placeholder="请输入转账金额" type="text"> 元
+</div>
+<div class="form_group">
+<label>备注：</label>
+<textarea placeholder="请填写转账备注" name="remark" maxlength="100"></textarea>
+</div>
+</div>
+</div>
+</div>
+<div class="footBox">
+<a href="javascript:void(0);" class="popBtn popCenterBtn  confirmBtn">确认</a>
+</div>
+<!--后端开发要求暂时把这个值写死成100,100是运立方在支付平台的代码-->
+<input name="terminal" value="100" type="hidden">
+</form>
+</div>
+<!--转账弹窗end-->
+<!-- 取消发货 start -->
+<div class="commonPop" id="cancelOrder">
+<div class="titlesBox">
+<h3>请选择取消发货原因</h3>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<div class="contentBox">
+<div class="contentTip" id="J_showtipFlag" style="display:none">
+罗计物流已指定了司机承运您的货物，现在取消发货可能需要收取一定费用的<span class="cRed">空驶费</span>哦。<br>有问题请联系：400-890-0856
+</div>
+<div class="contentTitle">请选择取消发货原因</div>
+<div class="cont">
+<div class="fail-list"><label class="checker crado"><span class="checked"><input checked="" name="fail-result" value="1" type="radio"></span>货已拉走</label></div>
+<div class="fail-list"><label class="checker crado"><span class=""><input name="fail-result" value="1" type="radio"></span>更改送货时间</label></div>
+<div class="fail-list"><label class="checker crado"><span class=""><input name="fail-result" value="1" type="radio"></span>不发这单货了</label></div>
+<div class="fail-list"><label class="checker crado"><span class=""><input name="fail-result" value="1" type="radio"></span>其他</label>&nbsp;<input id="cancelReason" type="text"></div>
+</div>
+</div>
+<div class="footBox">
+<a href="javascript:void(0);" class="popBtn popLeftBtn popBtnLinght popBtnOrange btn_delete_sub_full">确认</a><a href="javascript:void(0);" class="popBtn popRightBtn J_dismiss">取消</a>
+</div>
+</div>
+<!-- 取消发货 end -->
+<!-- 确认承运 start -->
+<div class="commonPop" id="J_confimToCarryPopLayer">
+<div class="titlesBox">
+<h3>确认承运人</h3>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<form id="J_collectUserInfoFrm" method="post">
+<div class="contentBox">
+<div class="contentBox">
+<div class="form_box">
+<div class="box_title"><label>装货地址：</label></div>
+<div class="box_text">
+<span id="J_startAddress"></span>
+</div>
+</div>
+<div class="form_box">
+<div class="box_title"><label>卸货地址：</label></div>
+<div class="box_text">
+<span id="J_endAddress"></span>
+</div>
+</div>
+<div class="form_box">
+<div class="box_title"><label for="loadGoodsName"><span class="need">*</span>发货人姓名：</label></div>
+<div class="box_text">
+<input class="text inMiddle" name="loadGoodsName" placeholder="发货人姓名" maxlength="20" type="text">
+</div>
+</div>
+<div class="form_box">
+<div class="box_title"><label for="loadGoodsPhone"><span class="need">*</span>发货人电话：</label></div>
+<div class="box_text">
+<input class="text inMiddle" name="loadGoodsPhone" placeholder="请输入发货人电话" maxlength="11" type="text">
+</div>
+</div>
+<div class="form_box">
+<div class="box_title"><label for="loadExtPhone">备用电话：</label></div>
+<div class="box_text">
+<input class="text inMiddle" name="loadExtPhone" placeholder="请输入发货备用电话" maxlength="11" type="text">
+</div>
+</div>
+<div class="form_box">
+<div class="box_title"><label for="unloadGoodsName"><span class="need">*</span>收货人姓名：</label></div>
+<div class="box_text">
+<input class="text inMiddle" name="unloadGoodsName" placeholder="收货人姓名" maxlength="20" type="text">
+</div>
+</div>
+<div class="form_box">
+<div class="box_title"><label for="unloadGoodsPhone"><span class="need">*</span>收货人电话：</label></div>
+<div class="box_text">
+<input class="text inMiddle" name="unloadGoodsPhone" placeholder="请输入收货人电话" maxlength="11" type="text">
+</div>
+</div>
+<div class="form_box">
+<div class="box_title"><label for="unloadExtPhone">备用电话：</label></div>
+<div class="box_text">
+<input class="text inMiddle" name="unloadExtPhone" placeholder="请输入收货备用电话" maxlength="11" type="text">
+</div>
+</div>
+<div class="form_box">
+<div class="box_text">
+<div class="checker">
+<span><input class="checkbox" name="agreement" id="agreements" type="checkbox"></span>
+同意<a href="../logistics/agreement" target="_blank" class="aLinkCblue">《罗计物流运输条款》</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footBox">
+<input id="J_id" type="hidden">
+<input id="J_orderId" type="hidden">
+<input id="J_robOrderId" type="hidden">
+<input id="J_token" type="hidden">
+<input id="J_payTypeFlag" type="hidden">
+<input id="J_payUrl" type="hidden">
+<a href="javascript:void(0);" class="popBtn popLeftBtn J_dismiss">取消</a><input data-cansubmit="1" class="popBtn popRightBtn popBtnLinght popBtnOrange J_confirmToCarryBtn" value="确认" type="submit">
+</div>
+</form>
+</div>
+<!-- 确认承运 end -->
+<!-- 组织架构弹窗 start -->
+<div class="commonBubble" id="J_enterpriseWar">
+</div>
+<!-- 组织架构弹窗 end -->
+<!-- 支付中间过程弹窗 start -->
+<div class="zfbres-dialog" id="zfbresDialog">
+<div class="box-con">
+<div class="notice">请您在新打开的页面完成付款。</div>
+<div class="warning">
+<p>完成付款前请不要关闭此窗口</p>
+<p>完成付款后请根据您的情况点击下列按钮</p>
+</div>
+<div class="btns clr">
+<a href="javascript:window.location.reload();" class="pay-succ">付款成功</a>
+<a href="javascript:window.location.reload();" class="pay-fail" id="payFailQus">付款遇到问题</a>
+</div>
+</div>
+</div>
+<form action="https://pay.loji.com/loji/pay/web/order/cashier" id="J_payOrderFrm" target="_blank" method="get">
+<input name="payOrderId" id="J_payOrderId" type="hidden">
+</form>
+<!-- 支付中间过程弹窗 end -->
+<!-- 异常上报 -->
+<div class="commonPop" id="report_box_pop">
+<div class="titlesBox">
+<h3>异常上报</h3>
+<a href="javascript:void(0);" class="close"></a>
+</div>
+<div class="contentBox">
+<div class="report_con">
+<div class="select_box">
+<select name="type">
+<option value="">请选择异常状况</option>
+<option value="1">事故故障</option>
+<option value="2">靠台晚点</option>
+<option value="3">送货晚点</option>
+<option value="4">货物破损</option>
+<option value="5">少货</option>
+<option value="0">其他</option>
+</select>
+</div>
+<div class="report_mark">
+<textarea name="description" placeholder="请输入异常情况"></textarea>
+</div>
+<div class="upload_list">
+<ul class="clear">
+<li>
+<div class="img_upload">
+<div class="img_box">
+<span class="previewWar">
+<img class="preview onVis" onload="this.className='preview'" src="">
+</span>
+<input name="img1" value="" type="hidden">
+</div>
+<div class="btn btn-large btn-widthauto swfBtn">
+<span class="up_btn webuploader-container" id="pic1"><div class="webuploader-pick">上传照片</div><div id="rt_rt_1b3h6mu5n1kt1f6a2qpar71olh1" style="position: absolute; top: 0px; left: 0px; width: 92px; height: 92px; overflow: hidden; bottom: auto; right: auto;"><input name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*" type="file"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></label></div></span>
+</div>
+</div>
+</li>
+<li>
+<div class="img_upload">
+<div class="img_box">
+<span class="previewWar">
+<img class="preview onVis" onload="this.className='preview'" src="">
+</span>
+<input name="img2" value="" type="hidden">
+</div>
+<div class="btn btn-large btn-widthauto swfBtn">
+<span class="up_btn webuploader-container" id="pic2"><div class="webuploader-pick">上传照片</div><div id="rt_rt_1b3h6mu5s75o1pnufsgln314f14" style="position: absolute; top: 0px; left: 0px; width: 92px; height: 92px; overflow: hidden; bottom: auto; right: auto;"><input name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*" type="file"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></label></div></span>
+</div>
+</div>
+</li>
+<li>
+<div class="img_upload">
+<div class="img_box">
+<span class="previewWar">
+<img class="preview onVis" onload="this.className='preview'" src="">
+</span>
+<input name="img3" value="" type="hidden">
+</div>
+<div class="btn btn-large btn-widthauto swfBtn">
+<span class="up_btn webuploader-container" id="pic3"><div class="webuploader-pick">上传照片</div><div id="rt_rt_1b3h6mu5v1nfob3i6b719jkkog7" style="position: absolute; top: 0px; left: 0px; width: 92px; height: 92px; overflow: hidden; bottom: auto; right: auto;"><input name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*" type="file"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></label></div></span>
+</div>
+</div>
+</li>
+<li class="img_last">
+<div class="img_upload">
+<div class="img_box">
+<span class="previewWar">
+<img class="preview onVis" onload="this.className='preview'" src="">
+</span>
+<input name="img4" value="" type="hidden">
+</div>
+<div class="btn btn-large btn-widthauto swfBtn">
+<span class="up_btn webuploader-container" id="pic4"><div class="webuploader-pick">上传照片</div><div id="rt_rt_1b3h6mu631cll133b1u361vn016tsa" style="position: absolute; top: 0px; left: 0px; width: 92px; height: 92px; overflow: hidden; bottom: auto; right: auto;"><input name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*" type="file"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></label></div></span>
+</div>
+</div>
+</li>
+</ul>
+<p class="warn_box">添加图片（必填）</p>
+</div>
+</div>
+</div>
+<div class="footBox">
+<input name="orderId" id="report_order_id" value="" type="hidden">
+<a href="javascript:void(0);" id="reportBtn" class="popBtn popCenterBtn popBtnOrange">确认上报</a>
+</div>
+</div><div class="mw commonPop commonPopNoFoot" id="loginSec">
+<div class="mwT">
+<a href="javascript:;" class="close"></a>
+<i class="icon_logo"><img src="http://static.loji.com/avenger/imgs/logo/logo1_160X46_ffpt.png"></i>
+</div>
+<div class="mwB">
+<div class="logFrm">
+<div class="loginType frm" id="loginTypeSelect">
+<span class="fl loginActive">
+<label class="checker crado"><span class="checked"><input checked="" name="loginType" value="1" type="radio"></span>普通登录</label>
+</span>
+<span class="fr">
+<label class="checker crado"><span class=""><input name="loginType" value="1" type="radio"></span>手机动态密码登录</label>
+</span>
+</div>
+<form id="loginForm" method="post" novalidate="novalidate">
+<div class="frm">
+<div class="frmC">
+<label class="titleName">&nbsp;</label>
+<label id="errorInfo1"><label class="error errorMsg" style="font-size:12px" id="loginMsg"></label></label>
+</div>
+</div>
+<div class="frm">
+<div class="frmC">
+<label class="titleName">登录账号</label><input name="username" class="input-text w-220" placeholder="请输入企业员工号或手机号" maxlength="11" autocomplete="off" value="" type="text">
+</div>
+</div>
+<div class="frm mt-15">
+<div class="frmC">
+<label class="titleName">密码</label><input name="mypassword" id="mypassword" class="input-text w-220 password" placeholder="请输入密码" maxlength="30" autocomplete="off" value="" type="password">
+</div>
+</div>
+<div class="frm noMarg mt-15 mb-15">
+<div class="frmC">
+<input name="role" id="J_role" value="0" type="hidden">
+<label class="titleName">&nbsp;</label><input class="loginBtn" id="loginBtn" value="登 录" type="submit">
+</div>
+</div>
+<div class="frm noMarg mt-5">
+<div class="frmC reg_forget">
+<a class="hightLight f-r" id="J_regUrl" href="/owner/reg">免费注册</a>
+<a class="c-888" id="J_resetPassUrl" href="/resetpass">忘记密码</a>
+</div>
+</div>
+</form>
+<form id="loginFormMessage" method="post" style="display:none" novalidate="novalidate">
+<div class="frm">
+<div class="frmC">
+<label class="titleName">&nbsp;</label>
+<label id="errorInfo2"><label class="error" style="display:none"></label></label>
+</div>
+</div>
+<div class="loginCon">
+<ul>
+<li>
+<h3>手机号</h3>
+<input name="username" id="J_mobileForPhoneLogin" placeholder="请输入手机号" maxlength="11" autocomplete="off" type="text">
+</li>
+<li>
+<h3>验证码</h3>
+<input class="text input-m" placeholder="请输入图形验证码" id="J_answerForPhoneLogin" name="answer" maxlength="6" autocomplete="off" type="text">
+<img src="/captcha?t=" id="J_captchaImagePhoneLogin" class="imgVerfyCode w83" style="margin-left: 4px;">
+</li>
+<li>
+<h3>短信验证</h3>
+<input class="text input-m J_verifyCode" placeholder="请输入短信验证码" name="verifyCode" maxlength="6" type="text">
+<input class="btn btn-middle btn-widthauto getVerifyCode" value="获取验证码" name="PhoneLoginBtn" id="J_getVerifyBtn_phonelogin" style="padding: 0 6px;margin-left:4px;" type="button">
+</li>
+</ul>
+<div class="btns clear" style="width: 170px;margin: 18px auto 0">
+<input class="submitBtn loginBtn fl" value="登    录" id="loginBtnP" type="submit">
+<input name="role" id="J_roleMessage" value="0" type="hidden">
+</div>
+<div class="frm noMarg mt-5">
+<div class="frmC reg_forget">
+<a class="hightLight f-r" href="/owner/reg">免费注册</a>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div><script src="http://static.loji.com/avenger/js/jquery-1.11.2.min.js?ver=v36906"></script>
+<!-- 表单相关js -->
+<script src="http://static.loji.com/avenger/js/form-vali-md5.min.js?ver=v41591"></script>
+<!-- 公用组件 -->
+<script src="http://static.loji.com/avenger/js/pubfunc.js?ver=v41961"></script><div class="tip-page"></div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?ca3f11bbdb68fbf43862d8b4cc7608c8";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script><script src="http://static.loji.com/avenger/js/plugin/webuploader-0.1.5/webuploader.js?ver=v38624"></script>
+<script src="http://static.loji.com/avenger/js/plugin/DatePicker/WdatePicker.js?ver=v36906"></script>
+<script src="http://static.loji.com/avenger/js/plugin/citychange/citychange-v3.min.js?ver=v41644"></script>
+<script src="http://static.loji.com/avenger/js/plugin/dialog.js?ver=v42063"></script>
+<script src="http://static.loji.com/avenger/js/page/pagination.js?ver=v40946"></script>
+<script src="http://static.loji.com/avenger/js/page/orderList.js?ver=v42063"></script>
+<script src="http://static.loji.com/avenger/js/page/orderCommentController.js?ver=v42064"></script>
+<script src="http://static.loji.com/avenger/js/page/fulltrucklist.js?ver=v42721"></script>
+<script src="http://static.loji.com/avenger/js/page/reportOrder.js?ver=v36903"></script>
+<script>
+var areaChangeFrom = new areaSelectChange("areaSelectFrom", {
+hasHot: false,
+inputFlag:true,
+historyShow:false,
+hideName: {
+provinceName: "startProvince",
+cityName: "startCity",
+countyName: "startCounty"
+}
+});
+var areaChangeTo = new areaSelectChange("areaSelectTo", {
+hasHot: false,
+inputFlag:true,
+historyShow:false,
+hideName: {
+provinceName: "endProvince",
+cityName: "endCity",
+countyName: "endCounty"
+}
+});
+</script>
+
+</body>
+</html>

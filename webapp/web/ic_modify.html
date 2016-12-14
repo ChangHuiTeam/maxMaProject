@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.body {
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 0px;
+	padding-end: 100px;
+}
+/*div主体*/
+.div1 {
+	float: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-block-end: 50px;
+	height: 800px;
+	width: 100%;
+	border: 0.05px solid;
+	border-color: #fff;
+	border-top-color: #E5E3E9;
+	border-end-color: #E5E3E9;
+}
+/*←导航栏*/
+.diva {
+	padding-top: 0px;
+	float: left;
+	background: #f3f3f3;
+	height: 100%;
+	width: 180px;
+}
+
+.divb {
+	margin-left: 0px;
+	padding: 20px 0;
+	list-style: none;
+}
+
+.li {
+	width: 100%;
+	height: auto;
+}
+
+.lia {
+	display: block;
+	width: 100%;
+	color: #333333;
+	height: 50px;
+	text-indent: 30px;
+	font-size: 20px;;
+	font-family: SimSun, Times, serif;
+	text-decoration: none;
+	padding-top: 8px;
+	margin-top: 20px;
+}
+
+.lib {
+	display: block;
+	width: 100%;
+	color: #333333;
+	height: 50px;
+	text-indent: 30px;
+	font-size: 20px;
+	font-family: SimSun, Times, serif;
+	text-decoration: none;
+	padding-top: 8px;
+	margin-top: 5px;
+}
+
+.lic {
+	display: block;
+	width: 100%;
+	background: #fff;
+	height: 50px;
+	text-indent: 30px;
+	font-size: 20px;
+	font-family: SimSun, Times, serif;
+	text-decoration: none;
+	padding-top: 8px;
+	margin-top: 5px;
+}
+
+.divmima {
+	margin-left: 25%;
+	width: 60%;
+	height: 100%;
+}
+
+.divds {
+	background: #fff;
+	padding-top: 50px;
+	padding-left: 10px;
+	font-family: SimSun, Times, serif;
+	font-size: 15px;
+}
+
+.divdd {
+	float: right;
+	width: 360px;
+	margin-right: 60px;
+	margin-top: -5px;
+}
+
+.btnn {
+	background: #10a0f1;
+	color: #ffffff;
+	border-radius: 10px;
+	font-family: SimSun, Times, serif;
+	font-size: 17px;
+	font-color: #b3b3b3;
+	height: 36px;
+	width: 160px;
+}
+</style>
+<meta charset="UTF-8">
+<title>修改密码</title>
+<meta charset="UTF-8">
+<meta
+	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	name="viewport" />
+
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../bootstrap/js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+	<IFRAME NAME="content_frame" width="100%" height="100px;"
+		src="header.html"></IFRAME>
+	<div class="div1">
+		<div class="diva">
+			<div id="menu" class="">
+				<ul class="divb">
+					<li class="li"><a class="lia" href="../web/ic_data.html">
+							<img src="../web/img/ic-personal-default.png"></img> 个人资料
+					</a></li>
+
+					<li class="li"><a class="lib" href="../web/ic_ident.html">
+							<img src="../web/img/ic-certify-default.png"></img> 认证中心 <span
+							class="menu_arrows"></span>
+					</a></li>
+					<li style=""><a class="lic" href="/"> <img
+							src="../web/img/ic-password-selected.png"></img> 修改密码
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="divmima">
+			<div class="divds">
+				旧密码： <input type="password" name="orderId" class="divdd"
+					placeholder="请输入旧密码" value="" type="text">
+			</div>
+			<div class="divds">
+				新密码： <input type="password" name="orderId" class="divdd"
+					placeholder="请输入新密码" value="" type="text">
+			</div>
+			<div style="margin-top: 51px; margin-left: 27%;">
+				<button id="id_confirm" class="btnn">确认修改</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

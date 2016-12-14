@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>个人资料</title>
+<meta charset="UTF-8">
+<meta
+	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	name="viewport" />
+
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../bootstrap/js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+ function changeImages{
+	 document.getElementById('identing').src="certify1.png";
+	
+	 var oImg = document.getElementById('identing');
+	var f=0;
+	if(f==0){
+}
+ 
+	document.getElementById('identing').src="certify1.png";	}
+else if(f==1){
+	oImg.src="../web/img/certify2.png"}
+else(f==2){
+	oImg.src="../web/img/certify3.png"}
+}
+
+</script>
+<script type="text/javascript">
+document.getElementById("identing").src="certify1.png";
+if(true){
+    document.getElementById("identing").src="certify1.png";
+     //or $("#id").attr("src","a.png")
+}else{
+    document.getElementById("identing").src="certify2.png";
+     //or $("#id").attr("src","b.png")
+}
+</script>
+<style>
+/* body*/
+.bo {
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 0px;
+	padding-end: 100px;
+}
+/*div*/
+.ae {
+	float: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-block-end: 50px;
+	height: 800px;
+	width: 100%;
+	border: 0.05px solid;
+	border-color: #fff;
+	border-top-color: #E5E3E9;
+	border-end-color: #E5E3E9;
+}
+/*左边导航栏*/
+.af {
+	padding-top: 0px;
+	float: left;
+	background: #f3f3f3;
+	height: 100%;
+	width: 180px;
+}
+
+.ul {
+	margin-left: 0;
+	padding: 20px 0;
+	list-style: none;
+}
+
+.li {
+	width: 100%;
+	height: auto;
+}
+
+.ali {
+	display: block;
+	background: #fff;
+	width: 100%;
+	height: 50px;
+	text-indent: 30px;
+	font-size: 20px;;
+	font-family: SimSun, Times, serif;
+	text-decoration: none;
+	padding-top: 8px;
+	margin-top: 20px;
+}
+
+.ali1 {
+	display: block;
+	width: 100%;
+	color: #333333;
+	height: 50px;
+	text-indent: 30px;
+	font-size: 20px;
+	font-family: SimSun, Times, serif;
+	text-decoration: none;
+	padding-top: 8px;
+	margin-top: 5px;
+}
+/*右边信息*/
+.divas {
+	padding-top: 10px;
+	float: right;
+	background: #f3f3f3;
+	height: 180px;
+	width: 75%;
+}
+
+.divbs {
+	padding-left: 60px;
+	padding-top: 30px;
+	overflow: hidden;
+}
+
+.divcs {
+	float: left;
+	width: 80px;
+	height: 80px;
+	position: relative;
+}
+
+.divds {
+	margin-left: 40px;
+	float: left;
+}
+
+.pspan {
+	width: 100%;
+	height: 50px;
+	flood-color: #333333;
+	text-indent: 30px;
+	font-size: 25px;
+	font-family: Microsoft YaHei, Times, serif;
+	text-decoration: none;
+	padding-top: 8px;
+	margin-top: 5px;
+}
+
+.divhs {
+	margin-left: 40px;
+	margin-top: 50px;
+	padding-top: 10px;
+	padding-left: 100px;
+}
+</style>
+</head>
+<body class="bo">
+	<IFRAME NAME="content_frame" width="100%" height="100px;"
+		src="header.html"></IFRAME>
+	<div class="ae">
+		<div class="af">
+			<div id="menu" class="">
+				<ul class="ul">
+					<li class="li"><a class="ali" href="/"> <img
+							src="../web/img/ic-personal-selected.png"></img> 个人资料
+					</a></li>
+					<li class="li"><a class="ali1" href="../web/ic_ident.html">
+							<img src="../web/img/ic-certify-default.png"></img> 认证中心 <span
+							class="menu_arrows"></span>
+					</a></li>
+					<li class="li"><a class="ali1" href="../web/ic_modify.html">
+							<img src="../web/img/ic-password-default.png"></img> 修改密码
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			<div class="divas">
+				<div class="divbs">
+					<div class="divcs">
+						<img id="img-sample" alt="" src="../web/img/img-sample.png">
+
+					</div>
+					<div class="divds">
+						<p class="">
+							<span id="useinfo" class="pspan">武漢大康物流有限責任公司</span> <strong
+								class=""></strong>
+						</p>
+					</div>
+					<div class="divhs">
+						<img id="identing" alt="认证状态" src="">
+						<script>
+  document.getElementById('identing').src ="../web/img/certify1.png";
+</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

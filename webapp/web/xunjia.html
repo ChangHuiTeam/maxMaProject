@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta
+	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	name="viewport" />
+<title>56物流，我们更懂物流</title>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../bootstrap/js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<style>
+.font1 {
+	color: #ff0000;
+	face: SimSun;
+	size: 14px;
+	margin-left: 10%;
+}
+.label1 {
+	background-color: #f4f4f4;
+	width: 240px;
+	height: 30px;
+	align: left;
+	padding-top:1%;
+	padding-left:3%;
+	margin-top:0.5%
+}
+.font3 {
+	color: #333333;
+	size: 16px;
+	margin-left: 3%;
+	margin-top: 3%;
+}
+.text {
+	width: 20%;
+	height: 12%;
+}
+.btn {
+	height: 18%;
+	width: 17%;
+	background-color: #10a0f1;
+	color: #ffffff;
+	border-radius: 8px;
+	font-size: 15px;
+	margin-left: 40%;
+}
+.div {
+	border: 1px solid gray;
+}
+.css{
+  font-weight:lighter;
+}
+</style>
+</head>
+
+<body>
+<IFRAME NAME="content_frame" width="100%" height="100" marginwidth="0" marginheight="0" src="header.html" ></IFRAME> 
+	<div style="padding: 0 25%">
+		<div>
+			<label class="label1">带<font color="red">*</font>为必须填写，请仔细填写</label>
+		</div>
+
+		<div style="height: 30%">
+			<div class="div" style="float: left; width: 50%;">
+				<label class="font3" style="padding-top:3%;padding-left:3%">发货地</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label class="css">请填写至区/县，报价更精确</label><br><br> 
+				<font class="font1">*</font><label class="css">发货地址：</label>
+				<input class="text" type="text" placeholder="选择城市"><br> <br>
+				<font class="font1">*</font><label class="css">详细地址：</label>
+				<textarea rows="2" cols="25" placeholder="请输入发货详细地址"></textarea>
+			</div>
+
+			<div class="div" style="align: right;">
+				<label class="font3">收货地</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label class="css">请填写至区/县，报价更精确</label><br><br>
+				<font class="font1">*</font><label class="css">收货地址：</label>
+				<input class="text" type="text" placeholder="选择城市"><br> <br>
+				<font class="font1">*</font><label class="css">详细地址：</label>
+				<textarea rows="2" cols="25" placeholder="请输入发货详细地址"></textarea>
+			</div>
+		</div>
+
+		<div class="div" style="align: left; height: 17%;border-top:none;">
+			<label class="font3">货物信息</label><br> <font
+				style="color: red; margin-left: 13%">*</font><label
+				style="margin-top: 0%" class="css">货品名称：</label> <input style="width: 20%"
+				type="text" placeholder="描述下您的货物"> <font color="red"
+				style="margin-left: 5%;">*</font><label style="margin-top: 0%" class="css">数量：</label>
+			<input style="width: 15%" type="text" placeholder="请输入数量"> <font
+				color="red" style="margin-left: 5%;">*</font><label
+				style="margin-top: 0%; margin-bottom: 5%" class="css">单位：</label> <select
+				style="width: 10%;color: #10A1F1;">
+				<option>吨</option>
+				<option>吨</option>
+				<option>吨</option>
+				<option>吨</option>
+			</select>
+		</div>
+
+		<div class="div" style="height: 17%;border-top:none;">
+			<label class="font3">车辆需求</label><br> <label
+				style="margin-left: 13%; margin-bottom: 3%" class="css">所需车长： </label> <select
+				style="width: 20%; color: #10A1F1;">
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+			</select> <label style="margin-left: 5%; align: right" class="css">所需车型： </label> <select
+				style="width: 20%;color: #10A1F1;text-align:center;">
+				<option>AA</option>
+				<option>BB</option>
+				<option>CC</option>
+				<option>DD</option>
+			</select> <br> <br>
+		</div>
+
+		<div class="div" style="border-top:none;">
+			<label class="font3" style="float: left; margin-top: 3%;">发货备注</label>
+			<textarea rows="4" cols="10" style="width: 40%; height: 70%; margin-top: 4%;margin-left: 15%"
+				placeholder="请输入您要备注的信息，如“三不超”、“需雨布”等"></textarea><br> <br>
+			<button class="btn" style="margin-bottom: 2%">下单询价</button>
+		</div>
+		<hr style="margin-top:5%;height:1px;background-color:gray;border:none;">
+	</div>
+</body>
+</html>

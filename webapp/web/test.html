@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>认证中心</title>
+<title>个人资料</title>
 <meta charset="UTF-8">
 <meta
 	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
@@ -13,19 +13,46 @@
 <script src="../bootstrap/js/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" -->
+<!-- 	src="../bootstrap/assets/js/jquery-1.11.1.min.js"></script> -->
 <script>
-	
 </script>
-<style type="text/css">
-/*body*/
-.body {
+
+<script>
+
+
+$(document).ready(function(){
+	
+
+	  $("#identing").click(function(){
+		//点击后隐藏
+//	    $(this).hide();
+		//点击后添加图片
+//		document.getElementById('identing').src="../web/img/certify1.png";
+		var a=3;
+		
+		if(1==a){
+			document.getElementById('identing').src="../web/img/certify1.png";
+			}
+		else if(2==a){
+			document.getElementById('identing').src="../web/img/certify2.png";
+			}
+		else if(3==a){
+			document.getElementById('identing').src="../web/img/certify3.png";
+			}		
+ 	  });
+ 	});
+</script>
+<style>
+/* body*/
+.bo {
 	padding-left: 15%;
 	padding-right: 15%;
 	padding-top: 0px;
-	height: 100%;
+	padding-end: 100px;
 }
-/*div主体*/
-.div {
+/*div*/
+.ae {
 	float: center;
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -37,8 +64,8 @@
 	border-top-color: #E5E3E9;
 	border-end-color: #E5E3E9;
 }
-
-.diva {
+/*左边导航栏*/
+.af {
 	padding-top: 0px;
 	float: left;
 	background: #f3f3f3;
@@ -57,10 +84,10 @@
 	height: auto;
 }
 
-.a {
+.ali {
 	display: block;
+	background: #fff;
 	width: 100%;
-	color: #333333;
 	height: 50px;
 	text-indent: 30px;
 	font-size: 20px;;
@@ -70,20 +97,7 @@
 	margin-top: 20px;
 }
 
-.a2 {
-	display: block;
-	width: 100%;
-	background: #fff;
-	height: 50px;
-	text-indent: 30px;
-	font-size: 20px;
-	font-family: SimSun, Times, serif;
-	text-decoration: none;
-	padding-top: 8px;
-	margin-top: 5px;
-}
-
-.a3 {
+.ali1 {
 	display: block;
 	width: 100%;
 	color: #333333;
@@ -95,218 +109,92 @@
 	padding-top: 8px;
 	margin-top: 5px;
 }
-
-.asdiv {
-	margin-left: 25%;
-	width: 60%;
-	background: #fff;
-	height: 100%;
-}
-
-.asdivd {
+/*右边信息*/
+.divas {
+	padding-top: 10px;
+	float: right;
 	background: #f3f3f3;
-	margin-left: 0px;
-	margin-top: 2px;
-	height: 45px;
-	width: 100%;
+	height: 180px;
+	width: 75%;
 }
 
-.divp {
-	padding-top: 15px;
+.divbs {
 	padding-left: 60px;
+	padding-top: 30px;
+	overflow: hidden;
+}
+
+.divcs {
+	float: left;
+	width: 80px;
+	height: 80px;
+	position: relative;
+}
+
+.divds {
+	margin-left: 40px;
+	float: left;
 }
 
 .pspan {
+	width: 100%;
+	height: 50px;
+	flood-color: #333333;
 	text-indent: 30px;
-	color: #333333;
-	font-size: 15px;
-	font-family: SimSun, Times, serif;
+	font-size: 25px;
+	font-family: Microsoft YaHei, Times, serif;
 	text-decoration: none;
+	padding-top: 8px;
+	margin-top: 5px;
 }
 
-.abdiv {
-	margin-top: 0px;
-	margin-left: 0%;
-	width: 100%;
-	height: 18%;
-}
-
-.acdiv {
-	padding-left: 10px;
-	wight: 150px;
-	padding-top: 30px;
-}
-
-.iinput {
-	float: right;
-	width: 360px;
-	color: #333333;
-	margin-right: 11%;
-}
-
-.ziti {
-	font-family: SimSun, Times, serif;
-	font-size: 17px;
-}
-
-.ddiv2 {
-	margin-top: 0px;
-	margin-left: 0%;
-	width: 100%;
-	height: 20%;
-}
-
-.ddiv2a {
-	padding-left: 10px;
-	font-family: SimSun, Times, serif;
-	font-size: 17px;
-}
-
-.imgbtn {
-	margin-left: 145px;
-	background: url(../web/img/img_back.png);
-	width: 90px;
-	height: 90px;
-	position: relative;
-	margin-top: -20px;
-}
-
-.btnn {
-	margin-top: -60px;
-	width: 69px;
-	height: 29px;
-	background: url(../web/img/img_btn.png);
-	margin-right: 37%;
-	float: right;
-	overflow: hidden;
-	bottom: auto;
-	right: auto;
-}
-
-.imgback {
-	color: #b3b3b3;
-	position: relative;
-}
-
-.ziti2 {
-	padding-left: 10px;
-	font-family: SimSun, Times, serif;
-	font-size: 17px;
-}
-
-.addiv {
-	opacity: 0;
-	cursor: pointer;
-	width: 100%;
-	height: 100%;
-	vertical-align: top;
-}
-
-.ttbtn {
-	background: #10a0f1;
-	color: #ffffff;
-	border-radius: 10px;
-	font-family: SimSun, Times, serif;
-	font-size: 17px;
-	font-color: #b3b3b3;
-	height: 36px;
-	width: 160px;
-}
-
-.ttbtnn {
-	margin-top: 0px;
-	margin-left: 0%;
-	width: 100%;
-	height: 10%;
+.divhs {
+	margin-left: 40px;
+	margin-top: 50px;
+	padding-top: 10px;
+	padding-left: 100px;
 }
 </style>
 </head>
-<body class="body">
-	<div class="headerWar">
-		<div class="">
-			<div class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					<a> 56物流，我们更懂物流 </a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="##">运营合作</a>|</li>
-					<li><a href="#" class="">关于我们</a>|</li>
-					<li><a href="#" class="">APP下载</a>|</li>
-					<li><span class="fh_tel"> <i
-							class="../web/ic-phone.png"></i> <span class="tel_number">400-890-0856</span>
-					</span></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="div">
-		<div class="diva">
+<body class="bo">
+	<IFRAME NAME="content_frame" width="100%" height="100px;"
+		src="header.html"></IFRAME>
+	<div class="ae">
+		<div class="af">
 			<div id="menu" class="">
 				<ul class="ul">
-					<li class="li"><a class="a" href="../web/ic_data.html"> <img
-							src="../web/img/ic-personal-default.png"></img> 个人资料
+					<li class="li"><a class="ali" href="/"> <img
+							src="../web/img/ic-personal-selected.png"></img> 个人资料
 					</a></li>
-					<li class="li"><a class="a2" href="/"> <img
-							src="../web/img/ic-certify-selected.png"></img> 认证中心 <span
+					<li class="li"><a class="ali1" href="../web/ic_ident.html">
+							<img src="../web/img/ic-certify-default.png"></img> 认证中心 <span
 							class="menu_arrows"></span>
 					</a></li>
-					<li class="li"><a class="a3" href="../web/ic_modify.html">
+					<li class="li"><a class="ali1" href="../web/ic_modify.html">
 							<img src="../web/img/ic-password-default.png"></img> 修改密码
 					</a></li>
-
 				</ul>
-
 			</div>
 		</div>
-		<div class="asdiv">
-			<div class="asdivd">
-				<p class="divp">
-					<span id="gs_name" class="pspan">帯<i style="color: red">*</i>为必填选项，认证通过后如无必要，请勿重复提交资料
-					</span> <strong class=""></strong>
-				</p>
+		<div>
+			<div class="divas">
+				<div class="divbs">
+					<div class="divcs">
+						<img id="img-sample" alt="" src="../web/img/img-sample.png">
 
-
-			</div>
-			<div class="abdiv">
-				<div class="acdiv">
-					<div id="gs_names" class="ziti">
-						<i style="color: red">*</i>公司全称： <input name="orderId"
-							class="iinput" placeholder="请输入公司全称" value="" type="text">
 					</div>
-				</div>
-			</div>
-			<div class="ddiv2">
-				<div id="gs_img" class="ddiv2a">
-					<i style="color: red">*</i>营业执照：
-				</div>
-				<div class="imgbtn">
-					<img id="img_0001" class="imgback" src="">
-				</div>
-				<div class="btnn">
-					<input type="file" class="addiv" />
-				</div>
-			</div>
-			<div class="ddiv2">
-				<div class="ziti2">税务登记证：</div>
-				<div class="imgbtn">
-					<img id="img_0002" alt="" class="imgback" src="">
-				</div>
-				<div class="btnn">
-					<input type="file" class="addiv" />
-				</div>
-			</div>
-			<div class="ddiv2">
-				<div class="ziti2">组织机构代码证：</div>
-				<div class="imgbtn">
-					<img id="img_0003" alt="" class="imgback" src="">
-				</div>
-				<div class="btnn">
-					<input type="file" class="addiv" />
-				</div>
-			</div>
-			<div class="ttbtnn">
-				<div style="margin-left: 145px;">
-					<button id="id_confirm" class="ttbtn">确认修改</button>
+					<div class="divds">
+						<p class="">
+							<span id="useinfo" class="pspan">武漢大康物流有限責任公司</span> <strong
+								class=""></strong>
+						</p>
+					</div>
+					<div class="divhs">
+						<img id="identing" alt="认证状态" src="javaScript:changeimg()">
+						<!-- 						<script> -->
+						<!--   document.getElementById('identing').src ="../web/img/certify1.png"; -->
+						<!-- </script> -->
+					</div>
 				</div>
 			</div>
 		</div>

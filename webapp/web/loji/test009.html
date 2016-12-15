@@ -1,0 +1,382 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>jquery.validate.min.js 用法方法示例</title>
+<script type="text/javascript" src="../js1/jquery-1.4a2.min.js"></script>
+<script src="../js1/base.js" type="text/javascript"></script>
+<script src="../jquery.validate.min.js"
+	type="text/javascript"></script>
+	<script type="text/javascript"  src="../bootstrap/js/jquery-2.1.1.min.js"></script>
+<script src="../js1/validate/validatecode.js" type="text/javascript"></script>
+<style type="text/css">
+.span9 {
+	width: 245px;
+	padding-right: 10px;
+	font-size: 14px;
+	color: #505050;
+	line-height: 33px;
+	height: 33px;
+	display: inline-block;
+	text-align: right;
+}
+
+.span9 b {
+	font-weight: normal;
+	font-size: 12px;
+	position: relative;
+	top: 3px;
+	color: #f00;
+	right: 5px;
+}
+
+.input1 {
+	height: 31px;
+	width: 230px;
+	border: 1px solid #DBDBDB;
+	padding: 0;
+}
+
+.input2 {
+	width: 340px;
+}
+
+.span10 {
+	line-height: 33px;
+	height: 33px;
+	color: #A7A7A7;
+	padding-left: 10px;
+}
+
+.div10 textarea {
+	padding: 5px;
+	width: 330px;
+	height: 80px;
+	resize: none;
+}
+
+[html] view plaincopy
+label.error {
+	display: inline-block;
+	margin-left: 5px;
+	padding: 5px 0 5px 20px;
+	color: #F00;
+	font-size: 12px;
+	line-height: 12px;
+	background: url(../images1/validate_bg.gif) 0 3px no-repeat;
+	vertical-align: middle;
+	color: Red;
+	margin-top: 7px;
+}
+
+label.success {
+	background: url(../images1/validate_bg.gif) 0 -22px no-repeat;
+	vertical-align: middle;
+	margin-top: 7px;
+}
+
+.ipt_txt {
+	width: 150px;
+	border: 1px solid #B1C3D9;
+	background-color: #FBFBFB;
+}
+
+input.error {
+	background-color: #FBE2E2;
+}
+</style>
+<script >
+	//以下为自定义方法，validate方法中没有的  
+
+	//判断两个值是否相等  
+	jQuery.validator.addMethod("notEqualTo", function(value, element, param) {
+		return value != $(param).val();
+	}, $.validator.format("两次输入不能相同!"));
+
+	//只能输入数字  
+	jQuery.validator.addMethod("isNum", function(value, element) {
+		var RegExp = /^\d+$/;
+		return RegExp.test(value);
+	}, $.validator.format("只能为数字!"));
+
+	//规则名：buga,value检测对像的值    
+	$.validator.addMethod("buga", function(value) {
+		return value == "buga";
+	}, 'Please enter "buga"!');
+
+	//规则名：chinese，value检测对像的值，element检测的对像    
+	$.validator.addMethod("chinese", function(value, element) {
+		var chinese = /^[\u4e00-\u9fa5]+$/;
+		return (chinese.test(value)) || this.optional(element);
+	}, "只能输入中文");
+
+	//规则名：byteRangeLength，value检测对像的值，element检测的对像,param参数    
+	jQuery.validator.addMethod("byteRangeLength", function(value, element,
+			param) {
+		var length = value.length;
+		for (var i = 0; i < value.length; i++) {
+			if (value.charCodeAt(i) > 127) {
+				length++;
+			}
+		}
+		return this.optional(element)
+				|| (length >= param[0] && length <= param[1]);
+	}, $.validator.format("请确保输入的值在{0}-{1}个字节之间(一个中文字算2个字节)"));
+
+	//联系电话(手机/电话皆可)验证  
+	jQuery.validator.addMethod("isPhone", function(value, element) {
+		var length = value.length;
+		var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+		var tel = /^\d{3,4}-?\d{7,9}$/;
+		return this.optional(element)
+				|| (tel.test(value) || mobile.test(value));
+
+	}, "请正确填写您的联系电话");
+
+	//邮政编码验证  
+	jQuery.validator.addMethod("isZipCode", function(value, element) {
+		var tel = /^[0-9]{6}$/;
+		return this.optional(element) || (tel.test(value));
+	}, "请正确填写您的邮政编码");
+
+	//字符验证  
+	jQuery.validator.addMethod("string", function(value, element) {
+		return this.optional(element) || /^[\u0391-\uFFE5\w]+$/.test(value);
+	}, "不允许包含特殊符号!");
+
+	//必须以特定字符串开头验证  
+	jQuery.validator.addMethod("begin", function(value, element, param) {
+		var begin = new RegExp("^" + param);
+		return this.optional(element) || (begin.test(value));
+	}, $.validator.format("必须以 {0} 开头!"));
+
+	//验证两次输入值是否不相同  
+	jQuery.validator.addMethod("notEqualTo", function(value, element, param) {
+		return value != $(param).val();
+	}, $.validator.format("两次输入不能相同!"));
+
+	//验证值不允许与特定值等于  
+	jQuery.validator.addMethod("notEqual", function(value, element, param) {
+		return value != param;
+	}, $.validator.format("输入值不允许为{0}!"));
+
+	//验证值必须大于特定值(不能等于)  
+	jQuery.validator.addMethod("gt", function(value, element, param) {
+		return value > param;
+	}, $.validator.format("输入值必须大于{0}!"));
+
+	//验证值小数位数不能超过两位  
+	jQuery.validator.addMethod("decimal", function(value, element) {
+		var decimal = /^-?\d+(\.\d{1,2})?$/;
+		return this.optional(element) || (decimal.test(value));
+	}, $.validator.format("小数位数不能超过两位!"));
+
+	//字母数字  
+	jQuery.validator.addMethod("alnum", function(value, element) {
+		return this.optional(element) || /^[a-zA-Z0-9]+$/.test(value);
+	}, "只能包括英文字母和数字");
+
+	//汉字  
+	jQuery.validator.addMethod("chcharacter", function(value, element) {
+		var tel = /^[\u4e00-\u9fa5]+$/;
+		return this.optional(element) || (tel.test(value));
+	}, "请输入汉字");
+
+	//身份证号码验证（加强验证）  
+	jQuery.validator
+			.addMethod(
+					"isIdCardNo",
+					function(value, element) {
+						return this.optional(element)
+								|| /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/
+										.test(value)
+								|| /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[A-Z])$/
+										.test(value);
+					}, "请正确输入您的身份证号码");
+
+	//手机号码验证  
+	jQuery.validator.addMethod("isMobile", function(value, element) {
+		var length = value.length;
+		var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+		return this.optional(element) || (length == 11 && mobile.test(value));
+	}, "请正确填写您的手机号码");
+
+	//电话号码验证  
+	jQuery.validator.addMethod("isTel", function(value, element) {
+		var tel = /^\d{3,4}-?\d{7,9}$/; //电话号码格式010-12345678  
+		return this.optional(element) || (tel.test(value));
+	}, "请正确填写您的电话号码");
+
+	//页面加载时调用  
+	$(function() {
+		$('#cerform').validate(
+				{
+					rules : {
+						txtUserName : {
+							required : true,
+							maxlength : 8,
+							minlength : 4
+						},
+						txtUserCardID : {
+							required : true,
+							maxlength : 18,
+							minlength : 18,
+							isIdCardNo : "#txtUserCardID"
+						},
+						txtUserPwd : {
+							required : true,
+							maxlength : 18,
+							minlength : 6,
+							notEqualTo : "#txtUserPwd"
+						},
+						txtRUserPwd : {
+							required : true,
+							equalTo : "#txtUserPwd"
+						},
+						txtAddress : {
+							required : true,
+							maxlength : 50
+						},
+						txtAreaContent : {
+							required : true,
+							maxlength : 300
+						},
+						txtUrl : {
+							required : true,
+							url : true
+						},
+						txtPhone : {
+							required : true,
+							minlength : 7,
+							maxlength : 13,
+							isTell : true,
+							isMobile : "#txtPhone"
+						},
+						txtZipCode : {
+							required : true,
+							minlength : 6,
+							maxlength : 6,
+							isNum : true
+						},
+						txtEmail : {
+							required : true,
+							email : true,
+							maxlength : 40
+						}
+					},
+					messages : {
+						txtUserName : {
+							required : "用户名不能为空！",
+							maxlength : "最长为18个字符！",
+							minlength : "最短为4个字符！",
+							remote : "该用户名已被占用！"
+						},
+						txtUserCardID : {
+							required : "身份证不能为空！",
+							maxlength : "身份证为18个字符！",
+							minlength : "身份证为18个字符！"
+						},
+						txtUserPwd : {
+							required : "密码不能为空！",
+							maxlength : "最长为18个字符！",
+							minlength : "最短为6个字符！",
+							notEqualTo : "用户名和密码不能相同！"
+						},
+						txtRUserPwd : {
+							required : "密码不能为空！",
+							equalTo : "两次输入密码不相同！"
+						},
+						txtAddress : {
+							required : "地址不能为空！",
+							maxlength : "最长50个字符！"
+						},
+						txtAreaContent : {
+							required : "不能为空！",
+							maxlength : "最长300个字符！"
+						},
+						txtUrl : {
+							required : "网址不能为空！",
+							url : "请填写正确的网址！"
+						},
+						txtPhone : {
+							required : "电话不能为空！",
+							minlength : "最少7个数字！",
+							maxlength : "最长13个数字！",
+							isTell : "电话格式不正确！"
+						},
+						txtZipCode : {
+							required : "邮编不能为空！",
+							minlength : "邮编为6个数字！",
+							maxlength : "邮编为6个数字！",
+							isNum : "请输入数字！"
+						},
+						txtEmail : {
+							required : "邮箱不能为空！",
+							email : "邮箱格式不正确！",
+							maxlength : "最长40个字符！"
+						}
+					},
+					errorPlacement : function(error, element) {
+						error.appendTo(element.parent());
+					},
+					submitHandler : function(form) {
+						form.submit();
+					},
+					errorClass : "error",
+					focusCleanup : true, //被验证的元素获得焦点时移除错误信息  
+					success : function(label) {
+						label.html("<span style=\"color:green\">填写正确！</span>")
+								.addClass("success");
+					}
+				});
+
+		//所有使用“.ipt_txt”样式的文本框加上效果，获得焦点文本框变成淡黄色  
+		$(".ipt_txt").focus(function() {
+			$(this).css("background-color", "#FFFFCC").blur(function() {
+				$(this).css("background-color", "#FBFBFB");
+			});
+		});
+	});
+</script>
+
+
+</head>
+<body>
+	<form id="cerform" runat="server">
+		<div>
+			<span class="span9"><b>*</b>用户真实姓名</span><input id="txtUserName"
+				runat="server" class="input1 ipt_txt" type="text" /> <span
+				class="span10">请输入您的真实姓名</span>
+		</div>
+		<div class="clear height20"></div>
+		<div>
+			<span class="span9"><b>*</b>身份证号码</span><input id="txtUserCardID"
+				runat="server" class="input1 input2 ipt_txt" type="text" /><span
+				class="span10">请输入您的身份证号码</span>
+		</div>
+		<div class="clear height20"></div>
+		<div>
+			<span class="span9"><b>*</b>认证说明</span>
+			<textarea id="txtAreaContent" runat="server"></textarea>
+			<span class="span10">请完善认证说明，成功认证后，将出现在您的认证说明介绍中</span>
+		</div>
+		<div class="clear height20"></div>
+		<div>
+			<span class="span9"><b>*</b>联系邮箱</span><input id="txtEmail"
+				class="input1 ipt_txt" type="text" runat="server" /><span
+				class="span10">请输入您的电子邮箱</span>
+		</div>
+		<div class="clear height20"></div>
+		<div>
+			<span class="span9"><b>*</b>手机号码</span><input id="txtPhone"
+				class="input1 ipt_txt" type="text" runat="server" /><span
+				class="span10">请输入能联系上您的手机号码</span>
+		</div>
+		<div class="clear height20"></div>
+		<div>
+			<span class="span9"></span> <input type="submit" class="button_a"
+				value="提交认证" />
+		</div>
+	</form>
+</body>
+</html>

@@ -15,31 +15,28 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script>
 
- function changeImages{
-	 document.getElementById('identing').src="certify1.png";
-	
-	 var oImg = document.getElementById('identing');
-	var f=0;
-	if(f==0){
-}
- 
-	document.getElementById('identing').src="certify1.png";	}
-else if(f==1){
-	oImg.src="../web/img/certify2.png"}
-else(f==2){
-	oImg.src="../web/img/certify3.png"}
-}
 
-</script>
-<script type="text/javascript">
-document.getElementById("identing").src="certify1.png";
-if(true){
-    document.getElementById("identing").src="certify1.png";
-     //or $("#id").attr("src","a.png")
-}else{
-    document.getElementById("identing").src="certify2.png";
-     //or $("#id").attr("src","b.png")
-}
+$(document).ready(function(){
+	
+
+	  $("#identing").click(function(){
+		//点击后隐藏
+//	    $(this).hide();
+		//点击后添加图片
+//		document.getElementById('identing').src="../web/img/certify1.png";
+		var a=3;
+		
+		if(1==a){
+			document.getElementById('identing').src="../web/img/certify1.png";
+			}
+		else if(2==a){
+			document.getElementById('identing').src="../web/img/certify2.png";
+			}
+		else if(3==a){
+			document.getElementById('identing').src="../web/img/certify3.png";
+			}		
+ 	  });
+ 	});
 </script>
 <style>
 /* body*/

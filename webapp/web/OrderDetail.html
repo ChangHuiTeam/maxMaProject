@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+<title>56物流，我们更懂物流</title>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../bootstrap/js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+</script>
+<style>
+/*  div居中 */
+	body{ text-align:center} 
+	.center{
+	height:660px; 
+	width:960px;
+	margin:0 auto; 
+	top: 25%; 
+	border: 4px solid ;
+	border-color:#EEEEEE;
+	border-top-color:#0000FF;
+　　}
+/* 导航first */
+.Dhfirst{
+	text-align:center;
+	text-decoration:none;
+	border-bottom:3px solid ; 
+	display: inline-block;
+	padding-bottom:4px;
+	size:18px;
+	font-family:"MicrosoftYaHei[Regular]"
+}
+/* 导航second */
+.Dhsecond{
+	text-align:center;
+	text-decoration:none;
+	size:18px;
+	color:#333333;
+	font-family:"MicrosoftYaHei[Regular]"
+}
+/* 订单详情文字 */
+.orderDetail{
+	size:16px;
+	font-family:"SimSum[Regular]";
+	color:#666666;
+	float:left;
+	padding-left:20px;
+	padding-top:16px;
+}
+/* 图片1 */
+.imgstyle1{
+	float:left;
+	padding-left:20px;
+	padding-top:15px;
+	height:35px;
+}
+/* 图片2 */
+.imgstyle2{
+	float:right;
+	padding-right:20px;
+	padding-top:10px;
+	height:40px;
+}
+/* 三分样式 */
+.styleinfo1{
+	float:left;
+	width:33.3333%;
+	height:454px;
+	border: 1px solid ;
+	border-color:#EEEEEE;
+	border-top-color:#E9E9E9;
+}
+/* 发货信息样式 */
+.shippingstyle{
+	size:16px;
+	font-family:"SimSum[Regular]";
+	color:#666666;
+	background-color:#EEEEEE;
+	height:50px;
+	padding-top:16px;
+}
+
+/* 发货地文字 */
+.shippingadd1{
+	height:100px;
+	width:30%;
+	padding-left:22px;
+	padding-top:20px;
+}
+/* 收货地文字 */
+.shippingadd2{
+	height:80px;
+	width:30%;
+	padding-left:22px;
+	padding-top:20px;
+}
+/* 发货地地址 */
+.add1{
+	float:left;
+	padding-top:20px;
+	padding-left:20px;
+	font-weight:lighter;
+	display:block;
+}
+/* 收货地地址 */
+.add2{
+	float:left;
+	padding-top:5px;
+	padding-left:20px;
+	width:200px;
+	font-weight:lighter;
+	text-align:left
+}
+/* 货品文字 */
+.goods{
+	height:10px;
+	width:30%;
+	padding-left:0px;
+	padding-top:13px;
+}
+/* 货品 */
+.goodsName{
+	height:50px;
+	width:70%;
+	padding-left:20px;
+	padding-top:13px;
+	float:left;
+	padding-left:20px;
+	width:200px;
+	font-weight:lighter;
+	text-align:left;
+}
+/* 数量文字 */
+.goodNum1{
+	height:50px;
+	width:30%;
+	padding-left:0px;
+	padding-top:13px;
+}
+/* 货物数量 */
+.goodNum2{
+	height:50px;
+	width:70%;
+	padding-left:20px;
+	padding-top:13px;
+}
+	
+</style>
+</head>
+<body>
+<IFRAME NAME="content_frame" width="100%" height="100" src="header.html" ></IFRAME>
+<div>
+<br><br>
+</div>
+<div class="center">
+	<div>
+        <ul class="nav nav-pills nav-justified" style="text-align:center;height:70px;">
+            <li><a href="#" class="Dhfirst" >询价中</a></li>
+            <li><a href="#" class="Dhsecond">已报价</a></li>
+            <li><a href="#" class="Dhsecond">已下单</a></li>
+            <li><a href="#" class="Dhsecond">已派送</a></li>
+            <li><a href="#" class="Dhsecond">已出库</a></li>
+            <li><a href="#" class="Dhsecond">已卸载</a></li>
+            <li><a href="#" class="Dhsecond">签收单</a></li>
+            <li><a href="#" class="Dhsecond">完成</a></li>
+            <li><a href="#" class="Dhsecond">已取消</a></li>   
+        </ul>
+</div>
+<div style="width:100%;background-color:#EEEEEE;height:50px;">
+	<div class="orderDetail">订单详情</div>
+	<div><img src="../image/ic-next.png" class="imgstyle1"/></div>
+	<div class="orderDetail">订单号 : </div>
+	<div id="orderNum" class="orderDetail" style="padding-left:10px;">78458375877348697</div>
+	<div class="orderDetail" style="padding-left:40px;">订单日期 ：</div>
+	<div id="orderNum" class="orderDetail" style="padding-left:10px;">2016/12/12 12:22:22</div>
+	<div><img src="../image/ic-orderdelete.png" class="imgstyle2"/></div>
+</div>
+<div>
+<div class="styleinfo1"  >
+	<div class="shippingstyle">发货信息</div>
+	<div >
+		<div class="shippingadd1" style="float:left" >发货地  ：</div>
+		<div style="height:100px;">
+			<label class="add1">陕西</label>
+			<label class="add1">陕西</label>
+			<label class="add1">陕西</label>
+			<label class="add2" style="text-align:left"></label>
+		</div>
+	</div>
+	
+	<div >
+		<div class="shippingadd2" style="float:left" >收货地  ：</div>
+		<div style="height:80px;">
+			<label class="add1">陕西</label>
+			<label class="add1">陕西</label>
+			<label class="add1">陕西</label>
+			<label class="add2" style="text-align:left"></label>
+		</div>
+	</div>
+	<div>
+		<div class="goods" style="float:left" >货品 ：</div>
+		<div style="height:10px;">
+		<label class="goodsName" style="text-align:left">塑料袋子。29斤山东矿机按个</label>
+		</div>
+	</div>
+	<div>
+		<div class="goods" style="float:left" >数量 ：</div>
+		<div style="height:10px;">
+		<label class="goodsName" style="text-align:left">20.00吨</label>
+		</div>
+	</div>
+	<div>
+		<div class="goods" style="float:left" >货品 ：</div>
+		<div style="height:10px;">
+		<label class="goodsName" style="text-align:left">塑料袋子。29斤山东矿机按个</label>
+		</div>
+	</div>
+
+</div>
+
+<div class="styleinfo1">
+<div class="shippingstyle">费用信息</div>
+</div>
+<div class="styleinfo1">
+<div class="shippingstyle">联系我们</div>
+</div>
+</div>
+
+</div>
+
+</body>

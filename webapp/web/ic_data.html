@@ -15,31 +15,28 @@
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script>
 
- function changeImages{
-	 document.getElementById('identing').src="certify1.png";
-	
-	 var oImg = document.getElementById('identing');
-	var f=0;
-	if(f==0){
-}
- 
-	document.getElementById('identing').src="certify1.png";	}
-else if(f==1){
-	oImg.src="../web/img/certify2.png"}
-else(f==2){
-	oImg.src="../web/img/certify3.png"}
-}
 
-</script>
-<script type="text/javascript">
-document.getElementById("identing").src="certify1.png";
-if(true){
-    document.getElementById("identing").src="certify1.png";
-     //or $("#id").attr("src","a.png")
-}else{
-    document.getElementById("identing").src="certify2.png";
-     //or $("#id").attr("src","b.png")
-}
+$(document).ready(function(){
+	
+
+	  $("#identing").click(function(){
+		//点击后隐藏
+//	    $(this).hide();
+		//点击后添加图片
+//		document.getElementById('identing').src="../web/images/certify1.png";
+		var a=3;
+		
+		if(1==a){
+			document.getElementById('identing').src="../web/images/certify1.png";
+			}
+		else if(2==a){
+			document.getElementById('identing').src="../web/images/certify2.png";
+			}
+		else if(3==a){
+			document.getElementById('identing').src="../web/images/certify3.png";
+			}		
+ 	  });
+ 	});
 </script>
 <style>
 /* body*/
@@ -162,14 +159,14 @@ if(true){
 			<div id="menu" class="">
 				<ul class="ul">
 					<li class="li"><a class="ali" href="/"> <img
-							src="../web/img/ic-personal-selected.png"></img> 个人资料
+							src="../web/images/ic-personal-selected.png"></img> 个人资料
 					</a></li>
 					<li class="li"><a class="ali1" href="../web/ic_ident.html">
-							<img src="../web/img/ic-certify-default.png"></img> 认证中心 <span
+							<img src="../web/images/ic-certify-default.png"></img> 认证中心 <span
 							class="menu_arrows"></span>
 					</a></li>
 					<li class="li"><a class="ali1" href="../web/ic_modify.html">
-							<img src="../web/img/ic-password-default.png"></img> 修改密码
+							<img src="../web/images/ic-password-default.png"></img> 修改密码
 					</a></li>
 				</ul>
 			</div>
@@ -178,7 +175,7 @@ if(true){
 			<div class="divas">
 				<div class="divbs">
 					<div class="divcs">
-						<img id="img-sample" alt="" src="../web/img/img-sample.png">
+						<img id="img-sample" alt="" src="../web/images/img-sample.png">
 
 					</div>
 					<div class="divds">
@@ -188,10 +185,7 @@ if(true){
 						</p>
 					</div>
 					<div class="divhs">
-						<img id="identing" alt="认证状态" src="">
-						<script>
-  document.getElementById('identing').src ="../web/img/certify1.png";
-</script>
+						<img id="identing" alt="认证状态" src="javaScript:changeimg()">						
 					</div>
 				</div>
 			</div>

@@ -11,32 +11,59 @@
 <script src="../bootstrap/js/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../bootstrap/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="../bootstrap/js/distpicker.data.js"></script>
+<script src="../bootstrap/js/distpicker.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+#allmap {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	font-family: "微软雅黑";
+}
+</style>
+<script type="text/javascript"
+	src="http://api.map.baidu.com/api?v=2.0&ak=9jj86cCF5oGfalibG43isgY2GfGeUazE"></script>
 <style>
 .font1 {
 	color: #ff0000;
 	face: SimSun;
 	size: 14px;
-	margin-left: 10%;
+	padding-left: 10%;
 }
+
+.font2 {
+	color: #ff0000;
+	face: SimSun;
+	size: 14px;
+	padding-left: 5%;
+}
+
 .label1 {
 	background-color: #f4f4f4;
 	width: 240px;
 	height: 30px;
 	align: left;
-	padding-top:1%;
-	padding-left:3%;
-	margin-top:0.5%
+	padding-top: 1%;
+	padding-left: 3%;
+	margin-top: 0.5%
 }
+
 .font3 {
 	color: #333333;
 	size: 16px;
 	margin-left: 3%;
 	margin-top: 3%;
 }
+
 .text {
 	width: 20%;
 	height: 12%;
 }
+
 .btn {
 	height: 18%;
 	width: 17%;
@@ -46,52 +73,105 @@
 	font-size: 15px;
 	margin-left: 40%;
 }
+
 .div {
 	border: 1px solid gray;
 }
-.css{
-  font-weight:lighter;
+
+.css {
+	font-weight: lighter;
 }
 </style>
 </head>
 
 <body>
-<IFRAME NAME="content_frame" width="100%" height="100" marginwidth="0" marginheight="0" src="header.html" ></IFRAME> 
+	<IFRAME NAME="content_frame" width="100%" height="100"
+		src="header.html"></IFRAME>
 	<div style="padding: 0 25%">
 		<div>
-			<label class="label1">带<font color="red">*</font>为必须填写，请仔细填写</label>
+			<label class="label1">带<font color="red">*</font>为必须填写，请仔细填写
+			</label>
 		</div>
 
 		<div style="height: 30%">
-			<div class="div" style="float: left; width: 50%;">
-				<label class="font3" style="padding-top:3%;padding-left:3%">发货地</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<label class="css">请填写至区/县，报价更精确</label><br><br> 
-				<font class="font1">*</font><label class="css">发货地址：</label>
-				<input class="text" type="text" placeholder="选择城市"><br> <br>
-				<font class="font1">*</font><label class="css">详细地址：</label>
-				<textarea rows="2" cols="25" placeholder="请输入发货详细地址"></textarea>
+			<div class="div"
+				style="float: left; width: 48%; border-bottom: none;">
+				<label class="font3" style="padding-top: 3%; padding-left: 3%">发货地</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label class="css">请填写至区/县，报价更精确</label><br> <br>
+				<div style="float: left; width: 30%">
+					<font class="font1" style="margin-left: 10%">*</font><label
+						class="css">发货地址：</label>
+				</div>
+				<div class="container" style="align: right">
+					<form class="form-inline">
+						<div data-toggle="distpicker">
+							<div class="form-group">
+								<label class="sr-only" for="province1">Province</label> <select
+									id="province1" data-province="---省---" style="width: 50pt"></select>
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="city1">City</label> <select
+									id="city1" data-city="---市---" style="width: 50pt"></select>
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="district1">District</label> <select
+									id="district1" data-district="---区---" style="width: 50pt"></select>
+							</div>
+						</div>
+					</form>
+
+				</div>
+				<br> <br> <font class="font1"
+					style="padding-left: 6%; vertical-align: top">*</font><label
+					class="css" style="vertical-align: top">详细地址：</label>
+				<textarea rows="2" cols="25" style="resize: none"
+					placeholder="请输入发货详细地址"></textarea>
 			</div>
 
-			<div class="div" style="align: right;">
-				<label class="font3">收货地</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<label class="css">请填写至区/县，报价更精确</label><br><br>
-				<font class="font1">*</font><label class="css">收货地址：</label>
-				<input class="text" type="text" placeholder="选择城市"><br> <br>
-				<font class="font1">*</font><label class="css">详细地址：</label>
-				<textarea rows="2" cols="25" placeholder="请输入发货详细地址"></textarea>
+			<div class="div" style="align: right">
+				<label class="font3">收货地</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label
+					class="css">请填写至区/县，报价更精确</label><br> <br>
+				<div style="float: left; width: 13.5%">
+					<font class="font2" style="margin-left: 10%">*</font><label
+						class="css">收货地址：</label>
+				</div>
+				<div class="container" style="align: right">
+					<form class="form-inline">
+						<div data-toggle="distpicker">
+							<div class="form-group">
+								<label class="sr-only" for="province2">Province</label> <select
+									id="province2" data-province="---省---" style="width: 50pt"></select>
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="city2">City</label> <select
+									id="city2" data-city="---市---" style="width: 50pt"></select>
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="district2">District</label> <select
+									id="district2" data-district="---区---" style="width: 50pt"></select>
+							</div>
+						</div>
+					</form>
+					<br> <br> <font class="font2"
+						style="padding-left: 1%; vertical-align: top">*</font><label
+						class="css" style="vertical-align: top">详细地址：</label>
+					<textarea rows="2" cols="25" style="resize: none"
+						placeholder="请输入发货详细地址"></textarea>
+				</div>
 			</div>
 		</div>
 
-		<div class="div" style="align: left; height: 17%;border-top:none;">
+		<div class="div" style="align: left; height: 17%; border-top: none;">
 			<label class="font3">货物信息</label><br> <font
 				style="color: red; margin-left: 13%">*</font><label
-				style="margin-top: 0%" class="css">货品名称：</label> <input style="width: 20%"
-				type="text" placeholder="描述下您的货物"> <font color="red"
-				style="margin-left: 5%;">*</font><label style="margin-top: 0%" class="css">数量：</label>
-			<input style="width: 15%" type="text" placeholder="请输入数量"> <font
+				style="margin-top: 0%" class="css">货品名称：</label> <input
+				style="width: 20%" type="text" placeholder="描述下您的货物"> <font
+				color="red" style="margin-left: 5%;">*</font><label
+				style="margin-top: 0%" class="css">数量：</label> <input
+				style="width: 15%" type="text" placeholder="请输入数量"> <font
 				color="red" style="margin-left: 5%;">*</font><label
 				style="margin-top: 0%; margin-bottom: 5%" class="css">单位：</label> <select
-				style="width: 10%;color: #10A1F1;">
+				style="width: 10%;">
 				<option>吨</option>
 				<option>吨</option>
 				<option>吨</option>
@@ -99,16 +179,16 @@
 			</select>
 		</div>
 
-		<div class="div" style="height: 17%;border-top:none;">
+		<div class="div" style="height: 17%; border-top: none;">
 			<label class="font3">车辆需求</label><br> <label
-				style="margin-left: 13%; margin-bottom: 3%" class="css">所需车长： </label> <select
-				style="width: 20%; color: #10A1F1;">
+				style="margin-left: 13%; margin-bottom: 3%" class="css">所需车长：
+			</label> <select style="width: 20%;">
 				<option>5</option>
 				<option>6</option>
 				<option>7</option>
 				<option>8</option>
-			</select> <label style="margin-left: 5%; align: right" class="css">所需车型： </label> <select
-				style="width: 20%;color: #10A1F1;text-align:center;">
+			</select> <label style="margin-left: 5%; align: right" class="css">所需车型：
+			</label> <select style="width: 20%; text-align: center;">
 				<option>AA</option>
 				<option>BB</option>
 				<option>CC</option>
@@ -116,13 +196,37 @@
 			</select> <br> <br>
 		</div>
 
-		<div class="div" style="border-top:none;">
+		<div class="div" style="border-top: none;">
 			<label class="font3" style="float: left; margin-top: 3%;">发货备注</label>
-			<textarea rows="4" cols="10" style="width: 40%; height: 70%; margin-top: 4%;margin-left: 15%"
-				placeholder="请输入您要备注的信息，如“三不超”、“需雨布”等"></textarea><br> <br>
-			<button class="btn" style="margin-bottom: 2%">下单询价</button>
+			<textarea rows="4" cols="10"
+				style="width: 40%; height: 70%; resize: none; margin-top: 4%; margin-left: 15%"
+				placeholder="请输入您要备注的信息，如“三不超”、“需雨布”等"></textarea>
+			<br> <br>
+			<div><button class="btn" type="button" style="margin-bottom: 2%"
+				onclick="button_onclick()">下单询价</button>
 		</div>
-		<hr style="margin-top:5%;height:1px;background-color:gray;border:none;">
+		<hr
+			style="margin-top: 5%; height: 1px; background-color: gray; border: none;">
 	</div>
+	<div id="allmap"></div>
 </body>
+<script type="text/javascript">
+	function button_onclick() {
+		// 百度地图API功能
+		var map = new BMap.Map("allmap");
+		map.centerAndZoom("重庆", 12); //初始化地图,设置城市和地图级别。
+		/* var pointA = new BMap.Point(106.486654, 29.490295); // 创建点坐标A--大渡口区 */
+
+		var pointA = new BMap.Point(118.177780, 24.492661); // 创建点坐标A--本地
+		var pointB = new BMap.Point(106.581515, 29.615467); // 创建点坐标B--江北区
+		alert('从本地到江北区的距离是：' + (map.getDistance(pointA, pointB)).toFixed(2)
+				+ ' 米。'); //获取两点距离,保留小数点后两位
+		var polyline = new BMap.Polyline([ pointA, pointB ], {
+			strokeColor : "blue",
+			strokeWeight : 6,
+			strokeOpacity : 0.5
+		}); //定义折线
+		map.addOverlay(polyline); //添加折线到地图上
+	}
+</script>
 </html>

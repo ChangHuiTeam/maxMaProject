@@ -12,87 +12,94 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <style>
-.first{
-background:#4D4D4D;
-height:36px;
+.first {
+	background: #4D4D4D;
+	height: 36px;
 }
-.bigView{
-padding:5px 25%;
-}
-.topView{
 
-float:right;
+.bigView {
+	padding: 5px 25%;
 }
-.topA{
-padding:0px 5px;
+
+.topView {
+	float: right;
 }
-.view{
-padding:0 15%;
-height:78px;
+
+.topA {
+	padding: 0px 5px;
 }
-.header2
-{
-float:left;
-padding:10px 15px 10px 0px;
+
+.view {
+	padding: 0 15%;
+	height: 78px;
 }
-.login{
-background-color:transparent;
-height:60px;
-border:0;
-color:#10A1F1;
+
+.header2 {
+	float: left;
+	padding: 10px 15px 10px 0px;
 }
-#navigate{
-padding-top:10px;
+
+.login {
+	background-color: transparent;
+	height: 60px;
+	border: 0;
+	color: #10A1F1;
+	outline: none;
 }
-#label56{
-font-family:SimSun;
-color:white;
-font-weight:regular;
+
+#navigate {
+	padding-top: 10px;
+}
+
+#label56 {
+	font-family: SimSun;
+	color: white;
+	font-weight: regular;
 }
 </style>
 <script type="text/javascript">
-function didLogin() {
-	
-	    parent.loginModel();
-	
-}
-function didRegister() {
-	
-    parent.registerModel();
-
-}
-
+	function didLogin() {
+		parent.loginClick();
+	}
+	function didRegister() {
+		parent.registerClick();
+	}
 </script>
 </head>
 <body>
-	<div class="first" >
-	<div class="bigView">
-	<label id="label56">56物流，我们更懂物流</label>
-	<div class="topView" >
-	<a class="topA" href="#" style="color: white">运营合作</a> 
-	<a class="topA" href="#" style="color: white">关于我们</a>
-	<a class="topA" href="#" style="color: white">APP下载</a>	
-	<a class="topA" href="#" style="color: white">400-879-7956</a>
+	<div class="first">
+		<div class="bigView">
+			<label id="label56">56物流，我们更懂物流</label>
+			<div class="topView">
+				<a class="topA" href="#" style="color: white">运营合作</a> <a
+					class="topA" href="#" style="color: white">关于我们</a> <a class="topA"
+					href="#" style="color: white">APP下载</a> <a class="topA" href="#"
+					style="color: white">400-879-7956</a>
+			</div>
+		</div>
 	</div>
-	</div>
-	</div>
-	<div class="view" >	
-	<div class="header2">
-	<img src="../images/img-56logo.png" style="height:40px" >
-	</div>			
+	<div class="view">
 		<div class="header2">
-			<ul id="navigate" style="width:340px" class="nav nav-pills">
+			<img src="../images/img-56logo.png" style="height: 40px">
+		</div>
+		<div class="header2">
+			<ul id="navigate" style="width: 340px" class="nav nav-pills">
 				<li class="active"><a href="#">首 页</a></li>
 				<li><a href="#">下单询价</a></li>
 				<li><a href="#">我的订单</a></li>
 				<li><a href="#">个人中心</a></li>
-			</ul>	
+			</ul>
 		</div>
 		<div class="header2">
-		<button id="register" onclick="didRegister();" class="login"  data-toggle="modal" data-target="#myModal"><img src="../images/ic-register.png" > 注册 </button>	
-		<button id="login" onclick="didLogin();" class="login"><img src="../images/ic-login.png" > 登录</button>	
-	    </div>	 
-</div>
+			<button id="register" onclick="didRegister();" class="login"
+				data-toggle="modal" data-target="#myModal">
+				<img src="../images/ic-register.png"> 注册
+			</button>
+			<button id="login" onclick="didLogin();" class="login">
+				<img src="../images/ic-login.png"> 登录
+			</button>
+		</div>
+	</div>
 
 </body>
 </html>

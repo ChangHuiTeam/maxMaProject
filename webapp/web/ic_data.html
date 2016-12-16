@@ -17,13 +17,7 @@
 
 
 $(document).ready(function(){
-	
-
 	  $("#identing").click(function(){
-		//点击后隐藏
-//	    $(this).hide();
-		//点击后添加图片
-//		document.getElementById('identing').src="../web/images/certify1.png";
 		var a=3;
 		
 		if(1==a){
@@ -152,13 +146,13 @@ $(document).ready(function(){
 </style>
 </head>
 <body class="bo">
-	<IFRAME NAME="content_frame" width="100%" height="100px;"
+	<IFRAME NAME="content_frame" width="100%" height="150px;"
 		src="header.html"></IFRAME>
 	<div class="ae">
 		<div class="af">
 			<div id="menu" class="">
 				<ul class="ul">
-					<li class="li"><a class="ali" href="/"> <img
+					<li class="li"><a class="ali" href="/"target="_self"> <img
 							src="../web/images/ic-personal-selected.png"></img> 个人资料
 					</a></li>
 					<li class="li"><a class="ali1" href="../web/ic_ident.html">
@@ -176,7 +170,6 @@ $(document).ready(function(){
 				<div class="divbs">
 					<div class="divcs">
 						<img id="img-sample" alt="" src="../web/images/img-sample.png">
-
 					</div>
 					<div class="divds">
 						<p class="">
@@ -185,7 +178,10 @@ $(document).ready(function(){
 						</p>
 					</div>
 					<div class="divhs">
-						<img id="identing" alt="认证状态" src="javaScript:changeimg()">						
+					<input type="image"id="identing"value="0"  src="../web/images/certify1.png" >
+					<input type="image"id="identing"value="1"  src="../web/images/certify2.png" >
+					<input type="image"id="identing"value="2"  src="../web/images/certify3.png" >
+<!-- 						<img id="identing" alt="认证状态" src="javaScript:changeimg()">						 -->
 					</div>
 				</div>
 			</div>

@@ -11,6 +11,11 @@
 <script src="../bootstrap/js/jquery-2.1.1.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function changeText() {
+	parent.changeTextToSubmit();
+}
+</script>
 </head>
 <body>
 <div class="input-group">
@@ -32,12 +37,10 @@
 			<input id="txtCode" type="text" class="form-control"  placeholder="请输入验证码" style="width:120px">
 			<img src="../images/test.png" style="width:100px;margin-left:60px" >
 		</div>
-		
 		<div style="padding:10px 60px ">
 		<input id="chkCondition" type="checkbox"> 记住我的登录状态
-		<a href="forgetPassword.html" style="padding-left:60px;font-size:16px">忘记密码？</a>
+		<a href="forgetPassword.html" onclick="changeText();" style="padding-left:60px;font-size:16px">忘记密码？</a>
 		</div>
 </div>
-
 </body>
 </html>

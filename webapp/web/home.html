@@ -15,145 +15,142 @@
 .centerView {
 	padding: 60px 25% 0px 25%;
 }
-
 .leftFloat {
 	float: left;
 	text-align: center;
-	padding-top:56px;
+	padding-top: 56px;
 }
-
 .imgPadding {
 	padding: 0 7% 37px 7%;
 	width: 25%;
 	float: left;
 }
-
 .textPadding {
 	width: 25%;
 	float: left;
 	text-align: center;
 	padding-bottom: 80px;
 }
-
 .bigLabel {
 	font-size: 16px;
 	padding-bottom: 29px;
 }
-
 .smallLabel {
 	font-size: 10px;
 	padding: 0 5%;
 	text-align: center;
 	font-family: "SimSun"
 }
-.lab{
-width:50%;
-float:left;
-text-align: center;
+.lab {
+	width: 50%;
+	float: left;
+	text-align: center;
 }
-.bigImg{
-width:50%;
+.bigImg {
+	width: 50%;
 }
-.loginBtn{
-font-size:20px;
-font-weight:700;
-font-family:MicrosoftYaHei;
-color:white;
-width:280px;
-height:40px;
-background:#10A1F1;
+.loginBtn {
+	font-size: 20px;
+	font-weight: 700;
+	font-family: MicrosoftYaHei;
+	color: white;
+	width: 280px;
+	height: 40px;
+	background: #10A1F1;
 }
-.toggle{
-width:160px;
-background-color:transparent;
-font-size:20px;
-font-weight:700;
-font-family:MicrosoftYaHei;
-border:0;
-outline:none;
+.toggle {
+	width: 160px;
+	background-color: transparent;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: MicrosoftYaHei;
+	border: 0;
+	outline: none;
 }
-.bottonLine{
-height:3px;
-width:100px;
-margin:0 30px 30px 30px;
+.bottonLine {
+	height: 3px;
+	width: 100px;
+	margin: 0 30px 30px 30px;
 }
 </style>
 </head>
-
-<body >
-<IFRAME id="header" NAME="content_frame"frameborder="no" height="100px"  scrolling="no" width="100%" height="120px" src="header.html" ></IFRAME>
-
-<!-- 模态框（Modal） -->
-<div class="modal fade"  id="myModal" tabindex="-1" role="dialog"  aria-hidden="true">
-	<div class="modal-dialog" style="width:440px;" >
-		<div class="modal-content">
-			<div class="modal-header" style="height:60px" >
-				<button type="button" class="close" data-dismiss="modal" 
-						aria-hidden="true">×
-				</button>
-				<div style="width:160px;float:left; padding:0 20px;">
-				<button id="toggleLogin" onclick="loginClick();" class="toggle" >登录</button>
-				<label id="loginLine" class="bottonLine"></label>
+<body>
+	<IFRAME id="header" NAME="content_frame" frameborder="no"
+		height="100px" scrolling="no" width="100%" height="120px"
+		src="header.html"></IFRAME>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-hidden="true">
+		<div class="modal-dialog" style="width: 440px;">
+			<div class="modal-content">
+				<div class="modal-header" style="height: 60px">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<div style="width: 160px; float: left; padding: 0 20px;">
+						<button id="toggleLogin" onclick="loginClick();" class="toggle">登录</button>
+						<label id="loginLine" class="bottonLine"></label>
+					</div>
+					<div style="width: 160px; float: left; padding: 0 20px;">
+						<button id="toggleRegister" onclick="registerClick();"
+							class="toggle">注册</button>
+						<label id="registerLine" class="bottonLine"></label>
+					</div>
 				</div>
-				<div style="width:160px;float:left;padding:0 20px;">
-				<button id="toggleRegister" onclick="registerClick();" class="toggle">注册</button>
-		    	<label id="registerLine" class="bottonLine"></label>
-		    	</div>
+				<div class="modal-body" style="height: 220px">
+					<IFRAME id="modelFrame" NAME="content_frame" width="100%"
+						height="100%" frameborder="no"></IFRAME>
+				</div>
+				<div class="modal-footer">
+					<div style="padding-right: 70px">
+						<input type="button" id="btnLogOrReg" class="loginBtn">
+					</div>
+				</div>
 			</div>
-			<div class="modal-body" style="height:220px" >
-				<IFRAME id="modelFrame"  NAME="content_frame" width="100%" height="100%"  frameborder="no"   ></IFRAME>
-			</div>
-			<div class="modal-footer">
-			<div style="padding-right:70px" >
-			
-			<input type="button" id="btnLogOrReg"  class="loginBtn">
-			</div>
-				
-			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog --> 
-</div><!-- /.modal -->
-		<div class="row clearfix">
-			<div class="col-md-12 column">
-				<div class="carousel slide" id="carousel-185472">
-					<ol class="carousel-indicators">
-						<li data-slide-to="0" data-target="#carousel-185472"></li>
-						<li data-slide-to="1" data-target="#carousel-185472"
-							class="active"></li>
-						<li data-slide-to="2" data-target="#carousel-185472"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="item">
-							<img   src="../images/lunbo3.jpg" />
-							<div class="carousel-caption">
-								<h4>First Thumbnail label</h4>
-								<p>aaaaaaaaaaaa</p>
-							</div>
-						</div>
-						<div class="item active">
-							<img  src="../images/lunbo2.jpg" />
-							<div class="carousel-caption">
-								<h4>Second Thumbnail label</h4>
-								<p>bbbbbbbbbbbbb</p>
-							</div>
-						</div>
-						<div class="item">
-							<img src="../images/lunbo1.jpg" />
-							<div class="carousel-caption">
-								<h4>Third Thumbnail label</h4>
-								<p>ccccccccccccc</p>
-							</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="carousel slide" id="carousel-185472">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-185472"></li>
+					<li data-slide-to="1" data-target="#carousel-185472" class="active"></li>
+					<li data-slide-to="2" data-target="#carousel-185472"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item">
+						<img src="../images/lunbo3.jpg" />
+						<div class="carousel-caption">
+							<h4>First Thumbnail label</h4>
+							<p>aaaaaaaaaaaa</p>
 						</div>
 					</div>
-					<a class="left carousel-control" href="#carousel-185472"
-						data-slide="prev"><span
-						class="glyphicon glyphicon-chevron-left"></span></a> <a
-						class="right carousel-control" href="#carousel-185472"
-						data-slide="next"><span
-						class="glyphicon glyphicon-chevron-right"></span></a>
+					<div class="item active">
+						<img src="../images/lunbo2.jpg" />
+						<div class="carousel-caption">
+							<h4>Second Thumbnail label</h4>
+							<p>bbbbbbbbbbbbb</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="../images/lunbo1.jpg" />
+						<div class="carousel-caption">
+							<h4>Third Thumbnail label</h4>
+							<p>ccccccccccccc</p>
+						</div>
+					</div>
 				</div>
+				<a class="left carousel-control" href="#carousel-185472"
+					data-slide="prev"><span
+					class="glyphicon glyphicon-chevron-left"></span></a> <a
+					class="right carousel-control" href="#carousel-185472"
+					data-slide="next"><span
+					class="glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 		</div>
+	</div>
 	<div class="leftFloat">
 		<div>
 			<label>供应商端下载</label><br> <img src="../images/code-supplyer.png" />
@@ -162,24 +159,19 @@ margin:0 30px 30px 30px;
 		<div>
 			<label>客户端下载</label><br> <img src="../images/code-customer.png" />
 		</div>
-
 	</div>
 	<div class="centerView">
 		<div class="imgPadding">
 			<img src="../images/1.png" />
-
 		</div>
 		<div class="imgPadding">
-			<img src="../images/1.png" />
-
+			<img src="../images/2.png" />
 		</div>
 		<div class="imgPadding">
-			<img src="../images/1.png" />
-
+			<img src="../images/3.png" />
 		</div>
 		<div class="imgPadding">
-			<img src="../images/1.png" />
-
+			<img src="../images/4.png" />
 		</div>
 		<div class="textPadding">
 			<label class="bigLabel">成本更低</label><br>
@@ -197,48 +189,53 @@ margin:0 30px 30px 30px;
 			<label class="bigLabel">自动派车</label><br>
 			<p class="smallLabel">后台自动匹配供应商，下单即可自动派车</p>
 		</div>
-
 		<div class="lab">
 			<label>供应商</label>
 		</div>
 		<div class="lab">
 			<label>线路</label>
 		</div>
-			<img class="bigImg" src="../images/img-supplyer.png" />
-			<img  class="bigImg" src="../images/img-route.png" />
+		<div style="height:100px;">
+			<img class="bigImg" align="left" src="../images/img-supplyer.png" />
+			<img class="bigImg" align="right" src="../images/img-route.png" />
+		</div>
 	</div>
-
-<IFRAME NAME="content_frame" width="100%" height="200px" src="footer.html" ></IFRAME> 
-<script>
-
-
-
-	function loginClick(){
-		$("#toggleLogin").css("color","#10A1F1");
-		$("#toggleRegister").css("color","gray");			
-		$("#loginLine").css("background","#10A1F1");
-		$("#registerLine").css("background","transparent");
-		document.getElementById('modelFrame').src="login.html";
-		document.getElementById('btnLogOrReg').value="登录";
-		 $(function () { $('#myModal').modal({					
-				keyboard: true
-			})});
-	}
-	
-	function registerClick(){
-		$("#toggleRegister").css("color","#10A1F1");
-		$("#toggleLogin").css("color","gray");			
-		$("#registerLine").css("background","#10A1F1");
-		$("#loginLine").css("background","transparent");
-		document.getElementById('modelFrame').src="register.html";
-		document.getElementById('btnLogOrReg').value="注册";
-		 $(function () { $('#myModal').modal({					
-				keyboard: true
-			})});
-	}
-
-</script>
-
+	<IFRAME NAME="content_frame" width="100%" height="200px"
+		src="footer.html"></IFRAME>
+	<script>
+		function loginClick() {
+			$("#toggleLogin").css("color", "#10A1F1");
+			$("#toggleRegister").css("color", "gray");
+			$("#loginLine").css("background", "#10A1F1");
+			$("#registerLine").css("background", "transparent");
+			document.getElementById('modelFrame').src = "login.html";
+			document.getElementById('btnLogOrReg').value = "登录";
+			$(function() {
+				$('#myModal').modal({
+					keyboard : true
+				})
+			});
+		}
+		function registerClick() {
+			$("#toggleRegister").css("color", "#10A1F1");
+			$("#toggleLogin").css("color", "gray");
+			$("#registerLine").css("background", "#10A1F1");
+			$("#loginLine").css("background", "transparent");
+			document.getElementById('modelFrame').src = "register.html";
+			document.getElementById('btnLogOrReg').value = "注册";
+			$(function() {
+				$('#myModal').modal({
+					keyboard : true
+				})
+			});
+		}
+		function changeTextToSubmit() {
+			document.getElementById('btnLogOrReg').value = "提交";
+		}
+		function changeTextToLogin() {
+			document.getElementById('btnLogOrReg').value = "登录";
+		}
+	</script>
 </body>
 </html>
 

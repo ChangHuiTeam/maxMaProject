@@ -203,25 +203,24 @@ background-color:transparent; /* 背景色透明 */
 				<div style="float:left;padding-left:10px;">
 					<label style="size:16px;font-family:MicrosoftYaHei;color:#333333;">取消订单原因</label>
 				</div>
-				<div style="float:left;padding-left:200px;padding-top:0px;">
-					<img src="../images/ic-delete.png"    data-dismiss="modal"  />		
-				</div> 
+<!-- 				<div style="float:left;padding-left:200px;padding-top:0px;">
+					<img src="../images/ic-delete.png" class="btn btn-default"   data-dismiss="modal"  />		
+				</div> -->
 			</div>
 
 				<div style="width:426px;text-align:left;padding-top:10px;padding-left:20px;height:30px;">
-				
-					<input type="radio" id="rad1" name="rad4" value="c" onClick="setSelectUserNo(this);">价格不合适，期待<input type="text" class="txt" id="text2" value="">钱
+					<input type="radio" id="rad1" value="c" onClick="setSelectUserNo(this);">价格不合适，期待<input type="text" class="txt" id="text2" value="">钱
 				</div>
 
 
 
 				<div style="width:426px;text-align:left;float:left;padding-top:10px;padding-left:20px;height:30px;">
-					<input type="radio" id="rad2" name="rad4" value="c"  onClick="setSelectUserNo(this);" >价格不合价格不合适，
+					<input type="radio" id="rad2" value="c"  onClick="setSelectUserNo(this);" >价格不合价格不合适，
 				</div>
 
 			<div style="width:426px;text-align:left;float:left;padding-top:10px;padding-left:0px;height:60px;">
 			<div style="width:100px;text-align:left;float:left;padding-top:0px;padding-left:20px;height:30px;">
-				<input type="radio" id="rad3" name="rad4" value="c" onClick="setSelectUserNo(this);">价格不合
+				<input type="radio" id="rad3" value="c" onClick="setSelectUserNo(this);">价格不合
 				</div >
 				<div style="width:300px;text-align:left;float:left;padding-top:0px;padding-left:10px;height:60px;">
 				<input type="text" style="height:50px;width:250px;">
@@ -250,11 +249,10 @@ background-color:transparent; /* 背景色透明 */
 </div>
 </div>
 <div class="center">
-
 	<div>
         <ul class="nav nav-pills nav-justified" style="width:960px;height:70px;" >
-            <li><a href="OrderDetail.html" ><label class="Dhfirst">询价中</label></a></li>
-            <li><a href="OrderBaoJia.html" class="Dhsecond">已报价</a></li>
+            <li><a href="OrderDetail.html" class="Dhsecond">询价中</a></li>
+            <li><a href="OrderBaoJia.html" ><label class="Dhfirst">已报价</label></a></li>
             <li><a href="Receipt.html" class="Dhsecond">已下单</a></li>
             <li><a href="SentCar.html" class="Dhsecond">已派送</a></li>
             <li><a href="Outbound.html" class="Dhsecond">已出库</a></li>
@@ -323,14 +321,14 @@ background-color:transparent; /* 背景色透明 */
 	<div >
 		<div class="shippingadd1" style="float:left;height:40px;" >单价 ：</div>
 		<div style="height:50px;">
-			<label class="add1">310.00元/吨   不含税</label>
+			<label class="add1">20元</label>
 		</div>
 
 	</div>
 	<div >
 		<div class="shippingadd1" style="float:left;height:40px;width:100px;" >运费 ：</div>
 		<div style="height:10px;float:left;">
-			<label class="add1" style="float:left;padding-left:15px">9300.00元</label>
+			<label class="add1" style="float:left;padding-left:15px">20元</label>
 		</div>
 	</div>
 	<div style="float:left;padding-left:5px;padding-top:10px;">
@@ -353,26 +351,35 @@ background-color:transparent; /* 背景色透明 */
 	<div >
 		<div class="shippingadd1" style="float:left;height:40px;padding-left:22px;width:35%">商务经理 ：</div>
 		<div style="height:50px;">
-			<label class="add1">20元</label>
+			<label class="add1">李孟浩</label>
 		</div>
 	</div>
 	<div >
 		<div class="shippingadd1" style="float:left;height:40px;padding-left:22px;width:35%" >联系电话 ：</div>
 		<div style="height:10px;float:left;">
-			<label class="add1" style="float:left;padding-left:15px">12757687683</label>
+			<label class="add1" style="float:left;padding-left:15px">10329292929</label>
 		</div>
 	</div>
 	<div style="float:left;padding-left:5px;padding-top:10px;">
-		<div class="shippingadd2" style="float:left;padding-left:18px;height:40px;width:100px;" >备注  ：</div>
+		<div class="shippingadd2" style="float:left;padding-left:18px;height:40px;width:100px;" >装车费  ：</div>
 		<div style="height:40px;float:left;">
-			<label class="add2" style="float:left;padding-left:20px;padding-top:20px;text-align:left">670yuan </label>
+			<label class="add2" style="float:left;padding-left:20px;padding-top:20px;text-align:left">670元 </label>
 		</div>
 	</div>
 
 	
 </div>
-
+	<div >
+		<div style="float:left;width:400px;height:80px;padding-left:250px;padding-top:15px;">
+			<button style="height:40px;width:100px;background-color:#10A0F1;color:#FFF;font-size:18px;font-family:SimSum;border:0;">再次议价</button>
+		</div>
+		
+		<div style="float:right;width:400px;height:80px;padding-right:250px;padding-top:15px;">
+<button style="height:40px;width:100px;background-color:#10A0F1;color:#FFF;font-size:18px;font-family:SimSum;border:0;">立即下单</button>
+		</div>
+	</div>
 </div>
+
 </div>
 
 </body>

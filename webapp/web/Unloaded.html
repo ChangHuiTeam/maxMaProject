@@ -250,15 +250,14 @@ background-color:transparent; /* 背景色透明 */
 </div>
 </div>
 <div class="center">
-
 	<div>
         <ul class="nav nav-pills nav-justified" style="width:960px;height:70px;" >
-            <li><a href="OrderDetail.html" ><label class="Dhfirst">询价中</label></a></li>
+            <li><a href="OrderDetail.html" class="Dhsecond">询价中</a></li>
             <li><a href="OrderBaoJia.html" class="Dhsecond">已报价</a></li>
             <li><a href="Receipt.html" class="Dhsecond">已下单</a></li>
             <li><a href="SentCar.html" class="Dhsecond">已派送</a></li>
             <li><a href="Outbound.html" class="Dhsecond">已出库</a></li>
-            <li><a href="Unloaded.html" class="Dhsecond">已卸载</a></li>
+            <li><a href="Unloaded.html" ><label class="Dhfirst">已卸载</label></a></li>
             <li><a href="PlaceOrder.html" class="Dhsecond">签收单</a></li>
             <li><a href="Complete.html" class="Dhsecond">完成</a></li>
             <li><a href="Cancled.html" class="Dhsecond">已取消</a></li>   
@@ -321,28 +320,60 @@ background-color:transparent; /* 背景色透明 */
 <div class="styleinfo1">
 <div class="shippingstyle">费用信息</div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;" >单价 ：</div>
+		<div class="shippingadd1" style="float:left;height:40px;padding-left:5px;" >单价 ：</div>
 		<div style="height:50px;">
-			<label class="add1">310.00元/吨   不含税</label>
+			<label class="add1" style="padding-left:5px;">310.00元/吨   不含税</label>
 		</div>
 
 	</div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;width:100px;" >运费 ：</div>
+		<div class="shippingadd1" style="float:left;height:40px;width:100px;padding-left:5px;" >运费 ：</div>
 		<div style="height:10px;float:left;">
-			<label class="add1" style="float:left;padding-left:15px">9300.00元</label>
+			<label class="add1" style="float:left;padding-left:0px">9300.00元</label>
 		</div>
 	</div>
 	<div style="float:left;padding-left:5px;padding-top:10px;">
-		<div class="shippingadd2" style="float:left;height:50px;width:100px;" >装车费  ：</div>
+		<div class="shippingadd2" style="float:left;height:50px;width:100px;padding-left:5px;" >装车费  ：</div>
 		<div style="height:40px;float:left;">
-			<label class="add2" style="float:left;padding-left:10px;padding-top:20px;text-align:left">670yuan </label>
+			<label class="add2" style="float:left;padding-left:10px;padding-top:20px;padding-left:0px">670yuan </label>
 		</div>
 	</div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;width:100px;" >其他 ：</div>
+		<div class="shippingadd1" style="float:left;height:40px;width:100px;padding-left:5px;" >其他 ：</div>
 		<div style="height:10px;float:left;">
-			<label class="add1" style="float:left;padding-left:15px">20元</label>
+			<label class="add1" style="float:left;padding-left:0px;">20.00元</label>
+		</div>
+	</div>
+	<div >
+		<div class="shippingadd1" style="float:left;height:40px;width:100px;" ></div>
+	</div>
+
+		<div class="shippingadd1" style="float:left;height:40px;width:100px;padding-left:5px;" >保险 ：</div>
+		<div style="height:100px;width:215px;float:left;">
+	<div >
+		<div  style="float:left;height:40px;padding-left:0px;padding-top:20px;">投保金额</div>
+		<div style="height:40px;">
+			<label  style="float:left;padding-left:0px;font-weight:lighter;width:100px;padding-top:20px;">270000.00元</label>
+		</div>
+		<div style="width:30px;float:left;height:5px;"></div>
+		<div  style="float:left;height:20px;padding-left:0px;padding-top:10px;">应付保费</div>
+		<div style="height:20px;">
+			<label  style="float:left;padding-left:10px;font-weight:lighter;padding-top:10px;">27.50元</label>
+		</div>
+		<div style="width:300px;float:left;height:10px;"></div>
+		<div  style="float:left;height:20px;padding-left:0px;padding-top:5px;">实付保费</div>
+		<div style="height:20px;">
+			<label  style="float:left;font-weight:lighter;padding-left:10px;padding-top:5px;">27.50元</label>
+			<label style="width:2px;float:left;padding-left:2px;"></label>
+			<label  style="float:left;padding-left:0px;font-weight:lighter;height:30px;padding-top:5px;background:#7FFF00;color:#FFF">节省￥67.05</label>			
+		</div>		
+	</div>
+		</div>
+		<div style="width:300px;float:left;height:20px;"></div>		
+	<div >
+		<div class="shippingadd1" style="float:left;height:40px;width:100px;padding-left:5px;" >运费 ：</div>
+		<div style="height:10px;float:left;">
+			<label class="add1" style="float:left;padding-left:0px">9300.00元</label>
 		</div>
 	</div>
 
@@ -363,16 +394,25 @@ background-color:transparent; /* 背景色透明 */
 		</div>
 	</div>
 	<div style="float:left;padding-left:5px;padding-top:10px;">
-		<div class="shippingadd2" style="float:left;padding-left:18px;height:40px;width:100px;" >备注  ：</div>
+		<div class="shippingadd2" style="float:left;padding-left:0px;height:40px;width:100px;" >备注  ：</div>
 		<div style="height:40px;float:left;">
 			<label class="add2" style="float:left;padding-left:20px;padding-top:20px;text-align:left">670yuan </label>
 		</div>
 	</div>
+	<div style="float:left;padding-left:5px;padding-top:10px;">
+		<div class="shippingadd2" style="float:left;height:50px;width:100px;padding-left:5px;" >装车费  ：</div>
+		<div style="height:40px;float:left;">
+			<label class="add2" style="float:left;padding-left:10px;padding-top:20px;padding-left:20px">林师傅  【闽D2536】</label>
+		</div>
+	</div>
 
-	
+					
+
+
+	</div>	
+</div>
 </div>
 
-</div>
 </div>
 
 </body>

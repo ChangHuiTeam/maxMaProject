@@ -7,14 +7,31 @@
 <meta
 	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
 	name="viewport" />
-
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="../bootstrap/js/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script>
-	
+//Change Parent pages	
+function changePages(whichPage) {
+	switch (whichPage) {
+	case 0:
+		self.location = "home.html";
+		break;
+	case 1:
+		self.location = "OrderInquiry.html";
+		break;
+	case 2:
+		self.location = "MyOrder.html";
+		break;
+	case 3:
+		self.location = "ic_data.html";
+		break;
+	case 4:
+		self.location = "about.html";
+	}
+}
 </script>
 <style type="text/css">
 /*body*/
@@ -32,17 +49,14 @@
 	padding-block-end: 50px;
 	height: 800px;
 	width: 100%;
-	border: 0.05px solid;
-	border-color: #fff;
-	border-top-color: #E5E3E9;
-	border-end-color: #E5E3E9;
+
 }
 
 .diva {
 	padding-top: 0px;
 	float: left;
 	background: #f3f3f3;
-	height: 100%;
+	height: 95%;
 	width: 180px;
 }
 
@@ -164,7 +178,7 @@
 
 .imgbtn {
 	margin-left: 145px;
-	background: url(../web/images/img_back.png);
+	background: url(../images/img_back.png);
 	width: 90px;
 	height: 90px;
 	position: relative;
@@ -175,7 +189,7 @@
 	margin-top: -60px;
 	width: 69px;
 	height: 29px;
-	background: url(../web/images/img_btn.png);
+	background: url(../images/img_btn.png);
 	margin-right: 37%;
 	float: right;
 	overflow: hidden;
@@ -225,92 +239,87 @@
 	<IFRAME id="header" NAME="content_frame" frameborder="no"
 		height="100px" scrolling="no" width="100%" height="120px"
 		src="header.html"></IFRAME>
-		<div  class="body">
-	<div class="div">
-		<div class="diva">
-			<div id="menu" class="">
-				<ul class="ul">
-					<li class="li"><a class="a" href="../web/ic_data.html"> <img
-							src="../web/images/ic-personal-default.png"></img> 个人资料
-					</a></li>
-					<!-- <li class="li"><a class="a2" href="/"> <img
-							src="../web/images/ic-certify-selected.png"></img> 认证中心 <span
-							class="menu_arrows"></span>
-					</a></li> -->
-					<li class="li"><a class="a2" href="../web/ic_data.html" target="_self"> <img
-							src="../web/images/ic-certify-selected.png"></img> 认证中心 <span
-							class="menu_arrows"></span>
-					</a></li>
-					<li class="li"><a class="a3" href="../web/ic_modify.html">
-							<img src="../web/images/ic-password-default.png"></img> 修改密码
-					</a></li>
-
-				</ul>
+	<div class="container " style="padding-top: 25px; height: 800px;">
+		<div class="div">
+			<div class="diva">
+				<div id="menu" class="">
+					<ul class="ul">
+						<li class="li"><a class="a" href="../web/ic_data.html">
+								<img src="../images/ic-personal-default.png"></img>
+								个人资料
+						</a></li>
+						<li class="li"><a class="a2" href="../web/ic_ident.html" target="_self"> <img
+								src="../images/ic-certify-selected.png"></img>
+								认证中心 <span class="menu_arrows"></span>
+						</a></li>
+						<li class="li"><a class="a3"
+							href="../web/ic_modify.html"> <img
+								src="../images/ic-password-default.png"></img>
+								修改密码
+						</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="asdiv">
-			<div class="asdivd">
-				<p class="divp">
-					<span id="gs_name" class="pspan">帯<b style="color: red">*</b>为必填选项，认证通过后如无必要，请勿重复提交资料
-					</span> <strong class=""></strong>
-				</p>
-
-
-			</div>
-			<div class="abdiv">
-				<div class="acdiv">
-					<div id="gs_names" class="ziti">
-						<b style="color: red">*</b>公司全称： <input name="orderId"
-							class="iinput" placeholder="请输入公司全称" value="" type="text">
+			<div class="asdiv">
+				<div class="asdivd">
+					<p class="divp">
+						<span id="gs_name" class="pspan">帯<b style="color: red">*</b>为必填选项，认证通过后如无必要，请勿重复提交资料
+						</span> <strong class=""></strong>
+					</p>
+				</div>
+				<div class="abdiv">
+					<div class="acdiv">
+						<div id="gs_names" class="ziti">
+							<b style="color: red">*</b>公司全称： <input name="orderId"
+								class="iinput" placeholder="请输入公司全称" value="" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="ddiv2">
+					<div id="gs_img" class="ddiv2a">
+						<b style="color: red">*</b>营业执照：
+					</div>
+					<div class="imgbtn">
+						<img id="img_0001" class="imgback" src="">
+					</div>
+					<div class="btnn">
+						<input type="file"
+							style="opacity: 0; cursor: pointer; width: 100%; height: 100%; vertical-align: top;" />
+					</div>
+				</div>
+				<div class="ddiv2">
+					<div class="ziti2">税务登记证：</div>
+					<div class="imgbtn">
+						<img id="img_0002" alt="" class="imgback" src="">
+					</div>
+					<div class="btnn">
+						<input type="file"
+							style="opacity: 0; cursor: pointer; width: 100%; height: 100%; vertical-align: top;" />
+					</div>
+				</div>
+				<div class="ddiv2">
+					<div class="ziti2">组织机构代码证：</div>
+					<div class="imgbtn">
+						<img id="img_0003" alt="" class="imgback" src="">
+					</div>
+					<div class="btnn">
+						<input type="file"
+							style="opacity: 0; cursor: pointer; width: 100%; height: 100%; vertical-align: top;" />
+					</div>
+				</div>
+				<div class="ttbtnn">
+					<div style="margin-left: 145px;">
+						<button id="id_confirm" class="ttbtn">确认修改</button>
 					</div>
 				</div>
 			</div>
-			<div class="ddiv2">
-				<div id="gs_img" class="ddiv2a">
-					<b style="color: red">*</b>营业执照：
-				</div>
-				<div class="imgbtn">
-					<img id="img_0001" class="imgback" src="">
-				</div>
-				<div class="btnn">
-					<!-- 					<input type="file" class="addiv"style="" /> -->
-					<input type="file"
-						style="opacity: 0; cursor: pointer; width: 100%; height: 100%; vertical-align: top;" />
-				</div>
-			</div>
-			<div class="ddiv2">
-				<div class="ziti2">税务登记证：</div>
-				<div class="imgbtn">
-					<img id="img_0002" alt="" class="imgback" src="">
-				</div>
-				<div class="btnn">
-					<input type="file" style="opacity: 0; cursor: pointer; width: 100%; height: 100%; vertical-align: top;" />
-				</div>
-			</div>
-			<div class="ddiv2">
-				<div class="ziti2">组织机构代码证：</div>
-				<div class="imgbtn">
-					<img id="img_0003" alt="" class="imgback" src="">
-				</div>
-				<div class="btnn">
-					<input type="file" style="opacity: 0; cursor: pointer; width: 100%; height: 100%; vertical-align: top;" />
-				</div>
-			</div>
-			<div class="ttbtnn">
-				<div style="margin-left: 145px;">
-					<button id="id_confirm" class="ttbtn">确认修改</button>
-				</div>
-			</div>
 		</div>
 	</div>
-<div class="page-footer"
+	<div class="page-footer"
 		style="border-top: 1px solid #eee; height: 100px;">
 		<b class="center-block  disabled"
-			style="padding-left: 30%; padding-right: 30%; margin-top: 30px; color: #bcc2b1; font-size: 18px; font-family: '宋体';">版权2012-2016
+			style="padding-left: 30%; padding-right: 30%; margin-top: 30px; color: #bcc2b1; font-size: 15px; font-family: '宋体';">版权2012-2016
 			厦门优创思特供应链管理有限公司版权所有 闽ICP备14000533号-1</b>
 	</div>
-	</div>
-	<IFRAME NAME="content_frame" width="100%" height="200px"
-		src="footer.html"></IFRAME>
 </body>
 </html>

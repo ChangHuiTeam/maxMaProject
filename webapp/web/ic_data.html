@@ -3,75 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <title>个人资料</title>
-<meta charset="UTF-8">
 <meta
 	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
 	name="viewport" />
-
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="../bootstrap/js/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
-<script>
-
-
-$(document).ready(function(){
-	  $("#identing").click(function(){
-		var a=3;
-		
-		if(1==a){
-			document.getElementById('identing').src="../web/images/certify1.png";
-			}
-		else if(2==a){
-			document.getElementById('identing').src="../web/images/certify2.png";
-			}
-		else if(3==a){
-			document.getElementById('identing').src="../web/images/certify3.png";
-			}		
- 	  });
- 	});
- 	
-//Change Parent pages	
-function changePages(whichPage) {
-	switch (whichPage) {
-	case 0:
-		self.location = "home.html";
-		break;
-	case 1:
-		self.location = "OrderInquiry.html";
-		break;
-	case 2:
-		self.location = "MyOrder.html";
-		break;
-	case 3:
-		self.location = "ic_data.html";
-		break;
-	case 4:
-		self.location = "about.html";
+<script type="text/javascript">
+	//Change Parent pages	
+	function changePages(whichPage) {
+		switch (whichPage) {
+		case 0:
+			self.location = "home.html";
+			break;
+		case 1:
+			self.location = "OrderInquiry.html";
+			break;
+		case 2:
+			self.location = "MyOrder.html";
+			break;
+		case 3:
+			self.location = "ic_data.html";
+			break;
+		case 4:
+			self.location = "about.html";
+		}
 	}
-}
 </script>
 <style>
-/* body*/
-.bo {
-	padding-left: 15%;
-	padding-right: 15%;
-	padding-top: 0px;
-	padding-end: 100px;
-}
-/*div*/
-.ae {
-	float: center;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	padding-block-end: 50px;
-	height: 800px;
-	width: 100%;
-	border: 0.05px solid;
-	border-color: #fff;
-	border-top-color: #E5E3E9;
-	border-end-color: #E5E3E9;
+.divbody {
+	height: auto;
+	width: 80%;
+	background: #f3f3f3;
 }
 /*左边导航栏*/
 .af {
@@ -118,14 +83,6 @@ function changePages(whichPage) {
 	padding-top: 8px;
 	margin-top: 5px;
 }
-/*右边信息*/
-.divas {
-	padding-top: 10px;
-	float: right;
-	background: #f3f3f3;
-	height: 180px;
-	width: 75%;
-}
 
 .divbs {
 	padding-left: 60px;
@@ -165,34 +122,37 @@ function changePages(whichPage) {
 }
 </style>
 </head>
-
 <body>
-<IFRAME id="header" NAME="content_frame" frameborder="no"
+	<IFRAME id="header" NAME="content_frame" frameborder="no"
 		height="100px" scrolling="no" width="100%" height="120px"
 		src="header.html"></IFRAME>
-		<div class="bo">
-	<div class="ae">
-		<div class="af">
-			<div id="menu" class="">
-				<ul class="ul">
-					<li class="li"><a class="ali" href="../web/ic_data.html"target="_self"> <img
-							src="../web/images/ic-personal-selected.png"></img> 个人资料
-					</a></li>
-					<li class="li"><a class="ali1" href="../web/ic_ident.html">
-							<img src="../web/images/ic-certify-default.png"></img> 认证中心 <span
-							class="menu_arrows"></span>
-					</a></li>
-					<li class="li"><a class="ali1" href="../web/ic_modify.html">
-							<img src="../web/images/ic-password-default.png"></img> 修改密码
-					</a></li>
-				</ul>
+	<div class="container " style="padding-top: 48px; height: 800px;">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"
+				style="background: #f3f3f3; height: 700px;">
+				<div class="af">
+					<div id="menu" style="margin-left: -15px;" class="">
+						<ul class="ul">
+							<li class="li"><a class="ali" href="../web/ic_data.html"
+								target="_self"> <img
+									src="../images/ic-personal-selected.png"></img> 个人资料
+							</a></li>
+							<li class="li"><a class="ali1" href="../web/ic_ident.html">
+									<img src="../images/ic-certify-default.png"></img> 认证中心
+									<span class="menu_arrows"></span>
+							</a></li>
+							<li class="li"><a class="ali1" href="../web/ic_modify.html">
+									<img src="../images/ic-password-default.png"></img> 修改密码
+							</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div>
-			<div class="divas">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"
+				style="float: right; background-color: #f3f3f3; width: 80%; min-width: 360px; height: 200px;">
 				<div class="divbs">
 					<div class="divcs">
-						<img id="img-sample" alt="" src="../web/images/img-sample.png">
+						<img id="img-sample" alt="" src="../images/img-sample.png">
 					</div>
 					<div class="divds">
 						<p class="">
@@ -201,23 +161,21 @@ function changePages(whichPage) {
 						</p>
 					</div>
 					<div class="divhs">
-					<input type="image"id="identing"value="0"  src="../web/images/certify1.png" >
-					<input type="image"id="identing"value="1"  src="../web/images/certify2.png" >
-					<input type="image"id="identing"value="2"  src="../web/images/certify3.png" >
-<!-- 						<img id="identing" alt="认证状态" src="javaScript:changeimg()">						 -->
+						<input type="image" id="identing" value="0"
+							src="../images/certify1.png"> <input type="image"
+							id="identing" value="1" src="../images/certify2.png">
+						<input type="image" id="identing" value="2"
+							src="../images/certify3.png">
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-<div class="page-footer"
+	<div class="page-footer"
 		style="border-top: 1px solid #eee; height: 100px;">
 		<b class="center-block  disabled"
 			style="padding-left: 30%; padding-right: 30%; margin-top: 30px; color: #bcc2b1; font-size: 18px; font-family: '宋体';">版权2012-2016
 			厦门优创思特供应链管理有限公司版权所有 闽ICP备14000533号-1</b>
 	</div>
-	</div>
-	<IFRAME NAME="content_frame" width="100%" height="200px"
-		src="footer.html"></IFRAME>
 </body>
 </html>

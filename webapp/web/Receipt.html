@@ -14,9 +14,7 @@
 <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
 function setSelectUserNo(radioObj){  
-
     var radioCheck= $(radioObj).val();
-
     if("1"==radioCheck){  
         $(radioObj).attr("checked",false);  
         $(radioObj).val("0");           
@@ -25,20 +23,32 @@ function setSelectUserNo(radioObj){
     }  
 }
 function getradtext(){
-
 	var aa = $("input[id=rad1]:checked").val();
-
 	if("1"==aa){
-
 		var b=document.getElementById("text2").value;
- 	
 	var a="价格不合适，期待价格"+b+"元"
 	alert(a);
 	}
-	
 } 
-
-
+// Change Parent pages	
+function changePages(whichPage) {
+	switch (whichPage) {
+	case 0:
+		self.location = "home.html";
+		break;
+	case 1:
+		self.location = "OrderInquiry.html";
+		break;
+	case 2:
+		self.location = "MyOrder.html";
+		break;
+	case 3:
+		self.location = "ic_data.html";
+		break;
+	case 4:
+		self.location = "about.html";
+	}
+}
 </script>
 <style>
 /*  div居中 */
@@ -61,7 +71,7 @@ function getradtext(){
 	display: inline-block;
 	padding-bottom:4px;
 	size:18px;
-	font-family:"MicrosoftYaHei[Regular]"
+	font-family:Microsoft YaHei;
 }
 /* 导航second */
 .Dhsecond{
@@ -69,16 +79,25 @@ function getradtext(){
 	text-decoration:none;
 	size:18px;
 	color:#333333;
-	font-family:"MicrosoftYaHei[Regular]"
+	font-family:Microsoft YaHei;
 }
 /* 订单详情文字 */
 .orderDetail{
-	size:16px;
-	font-family:"SimSum[Regular]";
-	color:#666666;
 	float:left;
 	padding-left:20px;
 	padding-top:16px;
+}
+.orderDetail1{
+	size:16px;
+	font-family:SimSum;
+	color:#666666;
+}
+
+.orderDetail2{
+	size:14px;
+	font-family:SimSum;
+	color:#333333;
+	font-weight:lighter;
 }
 /* 图片1 */
 .imgstyle1{
@@ -94,10 +113,15 @@ function getradtext(){
 	padding-top:10px;
 	height:40px;
 }
+.imgstyle3{
+	width:100px;
+	padding-top:20px;
+	height:170px;
+}
 /* 三分样式 */
 .styleinfo1{
 	float:left;
-	width:33.3333%;
+	width:318px;
 	height:454px;
 	border: 1px solid ;
 	border-color:#E9E9E9;
@@ -105,9 +129,6 @@ function getradtext(){
 }
 /* 发货信息样式 */
 .shippingstyle{
-	size:16px;
-	font-family:"SimSum[Regular]";
-	color:#666666;
 	background-color:#EEEEEE;
 	height:50px;
 	padding-top:16px;
@@ -115,17 +136,28 @@ function getradtext(){
 
 /* 发货地文字 */
 .shippingadd1{
-	height:100px;
+	float:left;
 	width:30%;
-	padding-left:22px;
+	height:40px;
 	padding-top:20px;
+	padding-left:5px;
 }
 /* 收货地文字 */
 .shippingadd2{
-	height:80px;
-	width:30%;
-	padding-left:22px;
+	float:left;
+	height:50px;
+	width:80px;
+	padding-left:20px;
 	padding-top:20px;
+}
+.shippingadd3{
+	width:100px;
+	padding-left:5px;
+}
+.shippingadd4{
+	float:left;
+	height:40px;
+	padding-left:20px;
 }
 /* 弹出框中text样式 */
 .txt{ 
@@ -151,10 +183,26 @@ background-color:transparent; /* 背景色透明 */
 .add2{
 	float:left;
 	padding-top:5px;
-	padding-left:20px;
 	width:200px;
-	font-weight:lighter;
 	text-align:left
+}
+.add3{
+float:left;
+height:20px;
+padding-left:5px;
+}
+.btn{
+	background:url("../images/bg-confirm.png");
+	color:#FFF;
+	width:80px;
+
+}
+.btn1{
+	float:left;
+	font-weight:lighter;
+	padding-top:3px;
+	background:url("../images/bg-cost.png");
+	color:#FFF;
 }
 /* 货品文字 */
 .goods{
@@ -172,7 +220,6 @@ background-color:transparent; /* 背景色透明 */
 	float:left;
 	padding-left:20px;
 	width:200px;
-	font-weight:lighter;
 	text-align:left;
 }
 /* 数量文字 */
@@ -189,223 +236,220 @@ background-color:transparent; /* 背景色透明 */
 	padding-left:20px;
 	padding-top:13px;
 }
+.mainframe{
+	height:534px;
+	border:1px solid;
+	border-color:#EEEEEE;
+	border-bottom:0;
+}
+.mainframe1{
+	float:left;
+	padding-top:10px;
+}
+.mainframe2{
+	height:40px;
+	width:70%;
+	float:left;
+	padding-left:10px;
+}
+.mainframe3{
+	height:100px;
+	width:215px;
+	float:left;
+}
+.mainframe4{
+	float:left;
+	padding-left:10px;
+}
+.mainframe5{
+	width:30px;
+	float:left;
+	height:5px;
+}
+.mainframe6{
+	width:300px;
+	float:left;
+	height:10px;
+}
+.mainframe7{
+	width:2px;
+	float:left;
+	padding-left:2px;
+}
 	
 </style>
 </head>
 <body>
-<IFRAME NAME="content_frame" width="100%" height="100" src="header.html" ></IFRAME>
+<IFRAME id="header" NAME="content_frame" frameborder="no"
+		height="100px" scrolling="no" width="100%" height="120px"
+		src="header.html"></IFRAME>
+	<div class="page-footer"
+		style="border-top: 1px solid #eee;width:100%;margin:0 auto;padding-top:1px;">
+	</div>
 <div>
 <br><br>
-<div class="modal fade" style="width:426px;height:250px;" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog" >
-		<div class="modal-content" style="float:left;">
-			<div class="modal-header" style="background-color:#EEEEEE;width:426px;height:40px;">
-				<div style="float:left;padding-left:10px;">
-					<label style="size:16px;font-family:MicrosoftYaHei;color:#333333;">取消订单原因</label>
-				</div>
-				<div style="float:left;padding-left:200px;padding-top:0px;">
-					<img src="../images/ic-delete.png"    data-dismiss="modal"  />		
-				</div> 
-			</div>
+<!-- 模态框 点击删除后的弹出框 -->
 
-				<div style="width:426px;text-align:left;padding-top:10px;padding-left:20px;height:30px;">
-				
-					<input type="radio" id="rad1" name="rad4" value="c" onClick="setSelectUserNo(this);">价格不合适，期待<input type="text" class="txt" id="text2" value="">钱
-				</div>
-
-
-
-				<div style="width:426px;text-align:left;float:left;padding-top:10px;padding-left:20px;height:30px;">
-					<input type="radio" id="rad2" name="rad4" value="c"  onClick="setSelectUserNo(this);" >价格不合价格不合适，
-				</div>
-
-			<div style="width:426px;text-align:left;float:left;padding-top:10px;padding-left:0px;height:60px;">
-			<div style="width:100px;text-align:left;float:left;padding-top:0px;padding-left:20px;height:30px;">
-				<input type="radio" id="rad3" name="rad4" value="c" onClick="setSelectUserNo(this);">价格不合
-				</div >
-				<div style="width:300px;text-align:left;float:left;padding-top:0px;padding-left:10px;height:60px;">
-				<input type="text" style="height:50px;width:250px;">
-				</div>
-			</div>
-			<div style="float:left;width:426px;height:45px;padding-top:5px;">
-				<div style="height:32px;width:200px;padding-left:20%;float:left;">
-					<button type="button" onClick="getradtext();" style="height:32px;width:70px;background-color:#10A0F1;color:#FFF;font-size:18px;font-family:SimSum;" >提交
-					</button>
-				</div>
-				<div style="height:32px;width:200px;padding-right:20%;float:right;" >
-					<button type="button" style="height:32px;width:70px;background-color:#10A0F1;color:#FFF;font-size:18px;font-family:SimSum;" class="btn btn-default"   data-dismiss="modal">取消
-					</button>
-				</div>
-
-			</div>
-
-
-
-
-
-
-
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal -->
-</div>
 </div>
 <div class="center">
 	<div>
         <ul class="nav nav-pills nav-justified" style="width:960px;height:70px;" >
-            <li><a href="OrderDetail.html" class="Dhsecond">询价中</a></li>
-            <li><a href="OrderBaoJia.html" class="Dhsecond">已报价</a></li>
+            <li><a href="OrderDetail.html" ><label class="Dhsecond">询价中</label></a></li>
+            <li><a href="OrderBaoJia.html" ><label class="Dhsecond">已报价</label></a></li>
             <li><a href="Receipt.html" ><label class="Dhfirst">已下单</label></a></li>
-            <li><a href="SentCar.html" class="Dhsecond">已派送</a></li>
-            <li><a href="Outbound.html" class="Dhsecond">已出库</a></li>
-            <li><a href="Unloaded.html" class="Dhsecond">已卸载</a></li>
-            <li><a href="PlaceOrder.html" class="Dhsecond">签收单</a></li>
-            <li><a href="Complete.html" class="Dhsecond">完成</a></li>
-            <li><a href="Cancled.html" class="Dhsecond">已取消</a></li>   
+            <li><a href="SentCar.html" ><label class="Dhsecond">已派送</label></a></li>
+            <li><a href="Outbound.html" ><label class="Dhsecond">已出库</label></a></li>
+            <li><a href="Unloaded.html" ><label class="Dhsecond">已卸载</label></a></li>
+            <li><a href="PlaceOrder.html" ><label class="Dhsecond">签收单</label></a></li>
+            <li><a href="Complete.html" ><label class="Dhsecond">完成</label></a></li>
+            <li><a href="Cancled.html" ><label class="Dhsecond">已取消</label></a></li>   
         </ul>
 </div>
 <div style="width:100%;background-color:#EEEEEE;height:50px;">
-	<div class="orderDetail">订单详情</div>
+	<div class="orderDetail"><label class="orderDetail1">订单详情</label></div>
 	<div><img src="../images/ic-next.png" class="imgstyle1"/></div>
-	<div class="orderDetail">订单号 : </div>
-	<div id="orderNum" class="orderDetail" style="padding-left:10px;">78458375877348697</div>
-	<div class="orderDetail" style="padding-left:40px;">订单日期 ：</div>
-	<div id="orderNum" class="orderDetail" style="padding-left:10px;">2016/12/12 12:22:22</div>
-	<div><img src="../images/ic-orderdelete.png"  data-toggle="modal" data-target="#myModal" class="imgstyle2"/></div>
-
+	<div class="orderDetail"><label class="orderDetail1">订单号 : </label></div>
+	<div id="orderNum" class="orderDetail" style="padding-left:10px;"><label class="orderDetail1">78458375877348697</label></div>
+	<div class="orderDetail" style="padding-left:40px;"><label class="orderDetail1">订单日期 ：</label></div>
+	<div id="orderNum" class="orderDetail" style="padding-left:10px;"><label class="orderDetail1">2016/12/12 12:22:22</label></div>
 	
 </div>
-<div style="height:534px;border: 1px solid ;border-bottom-color:E9E9E9">
-<div class="styleinfo1">
-<div class="shippingstyle">发货信息</div>
+<div class="mainframe">
+<div class="styleinfo1" style="border-left:0">
+<div class="shippingstyle"><label class="orderDetail1">发货信息</label></div>
 	<div >
-		<div class="shippingadd1" style="float:left" >发货地  ：</div>
+		<div class="shippingadd1" ><label class="orderDetail2">发货地  ：</label></div>
 		<div style="height:100px;">
-			<label class="add1">陕西</label>
-			<label class="add1">陕西</label>
-			<label class="add1">陕西</label>
-			<label class="add2" style="text-align:left">啥都会都会萨金凤凰都会萨金凤凰萨金凤凰看手机</label>
+			<label class="add1 orderDetail2" >蒙蒙蒙蒙</label>
+			<label class="add1 orderDetail2" >蒙蒙蒙</label>
+			<label class="add1 orderDetail2" >蒙蒙蒙蒙</label>
+			<label class="add2 orderDetail2" style="margin-left:115px;">啥都会萨金凤凰萨金凤凰萨都会萨凤凰看手机</label>
 		</div>
 	</div>
 	
 	<div >
-		<div class="shippingadd2" style="float:left" >收货地  ：</div>
+		<div class="shippingadd1" style="float:left" ><label class="orderDetail2">收货地  ：</label></div>
 		<div style="height:80px;">
-			<label class="add1">陕西</label>
-			<label class="add1">陕西</label>
-			<label class="add1">陕西</label>
-			<label class="add2" style="text-align:left">啥都会都会萨金凤凰都会萨金凤凰萨金凤凰看手机</label>
+			<label class="add1 orderDetail2">内蒙蒙蒙</label>
+			<label class="add1 orderDetail2">乌蒙蒙蒙</label>
+			<label class="add1 orderDetail2">蒙蒙蒙</label>
+			<label class="add2 orderDetail2" style="margin-left:115px;">啥都会金凤凰萨金凤凰会都会萨金凤凰都会萨金凤凰萨金凤看手机</label>
 		</div>
 	</div>
 	<div>
-		<div class="goods" style="float:left" >货品 ：</div>
+		<div class="goods" style="float:left" ><label class="orderDetail2">货品 ：</label></div>
 		<div style="height:10px;">
-		<label class="goodsName" style="text-align:left">塑料袋子。29斤山东矿机按个</label>
+		<label class="goodsName orderDetail2" >塑料袋子。29斤山东矿机按个</label>
 		</div>
 	</div>
 	<div>
-		<div class="goods" style="float:left" >数量 ：</div>
+		<div class="goods" style="float:left" ><label class="orderDetail2">数量 ：</label></div>
 		<div style="height:10px;">
-		<label class="goodsName" style="text-align:left">20.00吨</label>
+		<label class="goodsName orderDetail2" style="text-align:left">20.00吨</label>
 		</div>
 	</div>
 	<div>
-		<div class="goods" style="float:left" >描述 ：</div>
+		<div class="goods" style="float:left" ><label class="orderDetail2">描述 ：</label></div>
 		<div style="height:10px;">
-		<label class="goodsName" style="text-align:left">塑料袋子。29斤山东矿机买也买不起就不要阿里那个飞我玩会四件了</label>
+		<label class="goodsName orderDetail2" >塑料袋子。29斤山东矿机买也买不起就不要阿里那个飞我玩会四件了</label>
 		</div>
 	</div>
 
 </div>
 
 <div class="styleinfo1">
-<div class="shippingstyle">费用信息</div>
+<div class="shippingstyle"><label class="orderDetail1">费用信息</label></div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;padding-left:5px;" >单价 ：</div>
+		<div class="shippingadd1"  ><label class="orderDetail2">单价 ：</label></div>
 		<div style="height:50px;">
-			<label class="add1" style="padding-left:5px;">310.00元/吨   不含税</label>
+			<label class="add1 orderDetail2" style="padding-left:5px;">310.00元/吨   不含税</label>
 		</div>
 
 	</div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;width:100px;padding-left:5px;" >运费 ：</div>
+		<div class="shippingadd1" ><label class="orderDetail2">运费 ：</label></div>
 		<div style="height:10px;float:left;">
-			<label class="add1" style="float:left;padding-left:0px">9300.00元</label>
+			<label class="add1 orderDetail2" style="float:left;padding-left:5px">9300.00元</label>
 		</div>
 	</div>
 	<div style="float:left;padding-left:5px;padding-top:10px;">
-		<div class="shippingadd2" style="float:left;height:50px;width:100px;padding-left:5px;" >装车费  ：</div>
+		<div class="shippingadd2" style="padding-left:15px;" ><label class="orderDetail2">装车费  ：</label></div>
 		<div style="height:40px;float:left;">
-			<label class="add2" style="float:left;padding-left:10px;padding-top:20px;padding-left:0px">670yuan </label>
+			<label class="add2 orderDetail2" style="padding-top:20px;padding-left:15px">670yuan </label>
 		</div>
 	</div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;width:100px;padding-left:5px;" >其他 ：</div>
+		<div class="shippingadd1"  ><label class="orderDetail2">其他 ：</label></div>
 		<div style="height:10px;float:left;">
-			<label class="add1" style="float:left;padding-left:0px;">20.00元</label>
+			<label class="add1 orderDetail2" style="padding-left:5px;">20.00元</label>
 		</div>
 	</div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;width:100px;" ></div>
+		<div class="shippingadd1"  ></div>
 	</div>
 
-		<div class="shippingadd1" style="float:left;height:40px;width:100px;padding-left:5px;" >保险 ：</div>
-		<div style="height:100px;width:215px;float:left;">
+		<div class="shippingadd1"  ><label class="orderDetail2">保险 ：</label></div>
+		<div class="mainframe3">
 	<div >
-		<div  style="float:left;height:40px;padding-left:0px;padding-top:20px;">投保金额</div>
+		<div class="add3" style="height:40px;padding-top:20px;"><label class="orderDetail2">投保金额</label></div>
 		<div style="height:40px;">
-			<label  style="float:left;padding-left:0px;font-weight:lighter;width:100px;padding-top:20px;">270000.00元</label>
+			<label class="mainframe4 orderDetail2" style="padding-top:20px;">270000.00元</label>
 		</div>
-		<div style="width:30px;float:left;height:5px;"></div>
-		<div  style="float:left;height:20px;padding-left:0px;padding-top:10px;">应付保费</div>
+		<div class="mainframe5"></div>
+		<div  class="add3" style="padding-top:10px;"><label class="orderDetail2">应付保费</label></div>
 		<div style="height:20px;">
-			<label  style="float:left;padding-left:10px;font-weight:lighter;padding-top:10px;">27.50元</label>
+			<label class="mainframe4 orderDetail2" style="padding-top:10px;">27.50元</label>
 		</div>
-		<div style="width:300px;float:left;height:10px;"></div>
-		<div  style="float:left;height:20px;padding-left:0px;padding-top:5px;">实付保费</div>
+		<div class="mainframe6"></div>
+		<div class="add3" style="padding-top:5px"><label class="orderDetail2">实付保费</label></div>
 		<div style="height:20px;">
-			<label  style="float:left;font-weight:lighter;padding-left:10px;padding-top:5px;">27.50元</label>
-			<label style="width:2px;float:left;padding-left:2px;"></label>
-			<label  style="float:left;padding-left:0px;font-weight:lighter;height:30px;padding-top:5px;background:#7FFF00;color:#FFF">节省￥67.05</label>			
+			<label  class="mainframe4 orderDetail2" style="padding-top:5px;">27.50元</label>
+		<label class="mainframe7"></label>
+			<label  class="btn1" >节省￥67.05</label>			
 		</div>		
 	</div>
 		</div>
 		<div style="width:300px;float:left;height:20px;"></div>		
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;width:100px;padding-left:5px;" >运费 ：</div>
+		<div class="shippingadd1"  ><label class="orderDetail2">运费 ：</label></div>
 		<div style="height:10px;float:left;">
-			<label class="add1" style="float:left;padding-left:0px">9300.00元</label>
+			<label class="add1 orderDetail2" style="float:left;padding-left:5px">9300.00元</label>
 		</div>
 	</div>
 
 
 </div>
-<div class="styleinfo1">
-<div class="shippingstyle">联系我们</div>
+<div class="styleinfo1" style="width:320px;border-right:0">
+<div class="shippingstyle" ><label class="orderDetail1">联系我们</label></div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;padding-left:22px;width:35%">商务经理 ：</div>
+		<div class="shippingadd1 shippingadd4" style="padding-left:17px;" ><label class="orderDetail2">商务经理 ：</label></div>
 		<div style="height:50px;">
-			<label class="add1">20元</label>
+			<label class="add1 orderDetail2" style="padding-left:15px;">丽娜万荣</label>
 		</div>
 	</div>
 	<div >
-		<div class="shippingadd1" style="float:left;height:40px;padding-left:22px;width:35%" >联系电话 ：</div>
+		<div class="shippingadd1 shippingadd4" style="padding-left:17px;"><label class="orderDetail2">联系电话 ：</label></div>
 		<div style="height:10px;float:left;">
-			<label class="add1" style="float:left;padding-left:15px">12757687683</label>
+			<label class="add1 orderDetail2" style="float:left;padding-left:15px">12757687683</label>
 		</div>
 	</div>
-	<div style="float:left;padding-left:5px;padding-top:10px;">
-		<div class="shippingadd2" style="float:left;padding-left:0px;height:40px;width:100px;" >备注  ：</div>
-		<div style="height:40px;float:left;">
-			<label class="add2" style="float:left;padding-left:20px;padding-top:20px;text-align:left">670yuan </label>
-		</div>
+	<div class="mainframe1" style="padding-left:5px;">
+		<div class="shippingadd1"><label class="orderDetail2">备注  ：</label></div>
+		<div class="mainframe2">
+			<label class="add2 orderDetail2" style="padding-left:20px;padding-top:20px;">670yuan </label>
+		</div> 
 	</div>
-		
-
-
-	</div>	
+	
 </div>
 </div>
 
 </div>
+<div style="height:30px;margin:0 auto;width:960px;"></div>
+<div class="page-footer"
+		style="border-top: 1px solid #eee;width:960px;margin:0 auto;padding-top:20px;height:100px;">
+		<b class="center-block  disabled"
+			style=" margin-top: 30px; color: #bcc2b1; font-size: 12px; font-family: '宋体';">版权2012-2016
+			厦门优创思特供应链管理有限公司版权所有 闽ICP备14000533号-1</b>
+	</div>
 
 </body>

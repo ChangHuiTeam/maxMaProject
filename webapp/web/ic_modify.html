@@ -125,9 +125,11 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body class="body">
-	<IFRAME NAME="content_frame" width="100%" height="100px;"
+<body>
+<IFRAME id="header" NAME="content_frame" frameborder="no"
+		height="100px" scrolling="no" width="100%" height="120px"
 		src="header.html"></IFRAME>
+		<div class="body">
 	<div class="div1">
 		<div class="diva">
 			<div id="menu" class="">
@@ -140,7 +142,7 @@
 							<img src="../web/images/ic-certify-default.png"></img> 认证中心 <span
 							class="menu_arrows"></span>
 					</a></li>
-					<li style=""><a class="lic" href="/" target="_self"> <img
+					<li style=""><a class="lic" href="../web/ic_modify.html" target="_self"> <img
 							src="../web/images/ic-password-selected.png"></img> 修改密码
 					</a></li>
 				</ul>
@@ -166,5 +168,8 @@
 			style="padding-left: 30%; padding-right: 30%; margin-top: 30px; color: #bcc2b1; font-size: 18px; font-family: '宋体';">版权2012-2016
 			厦门优创思特供应链管理有限公司版权所有 闽ICP备14000533号-1</b>
 	</div>
+	</div>
+	<IFRAME NAME="content_frame" width="100%" height="200px"
+		src="footer.html"></IFRAME>
 </body>
 </html>

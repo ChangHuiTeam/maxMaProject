@@ -15,40 +15,48 @@
 .centerView {
 	padding: 60px 25% 0px 25%;
 }
+
 .leftFloat {
 	float: left;
 	text-align: center;
 	padding-top: 56px;
 }
+
 .imgPadding {
 	padding: 0 7% 37px 7%;
 	width: 25%;
 	float: left;
 }
+
 .textPadding {
 	width: 25%;
 	float: left;
 	text-align: center;
 	padding-bottom: 80px;
 }
+
 .bigLabel {
 	font-size: 16px;
 	padding-bottom: 29px;
 }
+
 .smallLabel {
 	font-size: 10px;
 	padding: 0 5%;
 	text-align: center;
 	font-family: "SimSun"
 }
+
 .lab {
 	width: 50%;
 	float: left;
 	text-align: center;
 }
+
 .bigImg {
 	width: 50%;
 }
+
 .loginBtn {
 	font-size: 20px;
 	font-weight: 700;
@@ -58,6 +66,7 @@
 	height: 40px;
 	background: #10A1F1;
 }
+
 .toggle {
 	width: 160px;
 	background-color: transparent;
@@ -67,6 +76,7 @@
 	border: 0;
 	outline: none;
 }
+
 .bottonLine {
 	height: 3px;
 	width: 100px;
@@ -195,14 +205,16 @@
 		<div class="lab">
 			<label>线路</label>
 		</div>
-		<div style="height:100px;">
+		<div style="height: 100px;">
 			<img class="bigImg" align="left" src="../images/img-supplyer.png" />
 			<img class="bigImg" align="right" src="../images/img-route.png" />
 		</div>
 	</div>
 	<IFRAME NAME="content_frame" width="100%" height="200px"
 		src="footer.html"></IFRAME>
+</body>
 	<script>
+		//Show the model and change toggle style for Login
 		function loginClick() {
 			$("#toggleLogin").css("color", "#10A1F1");
 			$("#toggleRegister").css("color", "gray");
@@ -216,6 +228,7 @@
 				})
 			});
 		}
+		//Show the model and change toggle style for Register
 		function registerClick() {
 			$("#toggleRegister").css("color", "#10A1F1");
 			$("#toggleLogin").css("color", "gray");
@@ -229,14 +242,34 @@
 				})
 			});
 		}
+		// Change button's text to Submit
 		function changeTextToSubmit() {
 			document.getElementById('btnLogOrReg').value = "提交";
 		}
+		// Change button's text to Login
 		function changeTextToLogin() {
 			document.getElementById('btnLogOrReg').value = "登录";
 		}
+		// Change Parent pages	
+		function changePages(whichPage) {
+			switch (whichPage) {
+			case 0:
+				self.location = "home.html";
+				break;
+			case 1:
+				self.location = "OrderInquiry.html";
+				break;
+			case 2:
+				self.location = "MyOrder.html";
+				break;
+			case 3:
+				self.location = "ic_data.html";
+				break;
+			case 4:
+				self.location = "about.html";
+			}
+		}
 	</script>
-</body>
 </html>
 
 

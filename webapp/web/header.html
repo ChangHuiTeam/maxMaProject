@@ -16,23 +16,25 @@
 	background: #4D4D4D;
 	height: 36px;
 }
+
 .bigView {
 	padding: 5px 25%;
 }
+
 .topView {
 	float: right;
 }
-.topA {
-	padding: 0px 5px;
-}
+
 .view {
 	padding: 0 15%;
 	height: 78px;
 }
+
 .header2 {
 	float: left;
 	padding: 10px 15px 10px 0px;
 }
+
 .login {
 	background-color: transparent;
 	height: 60px;
@@ -40,34 +42,118 @@
 	color: #10A1F1;
 	outline: none;
 }
+
 #navigate {
 	padding-top: 10px;
 }
+
 #label56 {
 	font-family: SimSun;
 	color: white;
 	font-weight: regular;
 }
+.topLi{
+float:left;
+list-style:none; 
+
+}
+.dropdown{
+float:left;
+list-style:none; 
+}
+.topUl{
+float:left;
+}
+.navBackground{
+background:#10A1F1;
+}
+
 </style>
 <script type="text/javascript">
+    //Login onclick
 	function didLogin() {
 		parent.loginClick();
 	}
+    //Register onclick
 	function didRegister() {
 		parent.registerClick();
+	}
+	//Home onclick
+	function pageToHome(){
+		parent.changePages(0);	
+		styleForNav(0);
+	}
+	//OrderInquiry onclick
+	function pageToOrderInquiry(){	
+		parent.changePages(1);		
+		styleForNav(1);
+	}
+	//My order onclick
+	function pageToMyOrder(){
+		parent.changePages(2);
+		styleForNav(2);
+	}
+	//Personal center onclick
+	function pageToIc_data(){
+		parent.changePages(3);
+		styleForNav(3);
+	}
+	//AboutUs onclick
+	function pageToAbout(){
+		parent.changePages(4);
+	}
+	// change style for navigate
+	function styleForNav(nowPage){
+		switch (nowPage){
+		case 0:
+			$("#liHome").attr("class", "active");
+		    $("#liOrderIn").removeClass("active");
+		    $("#liMyOrder").removeClass("active");
+		    $("#liPerson").removeClass("active");
+		    break;
+		case 1:
+			$("#liOrderIn").attr("class", "active");	
+			$("#liHome").removeClass("active");
+			$("#liMyOrder").removeClass("active");
+			$("#liPerson").removeClass("active");
+			 break;
+		case 2:
+			$("#liMyOrder").addClass("active");
+			$("#liOrderIn").removeClass("active");
+			$("#liHome").removeClass("active");
+			$("#liPerson").removeClass("active");
+			 break;
+		case 3:
+			$("#liPerson").addClass("active");
+			$("#liOrderIn").removeClass("active");
+			$("#liMyOrder").removeClass("active");
+			$("#liHome").removeClass("active");		
+			 break;
+		}
 	}
 </script>
 </head>
 <body>
 	<div class="first">
 		<div class="bigView">
-			<label id="label56">56物流，我们更懂物流</label>
-			<div class="topView">
-				<a class="topA" href="#" style="color: white">运营合作</a> 
-				<a class="topA" href="#" style="color: white">关于我们</a> 
-				<a class="topA" href="#" style="color: white"  data-toggle="tooltip" data-placement="bottom" data-html="true" >APP下载</a>
-			    <a class="topA" href="#"style="color: white">400-879-7956</a>
-			</div>
+
+			<ul class="topUl">
+				<li class="topLi" style="padding-right:180px;"><label id="label56">56物流，我们更懂物流</label></li>
+				<li class="topLi" style="padding-right:20px;"><a style="color:white" href="#">运营合作</a></li>
+				<li class="topLi"style="padding-right:20px;"><a style="color:white" href="#" onclick="pageToAbout();">关于我们</a></li>
+				<li class="dropdown" style="padding-right:20px;"><a style="color:white" href="#" class="dropdown-toggle"
+					data-toggle="dropdown"> APP下载 <b class="caret"></b>
+				</a>
+					<ul class="dropdown-menu">
+						<li>
+							<p>供应商端下载</p> <img src="../images/code-supplyer.png">
+						</li>
+						<li>
+							<p>客户端下载</p> <img src="../images/code-customer.png">
+						</li>
+					</ul></li>
+				<li class="topLi"><a style="color:white" href="#">400-879-7956</a></li>
+			</ul>
 		</div>
 	</div>
 	<div class="view">
@@ -76,10 +162,10 @@
 		</div>
 		<div class="header2">
 			<ul id="navigate" style="width: 340px" class="nav nav-pills">
-				<li class="active"><a href="#">首 页</a></li>
-				<li><a href="#">下单询价</a></li>
-				<li><a href="#">我的订单</a></li>
-				<li><a href="#">个人中心</a></li>
+				<li id="liHome" ><a href="#" onclick="pageToHome();">首 页</a></li>
+				<li id="liOrderIn"><a  href="#" onclick="pageToOrderInquiry();">下单询价</a></li>
+				<li id="liMyOrder"><a  href="#" onclick="pageToMyOrder();">我的订单</a></li>
+				<li id="liPerson"><a href="#" onclick="pageToIc_data();">个人中心</a></li>
 			</ul>
 		</div>
 		<div class="header2">

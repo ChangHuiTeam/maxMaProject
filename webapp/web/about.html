@@ -51,8 +51,9 @@ p {
 </style>
 </head>
 <body style="background: #F6F4F4;">
-	<IFRAME NAME="content_frame" width="100%" height="100" marginwidth="0"
-		marginheight="0" src="header.html"></IFRAME>
+	<IFRAME id="header" NAME="content_frame" frameborder="no"
+		height="100px" scrolling="no" width="100%" height="120px"
+		src="header.html"></IFRAME>
 <body class="About">
 	<img src="../images/img-banner.png" style="width: 100%">
 	<div class="instruction" style="height: 696px;">
@@ -79,9 +80,29 @@ p {
 		</div>
 	</div>
 	<!-- 表示一个危险的或潜在的负面动作 -->
-	<IFRAME NAME="content_frame" width="100%" height="300" marginwidth="0"
-		marginheight="0" src="footer.html"></IFRAME>
-
+	<IFRAME NAME="content_frame" width="100%" height="200px"
+		src="footer.html"></IFRAME>
+<script type="text/javascript">
+//Change Parent pages	
+function changePages(whichPage) {
+	switch (whichPage) {
+	case 0:
+		self.location = "home.html";
+		break;
+	case 1:
+		self.location = "OrderInquiry.html";
+		break;
+	case 2:
+		self.location = "MyOrder.html";
+		break;
+	case 3:
+		self.location = "ic_data.html";
+		break;
+	case 4:
+		self.location = "about.html";
+	}
+}
+</script>
 </body>
 </html>
 

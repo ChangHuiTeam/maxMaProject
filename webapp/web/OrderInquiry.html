@@ -63,15 +63,21 @@
 	margin-left: 40%;
 }
 .div {
-	border: 1px solid gray;
+	border: 1px solid #E9E9E9;
 }
 .css {
 	font-weight: lighter;
 }
+.select{
+    background:url(../images/02.png) no-repeat 92% 50%;
+    -webkit-appearance: none;
+    padding-left:1.5%;
+}
 </style>
 </head>
 <body>
-	<IFRAME NAME="content_frame" width="100%" height="100"
+<IFRAME id="header" NAME="content_frame" frameborder="no"
+		height="100px" scrolling="no" width="100%" height="120px"
 		src="header.html"></IFRAME>
 	<div style="padding: 0 25%">
 		<div>
@@ -89,15 +95,15 @@
 						<div data-toggle="distpicker">
 							<div class="form-group">
 								<label class="sr-only" for="ShippingProvince">Province</label> 
-								<select	id="ShippingProvince" data-province="---省---" style="width: 50pt"></select>
+								<select	class="select" id="ShippingProvince" data-province="---省---" style="width: 50pt"></select>
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="ShippingCity">City</label> 
-								<select id="ShippingCity" data-city="---市---" style="width: 50pt"></select>
+								<select class="select" id="ShippingCity" data-city="---市---" style="width: 50pt"></select>
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="ShippingDistrict">District</label> 
-								<select id="ShippingDistrict" data-district="---区---" style="width: 50pt"></select>
+								<select class="select" id="ShippingDistrict" data-district="---区---" style="width: 50pt"></select>
 							</div>
 						</div>
 					</form>
@@ -117,15 +123,15 @@
 						<div data-toggle="distpicker">
 							<div class="form-group">
 								<label class="sr-only" for="ReceiptProvince">Province</label> 
-								<select id="ReceiptProvince" data-province="---省---" style="width: 50pt"></select>
+								<select class="select" id="ReceiptProvince" data-province="---省---" style="width: 50pt"></select>
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="ReceiptCity">City</label> 
-								<select id="ReceiptCity" data-city="---市---" style="width: 50pt"></select>
+								<select class="select" id="ReceiptCity" data-city="---市---" style="width: 50pt"></select>
 							</div>
 							<div class="form-group">
 								<label class="sr-only" for="ReceiptDistrict">District</label> 
-								<select id="ReceiptDistrict" data-district="---区---" style="width: 50pt"></select>
+								<select class="select" id="ReceiptDistrict" data-district="---区---" style="width: 50pt"></select>
 							</div>
 						</div>
 					</form><br><br> 
@@ -145,7 +151,7 @@
 				style="width: 15%" type="text" id="GoodsNumber" placeholder="请输入数量"> <font
 				color="red" style="margin-left: 5%;">*</font><label
 				style="margin-top: 0%; margin-bottom: 5%" class="css">单位：</label>
-			<select id="GoodsUnit" style="width: 10%;">
+			<select class="select" id="GoodsUnit" style="width: 10%;">
 				<option>吨</option>
 				<option>吨</option>
 				<option>吨</option>
@@ -155,13 +161,13 @@
 		<div class="div" style="height: 17%; border-top: none;">
 			<label class="font3">车辆需求</label><br> <label
 				style="margin-left: 13%; margin-bottom: 3%" class="css">所需车长：
-			</label> <select id="VehicleLength" style="width: 20%;">
+			</label> <select class="select" id="VehicleLength" style="width: 20%;">
 				<option>5</option>
 				<option>6</option>
 				<option>7</option>
 				<option>8</option>
 			</select> <label style="margin-left: 5%; align: right" class="css">所需车型：
-			</label> <select id="VehicleType" style="width: 20%; text-align: center;">
+			</label> <select class="select" id="VehicleType" style="width: 20%; text-align: center;">
 				<option>AA</option>
 				<option>BB</option>
 				<option>CC</option>
@@ -198,43 +204,63 @@
 			</div>
 		</div>
 		<div id="allmap"></div>
-		<hr style="margin-top: 5%; align: center; height: 1px; background-color: gray; border: none;">
+		<hr style="margin-top: 5%; align: center; height: 1px; background-color: #E9E9E9; border: none;">
 	</div>
+	<IFRAME NAME="content_frame" width="100%" height="200px"
+		src="footer.html"></IFRAME>
 </body>
 <script>
-$(function () { $('#myModal').on('show.bs.modal', function () {
-		// 初始化地图
-			var map = new BMap.Map("allmap");
-			var localSearch1 = new BMap.LocalSearch(map);
-			var localSearch2 = new BMap.LocalSearch(map);
-			// 初始化经纬度　　
-			var poi1 = null;
-			var poi2 = null;
-			// 获取发货地地址
-			var ShippingDistrict = document.getElementById("ShippingDistrict").value;  	   
-			localSearch1.setSearchCompleteCallback(function (searchResult1) {
-			　　poi1 = searchResult1.getPoi(0);	
-			
-				// 获取收货地地址    
-				var ReceiptDistrict = document.getElementById("ReceiptDistrict").value;
-				localSearch2.setSearchCompleteCallback(function (searchResult2) {    	　　　
-			   		poi2 = searchResult2.getPoi(0);  
-			   		
-			   		// 获取发货地的经度和纬度   	
-			 		var ShippingPoint = new BMap.Point(poi1.point.lng,poi1.point.lat);
-			 		// 获取收货地的经度和纬度   	  	 
-			 		var ReceiptPoint = new BMap.Point(poi2.point.lng,poi2.point.lat);   	
-			 		// 计算两地之间的距离   	 
-		   			var distance =  map.getDistance(ShippingPoint,ReceiptPoint).toFixed(2); 
-		   			var distance = Math.round((distance/1000)*100)/100;
-					// 获取两地间距离,保留小数点后两位  
-					document.getElementById("distancetext").innerText ='从 '+ShippingDistrict+' 到 '+ReceiptDistrict+' 的距离是：'+distance+'千米。'; 
-					document.getElementById("pricetext").innerText ='从 '+ShippingDistrict+' 到 '+ReceiptDistrict+' 的总价是：'+distance+'元。'; 
-					});  			　  			
-				localSearch2.search(ReceiptDistrict);
-				   });   
-			localSearch1.search(ShippingDistrict); 	 
-			})
-		});
+function Orderinquiry_onclick(){
+	// 初始化地图
+	var map = new BMap.Map("allmap");
+	var localSearch1 = new BMap.LocalSearch(map);
+	var localSearch2 = new BMap.LocalSearch(map);
+	// 初始化经纬度　　
+	var poi1 = null;
+	var poi2 = null;
+	// 获取发货地地址
+	var ShippingDistrict = document.getElementById("ShippingDistrict").value;  	   
+	localSearch1.setSearchCompleteCallback(function (searchResult1) {
+	　　poi1 = searchResult1.getPoi(0);	
+	
+		// 获取收货地地址    
+		var ReceiptDistrict = document.getElementById("ReceiptDistrict").value;
+		localSearch2.setSearchCompleteCallback(function (searchResult2) {    	　　　
+	   		poi2 = searchResult2.getPoi(0);  
+	   		
+	   		// 获取发货地的经度和纬度   	
+	 		var ShippingPoint = new BMap.Point(poi1.point.lng,poi1.point.lat);
+	 		// 获取收货地的经度和纬度   	  	 
+	 		var ReceiptPoint = new BMap.Point(poi2.point.lng,poi2.point.lat);   	
+	 		// 计算两地之间的距离   	 
+   			var distance =  map.getDistance(ShippingPoint,ReceiptPoint).toFixed(2); 
+   			var distance = Math.round((distance/1000)*100)/100;
+			// 获取两地间距离,保留小数点后两位  
+			document.getElementById("distancetext").innerText ='从 '+ShippingDistrict+' 到 '+ReceiptDistrict+' 的距离是：'+distance+'千米。'; 
+			document.getElementById("pricetext").innerText ='从 '+ShippingDistrict+' 到 '+ReceiptDistrict+' 的总价是：'+distance+'元。'; 
+			});  			　  			
+		localSearch2.search(ReceiptDistrict);
+		   });   
+	localSearch1.search(ShippingDistrict); 	 
+	}
+//Change Parent pages	
+function changePages(whichPage) {
+	switch (whichPage) {
+	case 0:
+		self.location = "home.html";
+		break;
+	case 1:
+		self.location = "OrderInquiry.html";
+		break;
+	case 2:
+		self.location = "MyOrder.html";
+		break;
+	case 3:
+		self.location = "ic_data.html";
+		break;
+	case 4:
+		self.location = "about.html";
+	}
+}
 </script>
 </html>

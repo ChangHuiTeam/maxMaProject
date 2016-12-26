@@ -12,34 +12,6 @@
 <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-function setSelectUserNo(radioObj){  
-
-    var radioCheck= $(radioObj).val();
-
-    if("1"==radioCheck){  
-        $(radioObj).attr("checked",false);  
-        $(radioObj).val("0");           
-    }else{   
-        $(radioObj).val("1");          
-    }  
-}
-function getradtext(){
-
-	var aa = $("input[id=rad1]:checked").val();
-
-	if("1"==aa){
-
-		var b=document.getElementById("text2").value;
- 	
-	var a="价格不合适，期待价格"+b+"元"
-	alert(a);
-	}
-	
-} 
-
-
-</script>
 <style>
 /*  div居中 */
 	body{ text-align:center} 
@@ -55,6 +27,7 @@ function getradtext(){
 　　}
 /* 导航first */
 .Dhfirst{
+	cursor:pointer;
 	text-align:center;
 	text-decoration:none;
 	border-bottom:3px solid ; 
@@ -65,6 +38,7 @@ function getradtext(){
 }
 /* 导航second */
 .Dhsecond{
+	cursor:pointer;
 	text-align:center;
 	text-decoration:none;
 	size:18px;
@@ -288,7 +262,7 @@ padding-left:5px;
             <li><a href="Receipt.html" ><label class="Dhsecond">已下单</label></a></li>
             <li><a href="SentCar.html" ><label class="Dhsecond">已派车</label></a></li>
             <li><a href="Outbound.html" ><label class="Dhsecond">已出库</label></a></li>
-            <li><a href="Unloaded.html" ><label class="Dhfirst">已卸载</label></a></li>
+            <li><a href="Unloaded.html" ><label class="Dhfirst">已卸货</label></a></li>
             <li><a href="PlaceOrder.html" ><label class="Dhsecond">签收单</label></a></li>
             <li><a href="Complete.html" ><label class="Dhsecond">完成</label></a></li>
             <li><a href="Cancled.html" ><label class="Dhsecond">已取消</label></a></li>   

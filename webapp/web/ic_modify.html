@@ -1,124 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.body {
-	padding-left: 15%;
-	padding-right: 15%;
-	padding-top: 0px;
-	padding-end: 100px;
-}
-/*div主体*/
-.div1 {
-	float: center;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	padding-block-end: 50px;
-	height: 800px;
-	width: 100%;
-	border: 0.05px solid;
-	border-color: #fff;
-	border-top-color: #E5E3E9;
-	border-end-color: #E5E3E9;
-}
-/*←导航栏*/
-.diva {
-	padding-top: 0px;
-	float: left;
-	background: #f3f3f3;
-	height: 90%;
-	width: 180px;
-}
-
-.divb {
-	margin-left: 0px;
-	padding: 20px 0;
-	list-style: none;
-}
-
-.li {
-	width: 100%;
-	height: auto;
-}
-
-.lia {
-	display: block;
-	width: 100%;
-	color: #333333;
-	height: 50px;
-	text-indent: 30px;
-	font-size: 20px;;
-	font-family: SimSun, Times, serif;
-	text-decoration: none;
-	padding-top: 8px;
-	margin-top: 20px;
-}
-
-.lib {
-	display: block;
-	width: 100%;
-	color: #333333;
-	height: 50px;
-	text-indent: 30px;
-	font-size: 20px;
-	font-family: SimSun, Times, serif;
-	text-decoration: none;
-	padding-top: 8px;
-	margin-top: 5px;
-}
-
-.lic {
-	display: block;
-	width: 100%;
-	background: #fff;
-	height: 50px;
-	text-indent: 30px;
-	font-size: 20px;
-	font-family: SimSun, Times, serif;
-	text-decoration: none;
-	padding-top: 8px;
-	margin-top: 5px;
-}
-
-.divmima {
-	margin-left: 25%;
-	width: 60%;
-	height: 100%;
-}
-
-.divds {
-	background: #fff;
-	padding-top: 50px;
-	padding-left: 5%;
-	padding-right:30%;
-	font-family: SimSun, Times, serif;
-	font-size: 15px;
-}
-
-.divdd {
-	float: right;
-	width: 70%;	
-	margin-top: -5px;
-}
-
-.btnn {
-	background: #10a0f1;
-	color: #ffffff;
-	border-radius: 10px;
-	font-family: SimSun, Times, serif;
-	font-size: 17px;
-	font-color: #b3b3b3;
-	height: 36px;
-	width: 160px;
-}
-</style>
 <meta charset="UTF-8">
 <title>修改密码</title>
-<meta charset="UTF-8">
 <meta
 	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
 	name="viewport" />
-
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="../bootstrap/js/jquery.min.js"></script>
@@ -144,50 +31,239 @@ function changePages(whichPage) {
 		self.location = "about.html";
 	}
 }</script>
+<style>
+.divbody {
+	height: auto;
+	width: 80%;
+	background: #f3f3f3;
+}
+/*左边导航栏*/
+.af {
+	padding-top: 0px;
+	float: left;
+	background: #f3f3f3;
+	height: 100%;
+	width: 160px;
+	border: 1px solid #d6d6e0;
+}
+
+.ul {
+	margin-left: 0;
+	padding: 20px 0;
+	list-style: none;
+}
+
+.li {
+	width: 100%;
+	height: auto;
+}
+
+.ali {
+	display: block;
+	width: 100%;
+	height: 50px;
+	text-indent: 30px;
+	font-size: 16px;;
+	font-family: SimSun, Times, serif;
+	text-decoration: none;
+	padding-top: 12px;
+	margin-top: 20px;
+	color:#333;
+}
+
+.ali1 {
+	display: block;
+	width: 100%;
+	color: #333333;
+	height: 50px;
+	text-indent: 30px;
+	font-size: 16px;
+	font-family: SimSun, Times, serif;
+	text-decoration: none;
+	padding-top: 12px;
+	margin-top: 5px;
+}
+
+.divbs {
+	padding-left: 60px;
+	padding-top: 30px;
+	overflow: hidden;
+}
+
+.divcs {
+	float: left;
+	width: 80px;
+	height: 80px;
+	position: relative;
+}
+
+.divds {
+	margin-left: 40px;
+	float: left;
+}
+
+.pspan {
+	width: 100%;
+	height: 50px;
+	flood-color: #333333;
+	text-indent: 30px;
+	font-size: 18px;
+	font-family: Microsoft YaHei, Times, serif;
+	text-decoration: none;
+	padding-top: 8px;
+	margin-top: 5px;
+}
+
+.divhs {
+	margin-left: 120px;
+	margin-top: 20px;
+	padding-top: 10px;	
+	width:200px;
+	hight:50px;
+}
+.asdiv {
+	float:left;
+	height: 600px;
+	width: 600px;
+	background: #fff;
+	margin-inline-start: 40px;
+}
+
+.asdivd {
+	background: #f3f3f3;
+	margin-left: 0px;
+	margin-top: 2px;
+	
+	
+}
+
+.divp {
+	padding-top: 15px;
+	padding-left: 60px;
+}
+
+.pspan {
+	text-indent: 30px;
+	color: #333333;
+	font-size: 15px;
+	font-family: SimSun, Times, serif;
+	text-decoration: none;
+}
+
+
+
+.addiv {
+	opacity: 0;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.divmima {	
+	width: 550px;
+	height: 400px;
+}
+
+.divds {
+	background: #fff;
+	font-family: SimSun, Times, serif;
+	font-size: 15px;
+}
+
+.divdd {
+	float: right;
+	width: 300px;
+	min-width:299px;	
+	
+	margin-inline-start: 50px;
+}
+.ttbtn {
+	background: #10a0f1;
+	color: #ffffff;
+	border-radius: 10px;
+	font-family: SimSun, Times, serif;
+	font-size: 18px;
+	font-color: #b3b3b3;
+	height: 36px;
+	width: 160px;
+}
+
+.ttbtnn {
+	margin-top: 0px;
+	margin-left: 0%;
+	width: 100%;
+	height: 10%;
+}
+.btnn {
+	background: #10a0f1;
+	color: #ffffff;
+	border-radius: 10px;
+	font-family: SimSun, Times, serif;
+	font-size: 18px;
+	font-color: #b3b3b3;
+	height: 36px;
+	width: 160px;
+}
+
+</style>
 </head>
 <body>
-	<IFRAME id="header" NAME="content_frame" frameborder="no"
+<!-- 顶部导航栏 -->
+	<div class="" style="height: 121px;margin:0px 0px 0;">
+		<IFRAME id="header" NAME="content_frame" frameborder="no"
 		height="100px" scrolling="no" width="100%" height="120px"
 		src="header.html"></IFRAME>
-	<div class="container " style="padding-top: 48px; height: 600px;margin-left: 20%;">
-		<div class="diva">
-			<div id="menu" class="">
-				<ul class="divb">
-					<li class="li"><a class="lia"
-						href="../web/ic_data.html"> <img
-							src="../images/ic-personal-default.png"></img>
-							个人资料
-					</a></li>
-					<li class="li"><a class="lib"
-						href="../web/ic_ident.html"> <img
-							src="../images/ic-certify-default.png"></img> 认证中心
-							<span class="menu_arrows"></span>
-					</a></li>
-					<li style=""><a class="lic" href="../web/ic_modify.html" target="_self"> <img
-							src="../images/ic-password-selected.png"></img>
-							修改密码
-					</a></li>
-				</ul>
+	</div>
+<!-- 	内容 -->
+	<div class="container " style="border-top-color: #f3f3f3; border-top-style: solid; border-top-width: 1px;padding-top: 48px; height: 700px;">
+<!-- 	左边导航栏 -->
+		<div style="float:left;background: #f3f3f3; height: 600px;width:160px;margin-left: 150px;">
+				<div class="af">
+					<div id="menu"style="margin-left:0px;">
+						<ul class="ul">
+							<li class="li"><a class="ali" href="../web/ic_data.html" target="_self"> <img
+									src="../images/ic-personal-default.png"></img>
+									个人资料
+							</a></li>
+							<li class="li"><a class="ali1"
+								href="../web/ic_ident.html"> <img
+									src="../images/ic-certify-default.png"></img>
+									认证中心 <span class="menu_arrows"></span>
+							</a></li>
+							<li class="li"><a class="ali1"style="color:#10a0f1;background: #fff;border-left-color: #10a0f1; border-left-style: solid; border-left-width: 4px;"
+								href="../web/ic_modify.html"> <img
+									src="../images/ic-password-selected.png"></img>
+									修改密码
+							</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="divmima">
+<!-- 右侧内容 -->
+			<div 
+				style="float: left; margin-left: 40px; width: 700px;min-width:360px; height: auto;">
+			<div class="divmima">
 			<div class="divds">
-				旧密码： <input type="password" name="orderId" class="center-block divdd"
+				旧密码： <input type="password" name="orderId" class="divdd"
 					placeholder="请输入旧密码" value="" type="text">
 			</div>
-			<div class="divds">
-				新密码： <input type="password" name="orderId" class="center-block divdd"
+			<div class="divds" style="padding-top:40px;">
+				新密码： <input type="password" name="orderId" class=" divdd"
 					placeholder="请输入新密码" value="" type="text">
 			</div>
-			<div style="margin-top: 51px; margin-left: 27%;">
+			<div style="margin-top: 51px; margin-left: 27%;padding-top:130px;">
 				<button id="id_confirm" class="btnn">确认修改</button>
 			</div>			
 		</div>		
 	</div>
-	<div class="page-footer"
-		style="border-top: 1px solid #eee; height: 100px;">
+			</div>
+		
+	<!-- 		底部标注 -->
+	<div class="page-footer" 
+		style="border-top: 1px solid #eee; height: 80px;text-align:center;margin:0 auto;width:850px;">
 		<b class="center-block  disabled"
-			style="padding-left: 30%; padding-right: 30%; margin-top: 30px; color: #bcc2b1; font-size: 18px; font-family: '宋体';">版权2012-2016
+			style="padding-left: 10%; padding-right: 10%; margin-top: 30px; color: #bcc2b1; font-size: 12px; font-family: '宋体';">版权2012-2016
 			厦门优创思特供应链管理有限公司版权所有 闽ICP备14000533号-1</b>
 	</div>
 </body>

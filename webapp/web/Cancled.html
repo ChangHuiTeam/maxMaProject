@@ -12,34 +12,7 @@
 <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-function setSelectUserNo(radioObj){  
 
-    var radioCheck= $(radioObj).val();
-
-    if("1"==radioCheck){  
-        $(radioObj).attr("checked",false);  
-        $(radioObj).val("0");           
-    }else{   
-        $(radioObj).val("1");          
-    }  
-}
-function getradtext(){
-
-	var aa = $("input[id=rad1]:checked").val();
-
-	if("1"==aa){
-
-		var b=document.getElementById("text2").value;
- 	
-	var a="价格不合适，期待价格"+b+"元"
-	alert(a);
-	}
-	
-} 
-
-
-</script>
 <style>
 /*  div居中 */
 	body{ text-align:center} 
@@ -55,6 +28,7 @@ function getradtext(){
 　　}
 /* 导航first */
 .Dhfirst{
+	cursor:pointer;
 	text-align:center;
 	text-decoration:none;
 	border-bottom:3px solid ; 
@@ -65,6 +39,7 @@ function getradtext(){
 }
 /* 导航second */
 .Dhsecond{
+	cursor:pointer;
 	text-align:center;
 	text-decoration:none;
 	size:18px;
@@ -287,7 +262,7 @@ padding-left:5px;
             <li><a href="Receipt.html" ><label class="Dhsecond">已下单</label></a></li>
             <li><a href="SentCar.html" ><label class="Dhsecond">已派送</label></a></li>
             <li><a href="Outbound.html" ><label class="Dhsecond">已出库</label></a></li>
-            <li><a href="Unloaded.html" ><label class="Dhsecond">已卸载</label></a></li>
+            <li><a href="Unloaded.html" ><label class="Dhsecond">已卸货</label></a></li>
             <li><a href="PlaceOrder.html" ><label class="Dhsecond">签收单</label></a></li>
             <li><a href="Complete.html" ><label class="Dhsecond">完成</label></a></li>
             <li><a href="Cancled.html" ><label class="Dhfirst">已取消</label></a></li>   
@@ -300,7 +275,6 @@ padding-left:5px;
 	<div id="orderNum" class="orderDetail" style="padding-left:10px;"><label class="orderDetail1">78458375877348697</label></div>
 	<div class="orderDetail" style="padding-left:40px;"><label class="orderDetail1">订单日期 ：</label></div>
 	<div id="orderNum" class="orderDetail" style="padding-left:10px;"><label class="orderDetail1">2016/12/12 12:22:22</label></div>
-
 </div>
 <div class="mainframe">
 <div class="styleinfo1" style="border-left:0">
@@ -342,9 +316,7 @@ padding-left:5px;
 		<label class="goodsName orderDetail2" >塑料袋子。29斤山东矿机买也买不起就不要阿里那个飞我玩会四件了</label>
 		</div>
 	</div>
-
 </div>
-
 <div class="styleinfo1">
 <div class="shippingstyle"><label class="orderDetail1">费用信息</label></div>
 	<div >
@@ -352,7 +324,6 @@ padding-left:5px;
 		<div style="height:50px;">
 			<label class="add1 orderDetail2" style="padding-left:5px;">310.00元/吨   不含税</label>
 		</div>
-
 	</div>
 	<div >
 		<div class="shippingadd1" ><label class="orderDetail2">运费 ：</label></div>
@@ -372,9 +343,6 @@ padding-left:5px;
 			<label class="add1 orderDetail2" style="padding-left:5px;">20.00元</label>
 		</div>
 	</div>
-	
-
-
 </div>
 <div class="styleinfo1" style="width:320px;border-right:0">
 <div class="shippingstyle" ><label class="orderDetail1">联系我们</label></div>
@@ -395,11 +363,9 @@ padding-left:5px;
 		<div class="mainframe2">
 			<label class="add2 orderDetail2" style="padding-left:20px;padding-top:20px;">670yuan </label>
 		</div> 
-	</div>
-	
+	</div>	
 </div>
 </div>
-
 </div>
 <div style="height:30px;margin:0 auto;width:960px;"></div>
 <div class="page-footer"
@@ -408,5 +374,4 @@ padding-left:5px;
 			style=" margin-top: 30px; color: #bcc2b1; font-size: 12px; font-family: '宋体';">版权2012-2016
 			厦门优创思特供应链管理有限公司版权所有 闽ICP备14000533号-1</b>
 	</div>
-
 </body>

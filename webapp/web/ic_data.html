@@ -44,7 +44,8 @@
 	float: left;
 	background: #f3f3f3;
 	height: 100%;
-	width: 180px;
+	width: 160px;
+	border: 1px solid #d6d6e0;
 }
 
 .ul {
@@ -64,10 +65,10 @@
 	width: 100%;
 	height: 50px;
 	text-indent: 30px;
-	font-size: 20px;;
+	font-size: 16px;;
 	font-family: SimSun, Times, serif;
 	text-decoration: none;
-	padding-top: 8px;
+	padding-top: 12px;
 	margin-top: 20px;
 }
 
@@ -77,10 +78,10 @@
 	color: #333333;
 	height: 50px;
 	text-indent: 30px;
-	font-size: 20px;
+	font-size: 16px;
 	font-family: SimSun, Times, serif;
 	text-decoration: none;
-	padding-top: 8px;
+	padding-top: 12px;
 	margin-top: 5px;
 }
 
@@ -107,7 +108,7 @@
 	height: 50px;
 	flood-color: #333333;
 	text-indent: 30px;
-	font-size: 25px;
+	font-size: 18px;
 	font-family: Microsoft YaHei, Times, serif;
 	text-decoration: none;
 	padding-top: 8px;
@@ -115,66 +116,72 @@
 }
 
 .divhs {
-	margin-left: 40px;
-	margin-top: 50px;
+	margin-left: 120px;
+	margin-top: 20px;
 	padding-top: 10px;
-	padding-left: 100px;
+	width: 200px;
+	hight: 50px;
 }
 </style>
 </head>
 <body>
-	<IFRAME id="header" NAME="content_frame" frameborder="no"
-		height="100px" scrolling="no" width="100%" height="120px"
-		src="header.html"></IFRAME>
-	<div class="container " style="padding-top: 48px; height: 800px;">
-		<div class="row">
-			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"
-				style="background: #f3f3f3; height: 700px;">
-				<div class="af">
-					<div id="menu" style="margin-left: -15px;" class="">
-						<ul class="ul">
-							<li class="li"><a class="ali" href="../web/ic_data.html"
-								target="_self"> <img
-									src="../images/ic-personal-selected.png"></img> 个人资料
-							</a></li>
-							<li class="li"><a class="ali1" href="../web/ic_ident.html">
-									<img src="../images/ic-certify-default.png"></img> 认证中心
-									<span class="menu_arrows"></span>
-							</a></li>
-							<li class="li"><a class="ali1" href="../web/ic_modify.html">
-									<img src="../images/ic-password-default.png"></img> 修改密码
-							</a></li>
-						</ul>
-					</div>
+	<!-- 顶部导航栏 -->
+	<div class="" style="height: 121px; margin: 0px 0px 0;">
+		<IFRAME id="header" NAME="content_frame" frameborder="no"
+			height="100px" scrolling="no" width="100%" height="120px"
+			src="header.html"></IFRAME>
+	</div>
+	<!-- 	内容 -->
+	<div class="container " style="border-top-color: #f3f3f3; border-top-style: solid; border-top-width: 1px;padding-top: 48px; height: 700px;">
+		<!-- 	左边导航栏 -->
+		<div
+			style="float: left; background: #f3f3f3; height: 600px; width: 160px; margin-left: 150px;">
+			<div class="af">
+				<div id="menu" style="margin-left: 0px;" class="">
+					<ul class="ul">
+						<li class="li"><a class="ali"
+							style="border-left-color: #10a0f1; border-left-style: solid; border-left-width: 4px;"
+							href="../web/ic_data.html" target="_self"> <img
+								src="../images/ic-personal-selected.png"></img> 个人资料
+						</a></li>
+						<li class="li"><a class="ali1" href="../web/ic_ident.html">
+								<img src="../images/ic-certify-default.png"></img> 认证中心 <span
+								class="menu_arrows"></span>
+						</a></li>
+						<li class="li"><a class="ali1" href="../web/ic_modify.html">
+								<img src="../images/ic-password-default.png"></img> 修改密码
+						</a></li>
+					</ul>
 				</div>
 			</div>
-			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"
-				style="float: right; background-color: #f3f3f3; width: 80%; min-width: 360px; height: 200px;">
-				<div class="divbs">
-					<div class="divcs">
-						<img id="img-sample" alt="" src="../images/img-sample.png">
-					</div>
-					<div class="divds">
-						<p class="">
-							<span id="useinfo" class="pspan">武漢大康物流有限責任公司</span> <strong
-								class=""></strong>
-						</p>
-					</div>
-					<div class="divhs">
-						<input type="image" id="identing" value="0"
-							src="../images/certify1.png"> <input type="image"
-							id="identing" value="1" src="../images/certify2.png">
-						<input type="image" id="identing" value="2"
-							src="../images/certify3.png">
-					</div>
+		</div>
+		<!-- 右侧内容 -->
+		<div
+			style="border: 1px solid #d6d6e0;float: left; background-color: #f3f3f3; margin-left: 40px; width: 700px; min-width: 360px; height: 150px;">
+			<div class="divbs">
+				<div class="divcs">
+					<img id="img-sample" alt="" src="../images/img-sample.png">
+				</div>
+				<div class="divds">
+					<p class="">
+						<span id="useinfo" class="pspan">武漢大康物流有限責任公司</span> <strong
+							class=""></strong>
+					</p>
+				</div>
+				<div class="divhs">
+					<input type="image" id="identing" value="0"
+						src="../images/certify1.png"> <input type="image"
+						id="identing" value="1" src="../images/certify2.png"> <input
+						type="image" id="identing" value="2" src="../images/certify3.png">
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- 		底部标注 -->
 	<div class="page-footer"
-		style="border-top: 1px solid #eee; height: 100px;">
+		style="border-top: 1px solid #eee; height: 80px; text-align: center; margin: 0 auto; width: 850px;">
 		<b class="center-block  disabled"
-			style="padding-left: 30%; padding-right: 30%; margin-top: 30px; color: #bcc2b1; font-size: 18px; font-family: '宋体';">版权2012-2016
+			style="padding-left: 10%; padding-right: 10%; margin-top: 30px; color: #bcc2b1; font-size: 12px; font-family: '宋体';">版权2012-2016
 			厦门优创思特供应链管理有限公司版权所有 闽ICP备14000533号-1</b>
 	</div>
 </body>

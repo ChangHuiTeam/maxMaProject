@@ -10,19 +10,7 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script>
-/* 传订单数，算页数 */
-	function NumPage(){
-		var a=113;
-		var b;
-		document.getElementById('orderNum').innerHTML ="共"+a+"条消息"; 
-		if(a%10<10){			
-			b=parseInt(a/10)+1;
-		}
-		else{
-			b=a/10;
-		}
-		document.getElementById('pageNum').innerHTML =b; 		
-	}
+
 	// Change Parent pages	
 	function changePages(whichPage) {
 		switch (whichPage) {
@@ -52,7 +40,8 @@
 	margin:0 auto; 
 	top: 25%; 
 	border: 1px solid ;
-	border-color:#EEEEEE;
+	border-color:#E9E9E9;
+	border-top:4px solid ;
 	border-top-color:#0000FF;
 　　}
 /* 导航first */
@@ -64,14 +53,17 @@
 	padding-bottom:4px;
 	size:18px;
 	font-family:Microsoft YaHei;
+	cursor:pointer;
 }
 /* 导航second */
 .Dhsecond{
+
 	text-align:center;
 	text-decoration:none;
 	size:18px;
 	color:#333333;
 	font-family:Microsoft YaHei;
+	cursor:pointer;
 }
 /* 导航third */
 .Dhthird{
@@ -115,8 +107,14 @@
 </head>
 <body>
 <IFRAME id="header" NAME="content_frame" frameborder="no"
-		height="100px" scrolling="no" width="100%" height="120px"
+		 scrolling="no" width="100%" height="120px"
 		src="header.html"></IFRAME>
+	<div class="page-footer"
+		style="border-top: 1px solid #eee;width:100%;margin:0 auto;padding-top:1px;">
+	</div>	
+	<div>
+	<br><br>
+	</div>	
 <div class="center">
 	<div>
 	<div>
@@ -126,7 +124,7 @@
             <li><a href="Receipt.html" ><label class="Dhsecond">已下单</label></a></li>
             <li><a href="SentCar.html" ><label class="Dhsecond">已派送</label></a></li>
             <li><a href="Outbound.html" ><label class="Dhsecond">已出库</label></a></li>
-            <li><a href="Unloaded.html" ><label class="Dhsecond">已卸载</label></a></li>
+            <li><a href="Unloaded.html" ><label class="Dhsecond">已卸货</label></a></li>
             <li><a href="PlaceOrder.html" ><label class="Dhsecond">签收单</label></a></li>
             <li><a href="Complete.html" ><label class="Dhsecond">完成</label></a></li>
             <li><a href="Cancled.html" ><label class="Dhsecond">已取消</label></a></li>   
@@ -142,7 +140,7 @@
 
 		　　</ul>
 		<ul class="list-inline ul" >
-		　　<li class="Dhthird" ><a href="OrderDetail.html"><label class="Ordernum">2143242354235</label></a></li>
+		　　<li class="Dhthird" ><a href="OrderDetail.html" style="cursor:pointer"><label class="Ordernum">2143242354235</label></a></li>
 		<li class="Dhthird"><label class="Orderinfo">2016/12/12 12:22:22</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
@@ -150,7 +148,7 @@
 		<li class="Dhthird"><label class="Orderinfo">20.00吨</label></li>
 		　</ul>
 		<ul class="list-inline ul" >
-		　　<li class="Dhthird"><a href="OrderDetail.html"><label class="Ordernum">2143242354235</label></a></li>
+		　　<li class="Dhthird"><a href="OrderDetail.html" style="cursor:pointer"><label class="Ordernum">2143242354235</label></a></li>
 		<li class="Dhthird"><label class="Orderinfo">2016/12/12 12:22:22</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
@@ -158,7 +156,7 @@
 		<li class="Dhthird"><label class="Orderinfo">20.00吨</label></li>
 		　</ul>
 		<ul class="list-inline ul" >
-		　　<li class="Dhthird"><a href="OrderDetail.html"><label class="Ordernum">2143242354235</label></a></li>
+		　　<li class="Dhthird"><a href="OrderDetail.html" style="cursor:pointer"><label class="Ordernum">2143242354235</label></a></li>
 		<li class="Dhthird"><label class="Orderinfo">2016/12/12 12:22:22</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
@@ -166,7 +164,7 @@
 		<li class="Dhthird"><label class="Orderinfo">20.00吨</label></li>
 		　</ul>								
 		<ul class="list-inline ul" >
-		　　<li class="Dhthird"><a href="OrderDetail.html"><label class="Ordernum">2143242354235</label></a></li>
+		　　<li class="Dhthird"><a href="OrderDetail.html" style="cursor:pointer"><label class="Ordernum">2143242354235</label></a></li>
 		<li class="Dhthird"><label class="Orderinfo">2016/12/12 12:22:22</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
@@ -174,7 +172,7 @@
 		<li class="Dhthird"><label class="Orderinfo">20.00吨</label></li>
 		　</ul>
 		<ul class="list-inline ul" >
-		　　<li class="Dhthird"><a href="OrderDetail.html"><label class="Ordernum">2143242354235</label></a></li>
+		　　<li class="Dhthird"><a href="OrderDetail.html" style="cursor:pointer"><label class="Ordernum">2143242354235</label></a></li>
 		<li class="Dhthird"><label class="Orderinfo">2016/12/12 12:22:22</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
@@ -182,7 +180,7 @@
 		<li class="Dhthird"><label class="Orderinfo">20.00吨</label></li>
 		　</ul>
 		<ul class="list-inline ul" >
-		　　<li class="Dhthird"><a href="OrderDetail.html"><label class="Ordernum">2143242354235</label></a></li>
+		　　<li class="Dhthird"><a href="OrderDetail.html" style="cursor:pointer"><label class="Ordernum">2143242354235</label></a></li>
 		<li class="Dhthird"><label class="Orderinfo">2016/12/12 12:22:22</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
 		<li class="Dhthird"><label class="Orderinfo">陕西省西安市临潼区</label></li>
@@ -210,6 +208,5 @@
 			style=" margin-top: 30px; color: #bcc2b1; font-size: 12px; font-family: '宋体';">版权2012-2016
 			厦门优创思特供应链管理有限公司版权所有 闽ICP备14000533号-1</b>
 	</div>
-<IFRAME NAME="content_frame" width="100%" height="200px"
-		src="footer.html"></IFRAME>
+
 </body>

@@ -13,30 +13,7 @@
 <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
-function setSelectUserNo(radioObj){  
-
-    var radioCheck= $(radioObj).val();
-
-    if("1"==radioCheck){  
-        $(radioObj).attr("checked",false);  
-        $(radioObj).val("0");           
-    }else{   
-        $(radioObj).val("1");          
-    }  
-}
-function getradtext(){
-
-	var aa = $("input[id=rad1]:checked").val();
-
-	if("1"==aa){
-
-		var b=document.getElementById("text2").value;
- 	
-	var a="价格不合适，期待价格"+b+"元"
-	alert(a);
-	}
-	
-} 
+ 
 // Change Parent pages	
 function changePages(whichPage) {
 	switch (whichPage) {
@@ -73,6 +50,7 @@ function changePages(whichPage) {
 　　}
 /* 导航first */
 .Dhfirst{
+	cursor:pointer;
 	text-align:center;
 	text-decoration:none;
 	border-bottom:3px solid ; 
@@ -83,6 +61,7 @@ function changePages(whichPage) {
 }
 /* 导航second */
 .Dhsecond{
+	cursor:pointer;
 	text-align:center;
 	text-decoration:none;
 	size:18px;
@@ -289,7 +268,7 @@ padding-left:5px;
 </head>
 <body>
 <IFRAME id="header" NAME="content_frame" frameborder="no"
-		height="100px" scrolling="no" width="100%" height="120px"
+		 scrolling="no" width="100%" height="120px"
 		src="header.html"></IFRAME>
 	<div class="page-footer"
 		style="border-top: 1px solid #eee;width:100%;margin:0 auto;padding-top:1px;">
@@ -300,7 +279,7 @@ padding-left:5px;
 <div class="modal fade"  id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog" >
 		<div class="modal-content" style="width:426px;height:250px;margin-left:20%;margin-top:30%;" >
-			<div class="modal-header" style="background-color:#EEEEEE;width:426px;height:40px;">
+			<div class="modal-header" style="background-color:#EEEEEE;height:40px;">
 				<div style="float:left;padding-left:10px;">
 					<label style="size:16px;font-family:MicrosoftYaHei;color:#333333;">取消订单原因</label>
 				</div>
@@ -325,7 +304,7 @@ padding-left:5px;
 				<input type="radio" id="rad3" name="rad4" value="c" onClick="setSelectUserNo(this);">价格不合
 				</div >
 				<div style="width:300px;text-align:left;float:left;padding-top:0px;padding-left:10px;height:60px;">
-				<input type="text" style="height:70px;width:250px;">
+				<textarea rows=3 style="height:70px;width:250px;"></textarea>
 				</div>
 			</div>
 			<div style="float:left;width:426px;height:45px;padding-top:25px;">
@@ -358,7 +337,7 @@ padding-left:5px;
             <li><a href="Receipt.html" ><label class="Dhsecond">已下单</label></a></li>
             <li><a href="SentCar.html" ><label class="Dhsecond">已派送</label></a></li>
             <li><a href="Outbound.html" ><label class="Dhsecond">已出库</label></a></li>
-            <li><a href="Unloaded.html" ><label class="Dhsecond">已卸载</label></a></li>
+            <li><a href="Unloaded.html" ><label class="Dhsecond">已卸货</label></a></li>
             <li><a href="PlaceOrder.html" ><label class="Dhsecond">签收单</label></a></li>
             <li><a href="Complete.html" ><label class="Dhsecond">完成</label></a></li>
             <li><a href="Cancled.html" ><label class="Dhsecond">已取消</label></a></li>   

@@ -24,15 +24,15 @@
 <style>
 .font1 {
 	color: #ff0000;
-	face: SimSun;
 	size: 14px;
 	padding-left: 10%;
+	font-family:SimSun;
 }
 .font2 {
 	color: #ff0000;
-	face: SimSun;
 	size: 14px;
 	padding-left: 5%;
+	font-family:SimSun;
 }
 .label1 {
 	background-color: #f4f4f4;
@@ -48,6 +48,7 @@
 	size: 16px;
 	margin-left: 3%;
 	margin-top: 3%;
+	font-family:MicrosoftYaHei;
 }
 .text {
 	width: 20%;
@@ -81,7 +82,7 @@
 		src="header.html"></IFRAME>
 	<div style="padding: 0 25%">
 		<div>
-			<label class="label1">带<font color="red">*</font>为必须填写，请仔细填写</label>
+			<label class="label1">带<font style="font-family:SimSun;" color="red">*</font>为必须填写，请仔细填写</label>
 		</div>
 		<div style="height: 30%">
 			<div class="div" style="float: left; width: 48%; border-bottom: none;">
@@ -108,8 +109,7 @@
 						</div>
 					</form>
 				</div><br><br> 
-				<font class="font1" style="padding-left: 6%; vertical-align: top">*</font>
-				<label class="css" style="vertical-align: top">详细地址：</label>
+				<font class="font1" style="padding-left: 6%; vertical-align: top">*</font><label class="css" style="vertical-align: top">详细地址：</label>
 				<textarea rows="2" cols="25" style="resize: none" placeholder="请输入发货详细地址" id="ShippingDetailedAddress"></textarea>
 			</div>
 			<div class="div" style="align: right">
@@ -135,21 +135,20 @@
 							</div>
 						</div>
 					</form><br><br> 
-					<font class="font2" style="padding-left: 1%; vertical-align: top">*</font>
-					<label class="css" style="vertical-align: top">详细地址：</label>
+					<font class="font2" style="padding-left: 1%; vertical-align: top">*</font><label class="css" style="vertical-align: top">详细地址：</label>
 					<textarea rows="2" cols="25" style="resize: none" placeholder="请输入发货详细地址" id="ReceiptDetailedAddress"></textarea>
 				</div>
 			</div>
 		</div>
 		<div class="div" style="align: left; height: 17%; border-top: none;">
 			<label class="font3">货物信息</label><br> <font
-				style="color: red; margin-left: 13%">*</font><label
+				style="font-family:SimSun;color: red; margin-left: 13%">*</font><label
 				style="margin-top: 0%" class="css">货品名称：</label> <input
 				style="width: 20%" type="text" id="GoodsName" placeholder="描述下您的货物"> <font
-				color="red" style="margin-left: 5%;">*</font><label
+				color="red" style="font-family:SimSun;margin-left: 5%;">*</font><label
 				style="margin-top: 0%" class="css">数量：</label> <input
 				style="width: 15%" type="text" id="GoodsNumber" placeholder="请输入数量"> <font
-				color="red" style="margin-left: 5%;">*</font><label
+				color="red" style="margin-left: 5%;font-family:SimSun;">*</font><label
 				style="margin-top: 0%; margin-bottom: 5%" class="css">单位：</label>
 			<select class="select" id="GoodsUnit" style="width: 10%;">
 				<option>吨</option>
@@ -206,8 +205,6 @@
 		<div id="allmap"></div>
 		<hr style="margin-top: 5%; align: center; height: 1px; background-color: #E9E9E9; border: none;">
 	</div>
-	<IFRAME NAME="content_frame" width="100%" height="200px"
-		src="footer.html"></IFRAME>
 </body>
 <script>
 function Orderinquiry_onclick(){

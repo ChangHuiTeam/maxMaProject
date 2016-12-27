@@ -241,13 +241,127 @@ padding-left:5px;
 	float:left;
 	padding-left:2px;
 }
-	
+.loginBtn {
+	font-size: 20px;
+	font-weight: 700;
+	font-family: MicrosoftYaHei;
+	color: white;
+	width: 280px;
+	height: 40px;
+	background: #10A1F1;
+}
+
+.toggle {
+	width: 160px;
+	background-color: transparent;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: MicrosoftYaHei;
+	border: 0;
+	outline: none;
+}
+
+.bottonLine {
+	height: 3px;
+	width: 100px;
+	margin: 0 30px 30px 30px;
+}	
 </style>
+<script type="text/javascript">
+//Show the model and change toggle style for Login
+function loginClick() {
+	$("#toggleLogin").css("color", "#10A1F1");
+	$("#toggleRegister").css("color", "gray");
+	$("#loginLine").css("background", "#10A1F1");
+	$("#registerLine").css("background", "transparent");
+	document.getElementById('modelFrame').src = "login.html";
+	document.getElementById('btnLogOrReg').value = "登录";
+	$(function() {
+		$('#homeModal').modal({
+			keyboard : true
+		})
+	});
+}
+//Show the model and change toggle style for Register
+function registerClick() {
+	$("#toggleRegister").css("color", "#10A1F1");
+	$("#toggleLogin").css("color", "gray");
+	$("#registerLine").css("background", "#10A1F1");
+	$("#loginLine").css("background", "transparent");
+	document.getElementById('modelFrame').src = "register.html";
+	document.getElementById('btnLogOrReg').value = "注册";
+	$(function() {
+		$('#homeModal').modal({
+			keyboard : true
+		})
+	});
+}
+// Change button's text to Submit
+function changeTextToSubmit() {
+	document.getElementById('btnLogOrReg').value = "提交";
+}
+// Change button's text to Login
+function changeTextToLogin() {
+	document.getElementById('btnLogOrReg').value = "登录";
+}
+//Change Parent pages	
+function changePages(whichPage) {
+	switch (whichPage) {
+	case 0:
+		self.location = "home.html";
+		break;
+	case 1:
+		self.location = "OrderInquiry.html";
+		break;
+	case 2:
+		self.location = "MyOrder.html";
+		break;
+	case 3:
+		self.location = "ic_data.html";
+		break;
+	case 4:
+		self.location = "about.html";
+	}
+}
+</script>
 </head>
 <body>
 <IFRAME id="header" NAME="content_frame" frameborder="no"
 		 scrolling="no" width="100%" height="100px"
 		src="header.html"></IFRAME>
+			<!-- login模态框（Modal） -->
+	<div class="modal fade" id="homeModal" tabindex="-1" role="dialog"
+		aria-hidden="true">
+		<div class="modal-dialog" style="width: 440px;">
+			<div class="modal-content">
+				<div class="modal-header" style="height: 60px">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<div style="width: 160px; float: left; padding: 0 20px;">
+						<button id="toggleLogin" onclick="loginClick();" class="toggle">登录</button>
+						<label id="loginLine" class="bottonLine"></label>
+					</div>
+					<div style="width: 160px; float: left; padding: 0 20px;">
+						<button id="toggleRegister" onclick="registerClick();"
+							class="toggle">注册</button>
+						<label id="registerLine" class="bottonLine"></label>
+					</div>
+				</div>
+				<div class="modal-body" style="height: 220px">
+					<IFRAME id="modelFrame" NAME="content_frame" width="100%"
+						height="100%" frameborder="no"></IFRAME>
+				</div>
+				<div class="modal-footer">
+					<div style="padding-right: 70px">
+						<input type="button" id="btnLogOrReg" class="loginBtn">
+					</div>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 	<div class="page-footer"
 		style="border-top: 1px solid #eee;width:100%;margin:0 auto;padding-top:1px;">
 	</div>

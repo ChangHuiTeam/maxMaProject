@@ -89,7 +89,7 @@
 		height="100px" scrolling="no" width="100%" height="120px"
 		src="header.html"></IFRAME>
 	<!-- 模态框（Modal） -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+	<div class="modal fade" id="homeModal" tabindex="-1" role="dialog"
 		aria-hidden="true">
 		<div class="modal-dialog" style="width: 440px;">
 			<div class="modal-content">
@@ -223,7 +223,7 @@
 			document.getElementById('modelFrame').src = "login.html";
 			document.getElementById('btnLogOrReg').value = "登录";
 			$(function() {
-				$('#myModal').modal({
+				$('#homeModal').modal({
 					keyboard : true
 				})
 			});
@@ -237,7 +237,7 @@
 			document.getElementById('modelFrame').src = "register.html";
 			document.getElementById('btnLogOrReg').value = "注册";
 			$(function() {
-				$('#myModal').modal({
+				$('#homeModal').modal({
 					keyboard : true
 				})
 			});
